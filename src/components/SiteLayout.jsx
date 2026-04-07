@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import koandaHeaderLogo from '../assets/koanda-group-logo-wide.png';
 import { footerLinks, groupInfo, navigation, socialLinks } from '../data/siteContent';
 
@@ -29,6 +29,17 @@ function SocialIcon({ platform }) {
 
 function SiteLayout() {
   const location = useLocation();
+  const [openMenuPath, setOpenMenuPath] = useState(null);
+
+  const findActivePath = () => {
+    const activeItem = navigation.find((item) =>
+      item.path === '/'
+        ? location.pathname === '/'
+        : location.pathname === item.path || location.pathname.startsWith(`${item.path}/`),
+    );
+
+    return activeItem?.children ? activeItem.path : null;
+  };
 
   useEffect(() => {
     if (location.hash) {
@@ -43,6 +54,10 @@ function SiteLayout() {
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.pathname, location.hash]);
+
+  useEffect(() => {
+    setOpenMenuPath(findActivePath());
+  }, [location.pathname]);
 
   return (
     <div className="site-shell">
@@ -73,15 +88,31 @@ function SiteLayout() {
                   item.path === '/'
                     ? location.pathname === '/'
                     : location.pathname === item.path || location.pathname.startsWith(`${item.path}/`);
+                const isOpen = openMenuPath === item.path;
 
                 return (
                   <div className="nav-item" key={item.path}>
-                    <NavLink to={item.path} className={isActive ? 'active-link' : ''}>
+                    <NavLink
+                      to={item.path}
+                      className={isActive ? 'active-link' : ''}
+                      onClick={(event) => {
+                        if (!item.children) {
+                          return;
+                        }
+
+                        if (isActive) {
+                          event.preventDefault();
+                          setOpenMenuPath((current) => (current === item.path ? null : item.path));
+                        } else {
+                          setOpenMenuPath(item.path);
+                        }
+                      }}
+                    >
                       {item.label}
                     </NavLink>
 
-                    {item.children && isActive ? (
-                      <div className="nav-submenu">
+                    {item.children ? (
+                      <div className={`nav-submenu ${isOpen ? 'is-open' : ''}`}>
                         {item.children.map((child) => (
                           <Link key={child.path} to={child.path}>
                             {child.label}
