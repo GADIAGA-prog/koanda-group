@@ -1,0 +1,10 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="36" fill="#F7ECDF"/>
+  <rect x="120" y="270" width="960" height="310" rx="24" fill="#183E39"/>
+  <path d="M600 110L1000 286H200L600 110Z" fill="#B86D2F"/>
+  <rect x="270" y="334" width="168" height="180" rx="18" fill="#F6F2EB"/>
+  <rect x="516" y="334" width="168" height="180" rx="18" fill="#F6F2EB"/>
+  <rect x="762" y="334" width="168" height="180" rx="18" fill="#F6F2EB"/>
+  <text x="110" y="124" fill="#183E39" font-family="Arial, sans-serif" font-size="30" font-weight="700">CONSTRUCTION</text>
+  <text x="110" y="170" fill="#7A3F18" font-family="Arial, sans-serif" font-size="18">Infrastructure, delivery, reliability</text>
+</svg>

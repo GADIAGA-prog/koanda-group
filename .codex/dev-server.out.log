@@ -1,0 +1,78 @@
+
+> group-koanda@1.0.0 dev
+> vite --host 127.0.0.1
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m762[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m16:58:00[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m17:00:36[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx[22m
+[2m17:01:21[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx, /src/pages/PartnersPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/ContactPage.jsx, /src/pages/GroupPage.jsx, /src/pages/PresencePage.jsx, /src/pages/HomePage.jsx, /src/pages/SubsidiariesPage.jsx, /src/pages/LegalPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/components/ContactForm.jsx[22m
+[2m17:16:11[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx, /src/pages/PartnersPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/ContactPage.jsx, /src/pages/GroupPage.jsx, /src/pages/PresencePage.jsx, /src/pages/HomePage.jsx, /src/pages/SubsidiariesPage.jsx, /src/pages/LegalPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/components/ContactForm.jsx[22m
+[2m17:16:19[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.jsx[22m
+[2m17:17:42[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx, /src/pages/PartnersPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/ContactPage.jsx, /src/pages/GroupPage.jsx, /src/pages/PresencePage.jsx, /src/pages/HomePage.jsx, /src/pages/SubsidiariesPage.jsx, /src/pages/LegalPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/components/ContactForm.jsx[22m
+[2m17:17:48[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.jsx[22m
+[2m17:18:16[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ProjectsPage.jsx[22m
+[2m17:18:21[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SubsidiaryPage.jsx[22m
+[2m17:18:26[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PresencePage.jsx[22m
+[2m17:18:32[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PartnersPage.jsx[22m
+[2m17:18:39[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.jsx[22m
+[2m17:19:16[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.jsx[22m
+[2m17:19:33[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m17:19:48[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx[22m
+[2m17:49:57[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx, /src/pages/PartnersPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/ContactPage.jsx, /src/pages/GroupPage.jsx, /src/pages/PresencePage.jsx, /src/pages/SubsidiariesPage.jsx, /src/pages/LegalPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/components/ContactForm.jsx, /src/pages/NavigationPage.jsx[22m
+[2m17:51:02[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx, /src/pages/PartnersPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/ContactPage.jsx, /src/pages/GroupPage.jsx, /src/pages/PresencePage.jsx, /src/pages/SubsidiariesPage.jsx, /src/pages/LegalPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/components/ContactForm.jsx, /src/pages/NavigationPage.jsx[22m
+[2m17:51:11[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m17:51:16[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx[22m
+[2m17:51:38[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx[22m
+[2m17:51:48[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SubsidiaryCard.jsx[22m
+[2m17:51:55[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ContactForm.jsx[22m
+[2m17:52:16[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.jsx[22m
+[2m17:52:21[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/GroupPage.jsx[22m
+[2m17:52:34[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/GroupPage.jsx[22m
+[2m17:52:38[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SubsidiariesPage.jsx[22m
+[2m17:52:46[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SubsidiariesPage.jsx[22m
+[2m17:52:51[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SubsidiaryPage.jsx[22m
+[2m17:53:03[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SubsidiaryPage.jsx[22m
+[2m17:53:08[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ProjectsPage.jsx[22m
+[2m17:53:21[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ProjectsPage.jsx[22m
+[2m17:53:27[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PresencePage.jsx[22m
+[2m17:53:39[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PresencePage.jsx[22m
+[2m17:53:44[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PartnersPage.jsx[22m
+[2m17:53:55[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PartnersPage.jsx[22m
+[2m17:53:59[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.jsx[22m
+[2m17:54:10[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.jsx[22m
+[2m17:55:06[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m18:27:28[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/LegalPage.jsx, /src/components/ContactForm.jsx, /src/pages/NavigationPage.jsx, /src/components/SiteLayout.jsx, /src/pages/HomePage.jsx, /src/pages/GroupPage.jsx, /src/pages/SubsidiariesPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/PresencePage.jsx, /src/pages/PartnersPage.jsx, /src/pages/ContactPage.jsx[22m
+[2m18:27:36[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PartnersPage.jsx[22m
+[2m18:28:04[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m18:28:38[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PartnersPage.jsx[22m
+[2m18:28:45[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.jsx[22m
+[2m18:31:52[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/LegalPage.jsx, /src/components/ContactForm.jsx, /src/pages/NavigationPage.jsx, /src/components/SiteLayout.jsx, /src/pages/HomePage.jsx, /src/pages/GroupPage.jsx, /src/pages/SubsidiariesPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/PresencePage.jsx, /src/pages/PartnersPage.jsx, /src/pages/ContactPage.jsx[22m
+[2m18:31:57[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PartnersPage.jsx[22m
+[2m18:32:02[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.jsx[22m
+[2m18:32:28[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PartnersPage.jsx[22m
+[2m18:36:41[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PresencePage.jsx[22m
+[2m18:37:03[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PresencePage.jsx[22m
+[2m18:37:20[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m18:42:58[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PresencePage.jsx[22m
+[2m18:50:17[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/LegalPage.jsx, /src/components/ContactForm.jsx, /src/pages/NavigationPage.jsx, /src/components/SiteLayout.jsx, /src/pages/HomePage.jsx, /src/pages/GroupPage.jsx, /src/pages/SubsidiariesPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/PartnersPage.jsx, /src/pages/ContactPage.jsx, /src/pages/PresencePage.jsx[22m
+[2m18:50:27[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PresencePage.jsx[22m
+[2m18:51:19[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m18:55:20[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/LegalPage.jsx, /src/components/ContactForm.jsx, /src/pages/NavigationPage.jsx, /src/components/SiteLayout.jsx, /src/pages/HomePage.jsx, /src/pages/GroupPage.jsx, /src/pages/SubsidiariesPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/PartnersPage.jsx, /src/pages/ContactPage.jsx, /src/pages/PresencePage.jsx[22m
+[2m18:55:47[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.jsx[22m
+[2m18:55:54[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/GroupPage.jsx[22m
+[2m18:56:00[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SubsidiariesPage.jsx[22m
+[2m18:56:13[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ProjectsPage.jsx[22m
+[2m18:56:18[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PresencePage.jsx[22m
+[2m18:56:25[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PartnersPage.jsx[22m
+[2m18:56:25[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PartnersPage.jsx[22m
+[2m18:56:32[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.jsx[22m
+[2m18:56:56[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx[22m
+[2m18:57:23[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx[22m
+[2m18:57:36[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m18:57:43[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SubsidiariesPage.jsx[22m
+[2m18:58:00[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SubsidiariesPage.jsx[22m
+[2m18:58:10[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SiteLayout.jsx[22m
+[2m18:59:20[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/LegalPage.jsx, /src/components/ContactForm.jsx, /src/pages/NavigationPage.jsx, /src/pages/HomePage.jsx, /src/pages/GroupPage.jsx, /src/pages/SubsidiaryPage.jsx, /src/pages/ProjectsPage.jsx, /src/pages/PartnersPage.jsx, /src/pages/ContactPage.jsx, /src/pages/PresencePage.jsx, /src/components/SiteLayout.jsx, /src/pages/SubsidiariesPage.jsx[22m

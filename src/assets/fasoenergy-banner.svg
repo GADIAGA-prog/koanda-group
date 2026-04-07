@@ -1,0 +1,11 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="36" fill="#102C2A"/>
+  <circle cx="892" cy="136" r="104" fill="#FFC865"/>
+  <path d="M124 560L356 412L548 510L754 332L1028 560" stroke="#F6F2EB" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="240" y="446" width="180" height="92" rx="18" fill="#173A36"/>
+  <rect x="520" y="382" width="180" height="92" rx="18" fill="#173A36"/>
+  <rect x="786" y="300" width="180" height="92" rx="18" fill="#173A36"/>
+  <path d="M240 478H420M240 510H420M520 414H700M520 446H700M786 332H966M786 364H966" stroke="#CFE4DE" stroke-width="4"/>
+  <text x="94" y="116" fill="#F6F2EB" font-family="Arial, sans-serif" font-size="30" font-weight="700">FASO ENERGY</text>
+  <text x="94" y="164" fill="#FFC865" font-family="Arial, sans-serif" font-size="18">The energy for the future</text>
+</svg>

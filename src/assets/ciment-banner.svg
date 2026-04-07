@@ -1,0 +1,10 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="36" fill="#EEE7DC"/>
+  <rect x="178" y="220" width="160" height="316" rx="22" fill="#173A36"/>
+  <rect x="390" y="176" width="202" height="360" rx="22" fill="#A85F29"/>
+  <rect x="644" y="244" width="144" height="292" rx="22" fill="#173A36"/>
+  <rect x="834" y="198" width="190" height="338" rx="22" fill="#A85F29"/>
+  <path d="M130 584H1070" stroke="#173A36" stroke-width="16" stroke-linecap="round"/>
+  <text x="118" y="122" fill="#173A36" font-family="Arial, sans-serif" font-size="30" font-weight="700">CIMENTERIES</text>
+  <text x="118" y="170" fill="#7A3F18" font-family="Arial, sans-serif" font-size="18">Materials, output, industrial backbone</text>
+</svg>

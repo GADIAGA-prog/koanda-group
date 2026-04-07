@@ -1,0 +1,7 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="240" rx="40" fill="#F3F1E7"/>
+  <circle cx="120" cy="76" r="24" fill="#FFC865"/>
+  <path d="M70 148L170 148L154 190H86L70 148Z" fill="#1E6D61"/>
+  <path d="M92 120L82 138M120 112V148M148 120L158 138" stroke="#183E39" stroke-width="6" stroke-linecap="round"/>
+  <text x="120" y="224" text-anchor="middle" fill="#183E39" font-family="Arial, sans-serif" font-size="22" font-weight="700">FASO ENERGY</text>
+</svg>

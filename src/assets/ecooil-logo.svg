@@ -1,0 +1,6 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="240" rx="40" fill="#EEF6ED"/>
+  <path d="M120 56C146 86 172 122 172 150C172 179 149 202 120 202C91 202 68 179 68 150C68 122 94 86 120 56Z" fill="#1E6D61"/>
+  <path d="M120 86C136 108 148 132 148 148C148 163 135 176 120 176C105 176 92 163 92 148C92 132 104 108 120 86Z" fill="#FFC865"/>
+  <text x="120" y="224" text-anchor="middle" fill="#183E39" font-family="Arial, sans-serif" font-size="22" font-weight="700">ECO OIL BF</text>
+</svg>

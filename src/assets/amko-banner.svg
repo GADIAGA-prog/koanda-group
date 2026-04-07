@@ -1,0 +1,11 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="36" fill="#F2EEE6"/>
+  <path d="M170 538H1030" stroke="#183E39" stroke-width="18" stroke-linecap="round"/>
+  <rect x="228" y="392" width="252" height="102" rx="24" fill="#183E39"/>
+  <rect x="486" y="412" width="286" height="82" rx="24" fill="#B86D2F"/>
+  <rect x="780" y="380" width="190" height="114" rx="24" fill="#183E39"/>
+  <path d="M250 392C250 322 308 264 380 264H458C492 264 520 292 520 326V392H250Z" fill="#FFC865"/>
+  <path d="M828 380C828 332 868 292 916 292C964 292 1004 332 1004 380H828Z" fill="#FFC865"/>
+  <text x="112" y="120" fill="#183E39" font-family="Arial, sans-serif" font-size="30" font-weight="700">AMKO</text>
+  <text x="112" y="168" fill="#7A3F18" font-family="Arial, sans-serif" font-size="18">Petroleum supply, logistics, regional reach</text>
+</svg>
