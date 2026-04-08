@@ -25,6 +25,11 @@ function SubsidiaryPage() {
               <Link className="button button-primary" to="/filiales">
                 Retour aux filiales
               </Link>
+              {subsidiary.externalLink ? (
+                <a className="button button-secondary" href={subsidiary.externalLink} target="_blank" rel="noreferrer">
+                  {subsidiary.externalLabel ?? 'Lien externe'}
+                </a>
+              ) : null}
             </div>
           </div>
 
@@ -50,6 +55,25 @@ function SubsidiaryPage() {
           ))}
         </div>
       </section>
+
+      {subsidiary.gallery?.length ? (
+        <section className="section section-soft">
+          <SectionHeading
+            tag="Visuels"
+            title="Des images directement liées à l’activité de la filiale."
+            text="Cette galerie reprend les visuels fournis pour mieux illustrer les installations, les produits ou les réalisations de la filiale."
+            split
+          />
+
+          <div className="subsidiary-gallery-grid">
+            {subsidiary.gallery.map((image, index) => (
+              <article className="content-card subsidiary-gallery-card" key={`${subsidiary.slug}-gallery-${index + 1}`}>
+                <img src={image} alt={`Visuel ${index + 1} de ${subsidiary.name}`} />
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }

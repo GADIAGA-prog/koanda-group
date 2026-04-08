@@ -4,6 +4,22 @@ import koandaIndustries from '../assets/koanda-plaquette-industries.png';
 import koandaProjects from '../assets/koanda-plaquette-projects.png';
 import koandaContact from '../assets/koanda-plaquette-contact.png';
 import koandaPdgPortrait from '../assets/koanda-pdg-portrait.png';
+import amkoBanner from '../assets/amko-banner.svg';
+import amkoLogo from '../assets/amko-logo.svg';
+import belchickenLogo from '../assets/belchicken-logo.jpg';
+import belchickenMenu from '../assets/belchicken-menu.png';
+import cimentLogo from '../assets/ciment-logo.svg';
+import constructionLogo from '../assets/construction-logo.svg';
+import ecoOilLogo from '../assets/eco-oil-logo.png';
+import ecoOilStation from '../assets/eco-oil-station.png';
+import fasoEnergyLogo from '../assets/faso-energy-logo-raster.png';
+import fasoEnergyPanels from '../assets/faso-energy-panels.png';
+import fasoEnergyFactory from '../assets/faso-energy-factory.png';
+import gcmIndustries1 from '../assets/gcm-industries-1.png';
+import gcmIndustries2 from '../assets/gcm-industries-2.png';
+import gcmIndustries3 from '../assets/gcm-industries-3.png';
+import gcmIndustries4 from '../assets/gcm-industries-4.png';
+import gcmIndustries5 from '../assets/gcm-industries-5.png';
 import partnerEcobank from '../assets/partner-ecobank.png';
 import partnerCba from '../assets/partner-cba.png';
 import partnerCorisBank from '../assets/partner-coris-bank.png';
@@ -147,36 +163,45 @@ export const subsidiaries = [
     name: 'AMKO Trading SA',
     country: 'Suisse',
     sector: 'Trading de produits pétroliers',
-    image: koandaOverview,
+    image: amkoBanner,
+    logo: amkoLogo,
+    watermarkLabel: 'AMKO',
     summary:
       'Trading de produits pétroliers en Afrique de l’Ouest. Basée à Genève, l’entreprise se positionne comme un acteur majeur du négoce pétrolier.',
     description:
       'AMKO Trading SA est présentée dans la plaquette comme un acteur majeur du trading de produits pétroliers en Afrique de l’Ouest, avec une base stratégique à Genève et une production annoncée de 600 000 tonnes de produits.',
     facts: ['Base stratégique : Genève, Suisse', 'Production annoncée : 600 000 tonnes de produits', 'Activité : négoce pétrolier régional'],
+    gallery: [amkoBanner],
   },
   {
     slug: 'eco-oil-burkina',
     name: 'Eco Oil Burkina',
     country: 'Burkina Faso',
     sector: 'Distribution de produits pétroliers',
-    image: koandaOverview,
+    image: ecoOilStation,
+    logo: ecoOilLogo,
+    watermarkLabel: 'Eco Oil',
     summary:
       'Entreprise agréée pour la distribution de produits pétroliers au Burkina Faso, avec un réseau déjà déployé et un programme d’expansion.',
     description:
       'Eco Oil Burkina est présentée comme une entreprise agréée pour la distribution de produits pétroliers au Burkina Faso. Le réseau comprend déjà plusieurs stations-service et un important programme d’expansion en cours.',
     facts: ['32 stations-service réalisées', 'Extension prévue vers 60 stations-service', 'Distribution pétrolière au Burkina Faso'],
+    gallery: [ecoOilStation],
   },
   {
     slug: 'eco-oil-cote-divoire',
     name: 'Eco Oil Côte d’Ivoire',
     country: 'Côte d’Ivoire',
     sector: 'Distribution de produits pétroliers',
-    image: koandaOverview,
+    image: ecoOilStation,
+    logo: ecoOilLogo,
+    watermarkLabel: 'Eco Oil',
     summary:
       'Société spécialisée dans la distribution de produits pétroliers en Côte d’Ivoire, avec un projet de croissance du réseau de stations-service.',
     description:
       'La filiale ivoirienne est positionnée sur la distribution de produits pétroliers en Côte d’Ivoire, avec un projet d’extension de son réseau de stations-service tel qu’annoncé dans la plaquette.',
     facts: ['10 stations-service complétées', 'Extension annoncée vers 25 stations-service', 'Marché : Côte d’Ivoire'],
+    gallery: [ecoOilStation],
   },
   {
     slug: 'cim-metal',
@@ -184,6 +209,8 @@ export const subsidiaries = [
     country: 'Burkina Faso',
     sector: 'Acier et industrie',
     image: koandaIndustries,
+    logo: cimentLogo,
+    watermarkLabel: 'CIM Metal',
     summary:
       'Première usine d’acier au Burkina Faso, avec une capacité de production de 60 000 tonnes par an et un fort engagement qualité.',
     description:
@@ -195,24 +222,29 @@ export const subsidiaries = [
     name: 'Faso Energy',
     country: 'Burkina Faso',
     sector: 'Fabrication de panneaux photovoltaïques',
-    image: koandaIndustries,
+    image: fasoEnergyFactory,
+    logo: fasoEnergyLogo,
+    watermarkLabel: 'Faso Energy',
     summary:
       'Entreprise spécialisée dans la fabrication de panneaux photovoltaïques, avec un positionnement industriel majeur en Afrique de l’Ouest.',
     description:
       'Faso Energy est présentée comme une entreprise spécialisée dans la fabrication de panneaux photovoltaïques, avec une capacité industrielle forte et un projet de centrale solaire structurant.',
     facts: ['Capacité annuelle annoncée : 30 MW', 'Projet de centrale solaire de 30 MW', 'Positionnement industriel en Afrique de l’Ouest'],
+    gallery: [fasoEnergyFactory, fasoEnergyPanels],
   },
   {
     slug: 'gcm-industries',
     name: 'GCM Industries',
     country: 'Burkina Faso',
     sector: 'Cimenterie',
-    image: koandaIndustries,
+    image: gcmIndustries4,
+    watermarkLabel: 'GCM Industries',
     summary:
       'Acteur industriel de la cimenterie à Ouagadougou, avec une capacité importante de production et une ambition de montée en puissance.',
     description:
       'GCM Industries est présentée comme un acteur industriel de la cimenterie à Ouagadougou, avec des équipements modernes et une capacité de production élevée destinée à soutenir la demande locale et régionale.',
     facts: ['Capacité : 700 000 tonnes par an', 'Site industriel : 10 hectares à Ouagadougou', 'Ambition de montée en puissance'],
+    gallery: [gcmIndustries4, gcmIndustries5, gcmIndustries1, gcmIndustries2, gcmIndustries3],
   },
   {
     slug: 'tpb-sa',
@@ -220,6 +252,8 @@ export const subsidiaries = [
     country: 'Burkina Faso, Mali, Côte d’Ivoire, Niger',
     sector: 'Travaux publics et bâtiments',
     image: koandaIndustries,
+    logo: constructionLogo,
+    watermarkLabel: 'TPB',
     summary:
       'Entreprise de travaux publics et bâtiments intervenant dans les routes, l’asphalte, l’éclairage, la tuyauterie et d’autres infrastructures.',
     description:
@@ -232,6 +266,7 @@ export const subsidiaries = [
     country: 'Burkina Faso et international',
     sector: 'Transport international',
     image: koandaProjects,
+    watermarkLabel: 'SATI',
     summary:
       'Société Africaine de Transport International spécialisée dans le transport d’hydrocarbures, d’agrégats et de biens de consommation.',
     description:
@@ -244,6 +279,7 @@ export const subsidiaries = [
     country: 'Burkina Faso et corridors régionaux',
     sector: 'Transit et logistique',
     image: koandaProjects,
+    watermarkLabel: 'ALT',
     summary:
       'Afrik Logistik et Transit, spécialisée dans le transport de produits vrac et les activités de transit.',
     description:
@@ -256,6 +292,7 @@ export const subsidiaries = [
     country: 'Burkina Faso',
     sector: 'Immobilier',
     image: koandaProjects,
+    watermarkLabel: 'GCM Immo',
     summary:
       'Pôle immobilier engagé dans la promotion du logement, avec une ambition marquée sur les logements sociaux et différents actifs résidentiels.',
     description:
@@ -267,12 +304,17 @@ export const subsidiaries = [
     name: 'Belchicken',
     country: 'Burkina Faso',
     sector: 'Restauration rapide',
-    image: koandaProjects,
+    image: belchickenMenu,
+    logo: belchickenLogo,
+    watermarkLabel: 'Belchicken',
     summary:
       'Enseigne de restauration rapide présente à Ouagadougou, Belchicken développe une offre gourmande autour de burgers, wraps, salades et menus à partager.',
     description:
       'Belchicken enrichit le portefeuille du groupe sur le segment de la restauration et des services au public. L’enseigne met en avant une carte de menus variés, une identité visuelle forte et une présence locale à Ouagadougou.',
     facts: ['Ville indiquée : Ouagadougou', 'Téléphone affiché : 05 23 48 48', 'Offre : burgers, wraps, salades et menus rapides'],
+    externalLink: 'https://www.facebook.com/belchickenburkina',
+    externalLabel: 'Page Facebook',
+    gallery: [belchickenMenu],
   },
 ];
 
