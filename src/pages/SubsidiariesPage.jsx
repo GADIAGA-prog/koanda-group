@@ -11,7 +11,7 @@ const industrySubsidiaries = subsidiaries.filter((item) =>
 );
 
 const logisticsSubsidiaries = subsidiaries.filter((item) =>
-  ['sati', 'alt', 'gcm-immobilier'].includes(item.slug),
+  ['sati', 'alt', 'gcm-immobilier', 'belchicken'].includes(item.slug),
 );
 
 function SubsidiariesPage() {
@@ -58,9 +58,9 @@ function SubsidiariesPage() {
 
       <section className="section" id="logistique-immobilier">
         <SectionHeading
-          tag="Logistique et immobilier"
-          title="Transport, transit et immobilier."
-          text="Un troisième bloc consacré aux activités de transport international, de logistique et de promotion immobilière."
+          tag="Logistique, immobilier et services"
+          title="Transport, transit, immobilier et restauration."
+          text="Un troisième bloc consacré aux activités de transport international, de logistique, de promotion immobilière et de restauration."
           split
         />
 

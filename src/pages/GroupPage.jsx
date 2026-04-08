@@ -12,17 +12,11 @@ function GroupPage() {
           split
         />
 
-        <div className="about-layout">
-          <div className="about-visual-card">
-            <img src={groupInfo.overviewImage} alt="Présentation générale de Koanda Group" />
-          </div>
-
-          <div className="about-copy">
-            <p><strong>Qui sommes-nous ?</strong></p>
-            <p>{groupInfo.whoWeAre}</p>
-            <p><strong>Vision :</strong> {groupInfo.vision}</p>
-            <p><strong>Mission :</strong> {groupInfo.mission}</p>
-          </div>
+        <div className="about-copy">
+          <p><strong>Qui sommes-nous ?</strong></p>
+          <p>{groupInfo.whoWeAre}</p>
+          <p><strong>Vision :</strong> {groupInfo.vision}</p>
+          <p><strong>Mission :</strong> {groupInfo.mission}</p>
         </div>
       </section>
 

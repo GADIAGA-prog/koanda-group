@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import koandaHeaderLogo from '../assets/koanda-group-logo-wide.png';
 import { footerLinks, groupInfo, navigation, socialLinks } from '../data/siteContent';
 
@@ -30,6 +30,7 @@ function SocialIcon({ platform }) {
 function SiteLayout() {
   const location = useLocation();
   const [openMenuPath, setOpenMenuPath] = useState(null);
+  const closeSubmenuOnNextRoute = useRef(false);
 
   const findActivePath = () => {
     const activeItem = navigation.find((item) =>
@@ -37,6 +38,10 @@ function SiteLayout() {
         ? location.pathname === '/'
         : location.pathname === item.path || location.pathname.startsWith(`${item.path}/`),
     );
+
+    if (activeItem?.path === '/') {
+      return null;
+    }
 
     return activeItem?.children ? activeItem.path : null;
   };
@@ -56,6 +61,12 @@ function SiteLayout() {
   }, [location.pathname, location.hash]);
 
   useEffect(() => {
+    if (closeSubmenuOnNextRoute.current) {
+      closeSubmenuOnNextRoute.current = false;
+      setOpenMenuPath(null);
+      return;
+    }
+
     setOpenMenuPath(findActivePath());
   }, [location.pathname]);
 
@@ -114,7 +125,14 @@ function SiteLayout() {
                     {item.children ? (
                       <div className={`nav-submenu ${isOpen ? 'is-open' : ''}`}>
                         {item.children.map((child) => (
-                          <Link key={child.path} to={child.path}>
+                          <Link
+                            key={child.path}
+                            to={child.path}
+                            onClick={() => {
+                              closeSubmenuOnNextRoute.current = true;
+                              setOpenMenuPath(null);
+                            }}
+                          >
                             {child.label}
                           </Link>
                         ))}

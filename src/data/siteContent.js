@@ -15,7 +15,7 @@ import partnerWbi from '../assets/partner-wbi.png';
 export const groupInfo = {
   name: 'Koanda Group',
   legalName: 'Groupe Koanda',
-  heroTitle: 'Koanda Group, un groupe engagé pour un développement durable à travers des projets innovateurs et performants.',
+  heroTitle: 'Koanda Group, un groupe engagé pour un développement durable à travers des projets innovants et performants.',
   heroText:
     'Koanda Group est un conglomérat dynamique et visionnaire, présent dans plusieurs secteurs stratégiques : hydrocarbures, BTP, ciment, solaire, logistique, immobilier et hôtellerie. Le groupe déploie ses activités à travers plusieurs entreprises et projets structurants en Afrique de l’Ouest et à l’international.',
   objective: 'Donner immédiatement une image forte, institutionnelle et crédible du groupe.',
@@ -27,10 +27,11 @@ export const groupInfo = {
   mission:
     'Développer des solutions performantes dans des secteurs stratégiques afin de soutenir la croissance, l’emploi, l’industrialisation et la modernisation des économies africaines.',
   pdgTitle: 'Mot du PDG',
-  pdgName: 'Présidence de Koanda Group',
+  pdgName: 'Moussa Koanda',
+  pdgRole: 'Président du Groupe',
   pdgMessage:
-    'Koanda Group développe des projets utiles, créateurs de valeur et ancrés dans l’économie réelle. Notre ambition est de bâtir un groupe solide, innovant et durable, capable d’accompagner la transformation économique de l’Afrique à travers l’industrie, l’énergie, la logistique, l’immobilier et les services.',
-  pdgVisualCaption: 'Portrait institutionnel extrait de la plaquette du groupe.',
+    'Koanda Group est né d’une conviction forte : l’Afrique a besoin d’acteurs engagés, capables d’investir durablement dans des secteurs structurants et de transformer les opportunités en réalisations concrètes. À travers nos filiales, nos projets industriels, énergétiques, logistiques, immobiliers et hôteliers, nous bâtissons un groupe tourné vers la performance, l’emploi et l’impact local. Notre ambition est de faire de Koanda Group une référence de confiance, portée par l’exigence, l’innovation et des partenariats solides au service du développement économique du continent.',
+  pdgVisualCaption: 'Portrait de Moussa Koanda, Président du Groupe.',
   coverImage: koandaCover,
   overviewImage: koandaOverview,
   industriesImage: koandaIndustries,
@@ -53,6 +54,7 @@ export const navigation = [
       { label: 'Mot du PDG', path: '/#mot-pdg' },
       { label: 'Chiffres clés', path: '/#chiffres-cles' },
       { label: 'Filiales', path: '/#apercu-filiales' },
+      { label: 'Actualités', path: '/#actualites-groupe' },
       { label: 'Projets à la une', path: '/#projets-a-la-une' },
     ],
   },
@@ -260,6 +262,18 @@ export const subsidiaries = [
       'GCM Immobilier porte l’ambition immobilière du groupe autour du logement, de l’habitat résidentiel et des actifs destinés à répondre à des besoins croissants de marché.',
     facts: ['Logements sociaux', 'Actifs résidentiels', 'Promotion immobilière'],
   },
+  {
+    slug: 'belchicken',
+    name: 'Belchicken',
+    country: 'Burkina Faso',
+    sector: 'Restauration rapide',
+    image: koandaProjects,
+    summary:
+      'Enseigne de restauration rapide présente à Ouagadougou, Belchicken développe une offre gourmande autour de burgers, wraps, salades et menus à partager.',
+    description:
+      'Belchicken enrichit le portefeuille du groupe sur le segment de la restauration et des services au public. L’enseigne met en avant une carte de menus variés, une identité visuelle forte et une présence locale à Ouagadougou.',
+    facts: ['Ville indiquée : Ouagadougou', 'Téléphone affiché : 05 23 48 48', 'Offre : burgers, wraps, salades et menus rapides'],
+  },
 ];
 
 export const featuredProjects = [
@@ -278,6 +292,27 @@ export const featuredProjects = [
   {
     title: 'Expansion des stations-service Eco Oil',
     text: 'Déploiement progressif du réseau de distribution pétrolière au Burkina Faso et en Côte d’Ivoire.',
+  },
+];
+
+export const newsHighlights = [
+  {
+    title: 'Transition énergétique : un projet solaire de 30 MW mis en avant',
+    text: 'Faso Energy porte un projet structurant de centrale solaire destiné à accompagner durablement la capacité énergétique locale.',
+    image: koandaIndustries,
+    to: '/projets-et-realisations#projets-en-cours',
+  },
+  {
+    title: 'AMKO Energy Ghana : un dépôt stratégique pour la sous-région',
+    text: 'Le projet de stockage au port de Tema s’inscrit dans une logique régionale au service du Ghana, du Burkina Faso, du Mali et du Niger.',
+    image: koandaOverview,
+    to: '/projets-et-realisations#projets-en-cours',
+  },
+  {
+    title: 'Développements hôteliers à Ouagadougou, Bobo-Dioulasso et Accra',
+    text: 'La plaquette met en avant plusieurs projets hôteliers pensés pour répondre aux besoins des voyageurs d’affaires, des familles et du tourisme.',
+    image: koandaProjects,
+    to: '/projets-et-realisations#projets-en-cours',
   },
 ];
 
@@ -386,6 +421,7 @@ export const caseStudies = [
     text: 'Complémentarité entre négoce, distribution et stockage pour soutenir l’approvisionnement régional.',
   },
 ];
+
 
 export const presenceItems = [
   {

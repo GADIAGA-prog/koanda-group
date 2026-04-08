@@ -285,6 +285,12 @@ button, input, textarea { font: inherit; }
 .button-primary { background: linear-gradient(135deg, var(--green), var(--green-deep)); color: var(--white); }
 .button-secondary { border-color: rgba(94, 168, 106, 0.24); background: var(--surface-mint); color: var(--text); }
 .button-ghost { border-color: rgba(94, 168, 106, 0.24); background: rgba(255, 255, 255, 0.9); color: var(--green-deep); }
+.button-news {
+  border-color: transparent;
+  background: linear-gradient(135deg, #62b534, #4a9b27);
+  color: var(--white);
+  padding-inline: 22px;
+}
 .button-full { width: 100%; }
 
 .hero-stats, .card-grid, .timeline-grid, .subsidiary-grid, .detail-facts-grid, .footer-main,
@@ -306,6 +312,92 @@ button, input, textarea { font: inherit; }
 .metric-card span { display: block; margin-top: 8px; color: var(--muted); font-size: 0.92rem; }
 
 .hero-media { display: grid; gap: 18px; align-content: start; }
+
+.hero-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mosaic-card {
+  min-height: 230px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.mosaic-card-image {
+  position: relative;
+  isolation: isolate;
+}
+
+.mosaic-card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 51, 37, 0.08), rgba(22, 51, 37, 0.72));
+  z-index: 0;
+}
+
+.mosaic-card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mosaic-card-copy {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  justify-items: start;
+}
+
+.mosaic-card-copy h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.mosaic-card-copy .mini-text {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.mosaic-card-text {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 14px;
+  padding: 28px;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #f5fbf6);
+}
+
+.mosaic-card-text::before {
+  content: '';
+  width: 64px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--green), var(--green-deep));
+}
+
+.mosaic-card-text h3 {
+  margin: 0;
+  max-width: 18ch;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.mosaic-card-text p {
+  max-width: 28ch;
+  margin: 0;
+  color: var(--muted);
+}
 
 .hero-image-card,
 .hero-banner-card,
@@ -381,12 +473,65 @@ button, input, textarea { font: inherit; }
   background: linear-gradient(135deg, var(--green), var(--green-deep));
 }
 
+.home-section-actions {
+  margin-top: 22px;
+  justify-content: center;
+}
+
+.news-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 24px;
+}
+
+.news-highlight-card {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.news-highlight-image {
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--surface);
+}
+
+.news-highlight-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.news-highlight-body {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.news-highlight-body h3 {
+  margin: 0;
+  color: #62b534;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  line-height: 1.35;
+}
+
+.news-highlight-body p {
+  margin: 0;
+  color: #4e6f5d;
+}
+
+.news-highlight-body .button {
+  justify-self: start;
+}
+
 .pdg-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 340px);
   gap: 24px;
   margin-top: 24px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .pdg-copy,
@@ -406,14 +551,50 @@ button, input, textarea { font: inherit; }
 .pdg-visual-card {
   display: grid;
   gap: 12px;
+  justify-items: center;
+  align-content: start;
+  overflow: hidden;
 }
 
 .pdg-visual-card img {
   display: block;
-  width: 100%;
+  width: min(100%, 250px);
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center top;
   border-radius: 18px;
+}
+
+.pdg-visual-placeholder {
+  width: min(100%, 250px);
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  padding: 24px;
+  border-radius: 18px;
+  border: 1px dashed rgba(94, 168, 106, 0.35);
+  background: linear-gradient(180deg, #f7fcf8, #eef7ef);
+  text-align: center;
+}
+
+.pdg-visual-placeholder span {
+  color: var(--green-deep);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+}
+
+.pdg-visual-placeholder strong {
+  font-size: 1.1rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.pdg-visual-card p {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
 }
 .home-spotlight-card {
   display: grid;
@@ -504,7 +685,32 @@ button, input, textarea { font: inherit; }
 }
 
 .spotlight-nav-button.is-active small,
-.section-tab.is-active { color: var(--white); }
+  .section-tab.is-active { color: var(--white); }
+
+.content-card-image {
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.content-card-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.content-card-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.project-visual-card {
+  padding: 0;
+}
+
+.project-visual-card .content-card-copy {
+  padding: 22px;
+}
 
 .summary-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .summary-card { display: grid; gap: 14px; align-content: start; }
@@ -802,6 +1008,8 @@ button, input, textarea { font: inherit; }
   .navbar { grid-template-columns: minmax(160px, 190px) minmax(0, 1fr); }
   .nav-links { gap: 8px; }
   .spotlight-nav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hero-mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .news-highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 760px) {
@@ -847,4 +1055,7 @@ button, input, textarea { font: inherit; }
   .hero-stats, .values-grid, .subsidiary-grid, .card-grid, .news-grid, .timeline-grid, .detail-facts-grid, .footer-main, .legal-grid, .sector-chip-grid, .news-featured-grid, .summary-grid, .key-figures-grid, .spotlight-nav, .four-cols { grid-template-columns: 1fr; }
   .section-head { flex-direction: column; align-items: flex-start; }
   .hero-copy h1 { max-width: none; }
+  .hero-mosaic { grid-template-columns: 1fr; }
+  .mosaic-card { min-height: 220px; }
+  .news-highlight-grid { grid-template-columns: 1fr; }
 }
