@@ -16,7 +16,11 @@ function HomePage() {
   }, []);
 
   const currentSlide = homeCarousel[activeSlide];
-  const highlightedSubsidiaries = subsidiaries.slice(0, 6);
+  const highlightedSubsidiaries = subsidiaries.filter((item) =>
+    ['amko-trading', 'eco-oil-burkina', 'eco-oil-cote-divoire', 'cim-metal', 'faso-energy', 'belchicken'].includes(
+      item.slug,
+    ),
+  );
 
   const visualProjects = featuredProjects.map((item, index) => ({
     ...item,
