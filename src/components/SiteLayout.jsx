@@ -30,6 +30,7 @@ function SocialIcon({ platform }) {
 function SiteLayout() {
   const location = useLocation();
   const [openMenuPath, setOpenMenuPath] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const closeSubmenuOnNextRoute = useRef(false);
 
   const findActivePath = () => {
@@ -61,6 +62,8 @@ function SiteLayout() {
   }, [location.pathname, location.hash]);
 
   useEffect(() => {
+    setMobileMenuOpen(false);
+
     if (closeSubmenuOnNextRoute.current) {
       closeSubmenuOnNextRoute.current = false;
       setOpenMenuPath(null);
@@ -78,7 +81,20 @@ function SiteLayout() {
             <img src={koandaHeaderLogo} alt="Logo Koanda Group" />
           </NavLink>
 
-          <div className="nav-panel">
+          <button
+            type="button"
+            className={`mobile-nav-toggle ${mobileMenuOpen ? 'is-open' : ''}`}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="site-navigation-panel"
+            aria-label={mobileMenuOpen ? 'Fermer la navigation' : 'Ouvrir la navigation'}
+            onClick={() => setMobileMenuOpen((current) => !current)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+          <div className={`nav-panel ${mobileMenuOpen ? 'is-open' : ''}`} id="site-navigation-panel">
             <div className="social-links" aria-label="Réseaux sociaux">
               {socialLinks.map((item) => (
                 <a
@@ -108,6 +124,7 @@ function SiteLayout() {
                       className={isActive ? 'active-link' : ''}
                       onClick={(event) => {
                         if (!item.children) {
+                          setMobileMenuOpen(false);
                           return;
                         }
 
@@ -130,6 +147,7 @@ function SiteLayout() {
                             to={child.path}
                             onClick={() => {
                               closeSubmenuOnNextRoute.current = true;
+                              setMobileMenuOpen(false);
                               setOpenMenuPath(null);
                             }}
                           >
