@@ -4,10 +4,14 @@ import { subsidiaries } from '../data/siteContent';
 
 function SubsidiaryPage() {
   const { slug } = useParams();
-  const subsidiary = subsidiaries.find((item) => item.slug === slug);
+  const subsidiary = subsidiaries.find((item) => item.slug === slug || item.aliases?.includes(slug));
 
   if (!subsidiary) {
     return <Navigate to="/filiales" replace />;
+  }
+
+  if (slug !== subsidiary.slug) {
+    return <Navigate to={`/filiales/${subsidiary.slug}`} replace />;
   }
 
   return (
@@ -55,6 +59,33 @@ function SubsidiaryPage() {
           ))}
         </div>
       </section>
+
+      {subsidiary.markets?.length ? (
+        <section className="section section-soft">
+          <SectionHeading
+            tag="Détails par pays"
+            title="Une lecture séparée des implantations Eco Oil."
+            text="Les informations sont distinguées entre le Burkina Faso et la Côte d’Ivoire pour donner un aperçu plus clair des activités et des ambitions sur chaque marché."
+            split
+          />
+
+          <div className="card-grid">
+            {subsidiary.markets.map((market) => (
+              <article className="content-card" key={market.title}>
+                <p className="mini-text">{market.country}</p>
+                <h3>{market.title}</h3>
+                <p>{market.summary}</p>
+                <p>{market.description}</p>
+                <ul className="feature-list">
+                  {market.facts.map((fact) => (
+                    <li key={fact}>{fact}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {subsidiary.gallery?.length ? (
         <section className="section section-soft">

@@ -32,20 +32,7 @@ function SiteLayout() {
   const [openMenuPath, setOpenMenuPath] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const closeSubmenuOnNextRoute = useRef(false);
-
-  const findActivePath = () => {
-    const activeItem = navigation.find((item) =>
-      item.path === '/'
-        ? location.pathname === '/'
-        : location.pathname === item.path || location.pathname.startsWith(`${item.path}/`),
-    );
-
-    if (activeItem?.path === '/') {
-      return null;
-    }
-
-    return activeItem?.children ? activeItem.path : null;
-  };
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     if (location.hash) {
@@ -70,7 +57,7 @@ function SiteLayout() {
       return;
     }
 
-    setOpenMenuPath(findActivePath());
+    setOpenMenuPath(null);
   }, [location.pathname]);
 
   return (
@@ -132,7 +119,7 @@ function SiteLayout() {
                           event.preventDefault();
                           setOpenMenuPath((current) => (current === item.path ? null : item.path));
                         } else {
-                          setOpenMenuPath(item.path);
+                          setOpenMenuPath(null);
                         }
                       }}
                     >
@@ -214,6 +201,10 @@ function SiteLayout() {
               <li>{groupInfo.contactEmail}</li>
             </ul>
           </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>© {currentYear} GSF</p>
         </div>
       </footer>
     </div>

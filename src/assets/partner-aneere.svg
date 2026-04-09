@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 140" role="img" aria-labelledby="title desc">
+  <title id="title">ANEERE</title>
+  <desc id="desc">Logo textuel stylisé pour ANEERE.</desc>
+  <rect width="420" height="140" rx="28" fill="#ffffff"/>
+  <rect x="18" y="18" width="384" height="104" rx="22" fill="#f4fbf5" stroke="#d7ead9"/>
+  <circle cx="78" cy="70" r="28" fill="#5ea86a"/>
+  <path d="M62 84 78 44l16 40h-9l-3-9H74l-3 9h-9Zm14-17h8l-4-12-4 12Z" fill="#ffffff"/>
+  <text x="126" y="66" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#163325">ANEERE</text>
+  <text x="126" y="93" font-family="Arial, sans-serif" font-size="13" fill="#5f7568">Agence nationale des énergies renouvelables</text>
+</svg>

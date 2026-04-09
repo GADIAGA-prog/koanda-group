@@ -3,11 +3,11 @@ import SubsidiaryCard from '../components/SubsidiaryCard';
 import { subsidiaries } from '../data/siteContent';
 
 const hydrocarbonSubsidiaries = subsidiaries.filter((item) =>
-  ['amko-trading', 'eco-oil-burkina', 'eco-oil-cote-divoire'].includes(item.slug),
+  ['amko-trading', 'eco-oil'].includes(item.slug),
 );
 
 const industrySubsidiaries = subsidiaries.filter((item) =>
-  ['cim-metal', 'faso-energy', 'gcm-industries', 'tpb-sa'].includes(item.slug),
+  ['faso-energy', 'gcm-industries', 'tpb-sa'].includes(item.slug),
 );
 
 const logisticsSubsidiaries = subsidiaries.filter((item) =>

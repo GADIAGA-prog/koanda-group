@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import LegalPage from './pages/LegalPage';
 import PartnersPage from './pages/PartnersPage';
 import PresencePage from './pages/PresencePage';
+import PolicyPage from './pages/PolicyPage';
 import ProjectsPage from './pages/ProjectsPage';
 import SubsidiariesPage from './pages/SubsidiariesPage';
 import SubsidiaryPage from './pages/SubsidiaryPage';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/implantations" element={<PresencePage />} />
           <Route path="/partenaires" element={<PartnersPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/politique-generale" element={<PolicyPage />} />
           <Route path="/mentions-legales" element={<LegalPage />} />
         </Route>
       </Routes>

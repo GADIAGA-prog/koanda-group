@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SectionHeading from '../components/SectionHeading';
 import SubsidiaryCard from '../components/SubsidiaryCard';
-import { featuredProjects, groupInfo, homeCarousel, newsHighlights, stats, subsidiaries } from '../data/siteContent';
+import { featuredProjects, groupInfo, homeCarousel, newsHighlights, newsletterItems, stats, subsidiaries } from '../data/siteContent';
 
 function HomePage() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -17,7 +17,7 @@ function HomePage() {
 
   const currentSlide = homeCarousel[activeSlide];
   const highlightedSubsidiaries = subsidiaries.filter((item) =>
-    ['amko-trading', 'eco-oil-burkina', 'eco-oil-cote-divoire', 'cim-metal', 'faso-energy', 'belchicken'].includes(
+    ['amko-trading', 'eco-oil', 'gcm-industries', 'faso-energy', 'belchicken'].includes(
       item.slug,
     ),
   );
@@ -59,7 +59,6 @@ function HomePage() {
           <article className="carousel-card">
             <img src={currentSlide.image} alt={currentSlide.title} />
             <div className="carousel-copy">
-              <p className="mini-text">Défilement automatique</p>
               <h3>{currentSlide.title}</h3>
               <p>{currentSlide.text}</p>
             </div>
@@ -82,9 +81,8 @@ function HomePage() {
       <section className="section" id="mot-pdg">
         <div className="pdg-layout">
           <div className="pdg-copy">
-            <p className="mini-text">{groupInfo.pdgName}</p>
-            <p className="mini-text">{groupInfo.pdgRole}</p>
-            <h3>{groupInfo.pdgTitle}</h3>
+            <p className="mini-text">{groupInfo.pdgTitle}</p>
+            <h3>{groupInfo.pdgName}</h3>
             <p>{groupInfo.pdgMessage}</p>
           </div>
 
@@ -99,8 +97,6 @@ function HomePage() {
         <SectionHeading
           tag="Filiales"
           title="Un aperçu visuel des filiales du groupe."
-          text="La page d’accueil met en avant quelques entités clés avant la découverte détaillée de l’ensemble du portefeuille."
-          split
         />
 
         <div className="subsidiary-grid">
@@ -119,8 +115,8 @@ function HomePage() {
       <section className="section" id="actualites-groupe">
         <SectionHeading
           tag="Actualités"
-          title="Les temps forts du groupe mis en avant sur un format plus visuel."
-          text="Une sélection éditoriale légère pour faire ressortir les projets, les développements et les chantiers stratégiques du groupe."
+          title="Les temps forts du groupe, ses dons et ses bulletins d’information."
+          text="Cette rubrique met en avant les projets structurants, les actions solidaires du groupe et un accès direct aux bulletins d’information téléchargeables."
           split
         />
 
@@ -140,6 +136,32 @@ function HomePage() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="newsletter-panel">
+          <div className="newsletter-copy">
+            <p className="mini-text">Newsletter</p>
+            <h3>Bulletins d’information du groupe</h3>
+            <p>
+              Consultez et téléchargez les supports d’actualité du groupe pour suivre les activités, les annonces
+              institutionnelles et les faits marquants.
+            </p>
+          </div>
+
+          <div className="card-grid newsletter-grid">
+            {newsletterItems.map((item) => (
+              <article className="content-card" key={item.title}>
+                <p className="mini-text">Publication</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <div className="card-actions">
+                  <a className="button button-secondary" href={item.href} download>
+                    {item.fileLabel}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

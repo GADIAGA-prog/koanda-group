@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-labelledby="title desc">
+  <title id="title">GCM Industries</title>
+  <desc id="desc">Logo textuel stylisé pour GCM Industries.</desc>
+  <rect width="320" height="120" rx="24" fill="#ffffff"/>
+  <rect x="10" y="10" width="300" height="100" rx="18" fill="#f7fbf6" stroke="#dbe9dd"/>
+  <circle cx="58" cy="60" r="24" fill="#5ea86a"/>
+  <path d="M49 60c0-6 4-10 10-10 4 0 7 1 9 4l-5 4c-1-2-3-3-5-3-3 0-5 2-5 5s2 5 5 5c2 0 4-1 5-3l5 4c-2 3-5 4-9 4-6 0-10-4-10-10Z" fill="#fff"/>
+  <text x="94" y="62" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#163325">GCM</text>
+  <text x="96" y="86" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#5f7568">INDUSTRIES</text>
+</svg>

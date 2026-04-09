@@ -1,5 +1,6 @@
 import SectionHeading from '../components/SectionHeading';
 import { commitments, governanceItems, groupInfo, values } from '../data/siteContent';
+import donFasoMeebo from '../assets/don-faso-meebo.png';
 
 function GroupPage() {
   return (
@@ -8,15 +9,19 @@ function GroupPage() {
         <SectionHeading
           tag="Koanda Group"
           title="Une page dédiée à la gouvernance, à la vision et aux engagements du groupe."
-          text={groupInfo.whoWeAre}
-          split
         />
 
-        <div className="about-copy">
-          <p><strong>Qui sommes-nous ?</strong></p>
-          <p>{groupInfo.whoWeAre}</p>
-          <p><strong>Vision :</strong> {groupInfo.vision}</p>
-          <p><strong>Mission :</strong> {groupInfo.mission}</p>
+        <div className="about-layout">
+          <div className="about-copy">
+            <p><strong>Qui sommes-nous ?</strong></p>
+            <p>{groupInfo.whoWeAre}</p>
+            <p><strong>Vision :</strong> {groupInfo.vision}</p>
+            <p><strong>Mission :</strong> {groupInfo.mission}</p>
+          </div>
+
+          <article className="about-visual-card">
+            <img src={donFasoMeebo} alt="Action solidaire Don Faso Meebo avec des participants et bénéficiaires." />
+          </article>
         </div>
       </section>
 
@@ -72,6 +77,27 @@ function GroupPage() {
               <p>{item}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section" id="mot-du-pdg">
+        <SectionHeading
+          tag={groupInfo.pdgTitle}
+          title={groupInfo.pdgName}
+          text={groupInfo.pdgRole}
+          split
+        />
+
+        <div className="pdg-layout">
+          <div className="pdg-copy">
+            <h3>Mot du PDG</h3>
+            <p>{groupInfo.pdgMessage}</p>
+          </div>
+
+          <article className="pdg-visual-card">
+            <img src={groupInfo.pdgPortrait} alt={groupInfo.pdgVisualCaption} />
+            <p className="mini-text">{groupInfo.pdgRole}</p>
+          </article>
         </div>
       </section>
     </main>

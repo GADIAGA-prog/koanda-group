@@ -1,6 +1,26 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function SubsidiaryCard({ subsidiary }) {
+  const gallery = subsidiary.gallery?.length ? subsidiary.gallery : [subsidiary.image];
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveImageIndex(0);
+  }, [subsidiary.slug]);
+
+  useEffect(() => {
+    if (gallery.length <= 1) {
+      return undefined;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setActiveImageIndex((current) => (current + 1) % gallery.length);
+    }, 2600);
+
+    return () => window.clearInterval(intervalId);
+  }, [gallery]);
+
   return (
     <article className="subsidiary-card">
       <div className="subsidiary-card-watermark" aria-hidden="true">
@@ -12,7 +32,7 @@ function SubsidiaryCard({ subsidiary }) {
       </div>
 
       <div className="subsidiary-card-media">
-        <img src={subsidiary.image} alt={`Illustration ${subsidiary.name}`} />
+        <img src={gallery[activeImageIndex]} alt={`Illustration ${subsidiary.name}`} />
       </div>
 
       <div className="subsidiary-card-head">

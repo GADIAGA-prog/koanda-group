@@ -4,22 +4,33 @@ import koandaIndustries from '../assets/koanda-plaquette-industries.png';
 import koandaProjects from '../assets/koanda-plaquette-projects.png';
 import koandaContact from '../assets/koanda-plaquette-contact.png';
 import koandaPdgPortrait from '../assets/koanda-pdg-portrait.png';
+import donFasoMeebo from '../assets/don-faso-meebo.png';
 import amkoBanner from '../assets/amko-trading-image.png';
 import amkoLogo from '../assets/amko-trading-logo.png';
 import belchickenLogo from '../assets/belchicken-logo.jpg';
 import belchickenMenu from '../assets/belchicken-menu.png';
 import cimentLogo from '../assets/ciment-logo.svg';
 import constructionLogo from '../assets/construction-logo.svg';
-import ecoOilLogo from '../assets/eco-oil-logo.png';
-import ecoOilStation from '../assets/eco-oil-station.png';
+import ecoOilLogo from '../assets/eco-oil-logo-main.png';
+import ecoOilPylon from '../assets/eco-oil-1.png';
+import ecoOilStation from '../assets/eco-oil-2.png';
 import fasoEnergyLogo from '../assets/faso-energy-logo-raster.png';
 import fasoEnergyPanels from '../assets/faso-energy-panels.png';
 import fasoEnergyFactory from '../assets/faso-energy-factory.png';
+import satiLogo from '../assets/sati-logo.png';
 import gcmIndustries1 from '../assets/gcm-industries-1.png';
 import gcmIndustries2 from '../assets/gcm-industries-2.png';
 import gcmIndustries3 from '../assets/gcm-industries-3.png';
 import gcmIndustries4 from '../assets/gcm-industries-4.png';
 import gcmIndustries5 from '../assets/gcm-industries-5.png';
+import gcmIndustriesLogo from '../assets/gcm-industries-logo.png';
+import cimEtoile from '../assets/cim-etoile.png';
+import gcmDirecteur from '../assets/gcm-directeur.png';
+import gcmDon from '../assets/gcm-don.png';
+import gcmEquipe from '../assets/gcm-equipe.png';
+import gcmRapide from '../assets/gcm-rapide.png';
+import gcmSolidarite from '../assets/gcm-solidarite.png';
+import gcmUsine from '../assets/gcm-usine.png';
 import partnerEcobank from '../assets/partner-ecobank.png';
 import partnerCba from '../assets/partner-cba.png';
 import partnerCorisBank from '../assets/partner-coris-bank.png';
@@ -27,6 +38,11 @@ import partnerCorisAssurances from '../assets/partner-coris-assurances.png';
 import partnerCorisBourse from '../assets/partner-coris-bourse.png';
 import partnerMoovAfrica from '../assets/partner-moov-africa.png';
 import partnerWbi from '../assets/partner-wbi.png';
+import partnerAneere from '../assets/partner-aneere.svg';
+import partnerMinistereTransition from '../assets/partner-ministere-transition.svg';
+import partner2ie from '../assets/partner-2ie.svg';
+import partnerMondragonAssembly from '../assets/partner-mondragon-assembly.svg';
+import partnerYingliSolar from '../assets/partner-yingli-solar.svg';
 
 export const groupInfo = {
   name: 'Koanda Group',
@@ -43,11 +59,11 @@ export const groupInfo = {
   mission:
     'Développer des solutions performantes dans des secteurs stratégiques afin de soutenir la croissance, l’emploi, l’industrialisation et la modernisation des économies africaines.',
   pdgTitle: 'Mot du PDG',
-  pdgName: 'Moussa Koanda',
-  pdgRole: 'Président du Groupe',
+  pdgName: 'El Adj Moussa KOANDA',
+  pdgRole: 'PDG du groupe',
   pdgMessage:
     'Koanda Group est né d’une conviction forte : l’Afrique a besoin d’acteurs engagés, capables d’investir durablement dans des secteurs structurants et de transformer les opportunités en réalisations concrètes. À travers nos filiales, nos projets industriels, énergétiques, logistiques, immobiliers et hôteliers, nous bâtissons un groupe tourné vers la performance, l’emploi et l’impact local. Notre ambition est de faire de Koanda Group une référence de confiance, portée par l’exigence, l’innovation et des partenariats solides au service du développement économique du continent.',
-  pdgVisualCaption: 'Portrait de Moussa Koanda, Président du Groupe.',
+  pdgVisualCaption: 'Portrait de El adj Moussa KOANDA, PDG du groupe.',
   coverImage: koandaCover,
   overviewImage: koandaOverview,
   industriesImage: koandaIndustries,
@@ -55,6 +71,7 @@ export const groupInfo = {
   contactImage: koandaContact,
   pdgPortrait: koandaPdgPortrait,
   plaquetteUrl: '/documents/plaquette-koanda-group-2025.pdf',
+  newsletterUrl: '/documents/bulletin-information-koanda-group.docx',
   contactEmail: 'contact@adholding.com',
   phone: '+226 70 20 97 18',
   address: '01 BP 4928 Ouagadougou 01, Zone industrielle de Kossodo, Ouagadougou, Burkina Faso',
@@ -174,34 +191,54 @@ export const subsidiaries = [
     gallery: [amkoBanner],
   },
   {
-    slug: 'eco-oil-burkina',
-    name: 'Eco Oil Burkina',
-    country: 'Burkina Faso',
+    slug: 'eco-oil',
+    aliases: ['eco-oil-burkina', 'eco-oil-cote-divoire'],
+    name: 'Eco Oil',
+    country: 'Burkina Faso et Côte d’Ivoire',
     sector: 'Distribution de produits pétroliers',
-    image: ecoOilStation,
+    image: ecoOilPylon,
     logo: ecoOilLogo,
     watermarkLabel: 'Eco Oil',
     summary:
-      'Entreprise agréée pour la distribution de produits pétroliers au Burkina Faso, avec un réseau déjà déployé et un programme d’expansion.',
+      'Eco Oil déploie ses activités de distribution de produits pétroliers au Burkina Faso et en Côte d’Ivoire, avec un réseau de stations-service déjà engagé et une logique d’expansion régionale.',
     description:
-      'Eco Oil Burkina est présentée comme une entreprise agréée pour la distribution de produits pétroliers au Burkina Faso. Le réseau comprend déjà plusieurs stations-service et un important programme d’expansion en cours.',
-    facts: ['32 stations-service réalisées', 'Extension prévue vers 60 stations-service', 'Distribution pétrolière au Burkina Faso'],
-    gallery: [ecoOilStation],
-  },
-  {
-    slug: 'eco-oil-cote-divoire',
-    name: 'Eco Oil Côte d’Ivoire',
-    country: 'Côte d’Ivoire',
-    sector: 'Distribution de produits pétroliers',
-    image: ecoOilStation,
-    logo: ecoOilLogo,
-    watermarkLabel: 'Eco Oil',
-    summary:
-      'Société spécialisée dans la distribution de produits pétroliers en Côte d’Ivoire, avec un projet de croissance du réseau de stations-service.',
-    description:
-      'La filiale ivoirienne est positionnée sur la distribution de produits pétroliers en Côte d’Ivoire, avec un projet d’extension de son réseau de stations-service tel qu’annoncé dans la plaquette.',
-    facts: ['10 stations-service complétées', 'Extension annoncée vers 25 stations-service', 'Marché : Côte d’Ivoire'],
-    gallery: [ecoOilStation],
+      'Eco Oil regroupe les activités de distribution pétrolière du groupe sur deux marchés prioritaires : le Burkina Faso et la Côte d’Ivoire. La filiale porte une stratégie de croissance du réseau de stations-service et de renforcement de la présence commerciale en Afrique de l’Ouest.',
+    facts: [
+      'Présence opérationnelle au Burkina Faso et en Côte d’Ivoire',
+      'Déploiement de stations-service sur deux marchés régionaux',
+      'Distribution pétrolière et expansion du réseau',
+    ],
+    markets: [
+      {
+        title: 'Eco Oil Burkina',
+        country: 'Burkina Faso',
+        summary:
+          'Entreprise agréée pour la distribution de produits pétroliers au Burkina Faso, avec un réseau déjà déployé et un programme d’expansion.',
+        description:
+          'Eco Oil Burkina est présentée comme une entreprise agréée pour la distribution de produits pétroliers au Burkina Faso. Le réseau comprend déjà plusieurs stations-service et un important programme d’expansion en cours.',
+        facts: [
+          '32 stations-service réalisées',
+          'Extension prévue vers 60 stations-service',
+          'Distribution pétrolière au Burkina Faso',
+        ],
+        image: ecoOilPylon,
+      },
+      {
+        title: 'Eco Oil Côte d’Ivoire',
+        country: 'Côte d’Ivoire',
+        summary:
+          'Société spécialisée dans la distribution de produits pétroliers en Côte d’Ivoire, avec un projet de croissance du réseau de stations-service.',
+        description:
+          'La filiale ivoirienne est positionnée sur la distribution de produits pétroliers en Côte d’Ivoire, avec un projet d’extension de son réseau de stations-service tel qu’annoncé dans la plaquette.',
+        facts: [
+          '10 stations-service complétées',
+          'Extension annoncée vers 25 stations-service',
+          'Marché : Côte d’Ivoire',
+        ],
+        image: ecoOilStation,
+      },
+    ],
+    gallery: [ecoOilPylon, ecoOilStation],
   },
   {
     slug: 'cim-metal',
@@ -237,14 +274,28 @@ export const subsidiaries = [
     name: 'GCM Industries',
     country: 'Burkina Faso',
     sector: 'Cimenterie',
-    image: gcmIndustries4,
+    image: gcmUsine,
+    logo: gcmIndustriesLogo,
     watermarkLabel: 'GCM Industries',
     summary:
       'Acteur industriel de la cimenterie à Ouagadougou, avec une capacité importante de production et une ambition de montée en puissance.',
     description:
       'GCM Industries est présentée comme un acteur industriel de la cimenterie à Ouagadougou, avec des équipements modernes et une capacité de production élevée destinée à soutenir la demande locale et régionale.',
     facts: ['Capacité : 700 000 tonnes par an', 'Site industriel : 10 hectares à Ouagadougou', 'Ambition de montée en puissance'],
-    gallery: [gcmIndustries4, gcmIndustries5, gcmIndustries1, gcmIndustries2, gcmIndustries3],
+    gallery: [
+      gcmUsine,
+      gcmIndustries4,
+      gcmIndustries5,
+      gcmIndustries1,
+      gcmIndustries2,
+      gcmIndustries3,
+      cimEtoile,
+      gcmRapide,
+      gcmDirecteur,
+      gcmEquipe,
+      gcmDon,
+      gcmSolidarite,
+    ],
   },
   {
     slug: 'tpb-sa',
@@ -266,6 +317,7 @@ export const subsidiaries = [
     country: 'Burkina Faso et international',
     sector: 'Transport international',
     image: koandaProjects,
+    logo: satiLogo,
     watermarkLabel: 'SATI',
     summary:
       'Société Africaine de Transport International spécialisée dans le transport d’hydrocarbures, d’agrégats et de biens de consommation.',
@@ -339,6 +391,12 @@ export const featuredProjects = [
 
 export const newsHighlights = [
   {
+    title: 'Koanda Group engagé sur le volet social avec Don Faso Meebo',
+    text: 'Le groupe met aussi en avant ses actions solidaires à travers des initiatives de dons, de mobilisation terrain et d’accompagnement social.',
+    image: donFasoMeebo,
+    to: '/koanda-group#engagements',
+  },
+  {
     title: 'Transition énergétique : un projet solaire de 30 MW mis en avant',
     text: 'Faso Energy porte un projet structurant de centrale solaire destiné à accompagner durablement la capacité énergétique locale.',
     image: koandaIndustries,
@@ -355,6 +413,15 @@ export const newsHighlights = [
     text: 'La plaquette met en avant plusieurs projets hôteliers pensés pour répondre aux besoins des voyageurs d’affaires, des familles et du tourisme.',
     image: koandaProjects,
     to: '/projets-et-realisations#projets-en-cours',
+  },
+];
+
+export const newsletterItems = [
+  {
+    title: 'Bulletin d’information du groupe',
+    text: 'Retrouvez les informations institutionnelles, les temps forts du groupe, les projets suivis et les principales actualités dans un support téléchargeable.',
+    href: groupInfo.newsletterUrl,
+    fileLabel: 'Télécharger le bulletin',
   },
 ];
 
@@ -516,6 +583,15 @@ export const partners = [
   { title: 'Coris Bourse', category: 'Partenaires financiers', image: partnerCorisBourse },
   { title: 'Moov Africa', category: 'Partenaires stratégiques', image: partnerMoovAfrica },
   { title: 'WBI', category: 'Partenaires institutionnels', image: partnerWbi },
+  { title: 'ANEERE', category: 'Partenaires institutionnels', image: partnerAneere },
+  {
+    title: 'Ministère de la Transition énergétique, des Mines et des Carrières',
+    category: 'Partenaires institutionnels',
+    image: partnerMinistereTransition,
+  },
+  { title: '2IE', category: 'Partenaires techniques', image: partner2ie },
+  { title: 'Mondragon Assembly', category: 'Partenaires techniques', image: partnerMondragonAssembly },
+  { title: 'Yingli Solar', category: 'Partenaires stratégiques', image: partnerYingliSolar },
 ];
 
 export const contactItems = [
@@ -541,5 +617,6 @@ export const mediaKit = [
 
 export const footerLinks = [
   { label: 'Mentions légales', path: '/mentions-legales' },
+  { label: 'Politique générale du groupe', path: '/politique-generale' },
   { label: 'Plaquette groupe', path: groupInfo.plaquetteUrl },
 ];
