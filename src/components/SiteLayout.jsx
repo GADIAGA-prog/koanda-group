@@ -156,15 +156,6 @@ function SiteLayout() {
       <footer className="site-footer">
         <div className="footer-main">
           <div>
-            <p className="section-tag">Koanda Group</p>
-            <h3>Un groupe engagé dans des secteurs structurants.</h3>
-            <p>
-              Le site reprend la présentation institutionnelle du groupe, ses filiales, ses projets, ses implantations
-              et ses partenaires à partir de la plaquette.
-            </p>
-          </div>
-
-          <div>
             <p className="section-tag">Navigation</p>
             <ul className="footer-list">
               {navigation.map((item) => (

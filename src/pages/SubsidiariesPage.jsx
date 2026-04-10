@@ -21,7 +21,6 @@ function SubsidiariesPage() {
         <SectionHeading
           tag="Filiales"
           title="Une présentation centrale des entreprises du portefeuille."
-          text="Chaque carte de filiale reprend un pays, un secteur, un résumé de 2 à 4 lignes et un bouton En savoir plus."
           split
         />
       </section>
@@ -30,7 +29,6 @@ function SubsidiariesPage() {
         <SectionHeading
           tag="Hydrocarbures"
           title="Trading et distribution pétrolière."
-          text="Un premier ensemble de filiales orientées vers le négoce et la distribution de produits pétroliers."
           split
         />
 

@@ -1,13 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 140" role="img" aria-labelledby="title desc">
   <title id="title">Ministère de la Transition énergétique, des Mines et des Carrières</title>
-  <desc id="desc">Logo textuel institutionnel simplifié.</desc>
+  <desc id="desc">Logo textuel institutionnel simplifié sans drapeau.</desc>
   <rect width="420" height="140" rx="28" fill="#ffffff"/>
   <rect x="18" y="18" width="384" height="104" rx="22" fill="#fbfdf7" stroke="#e7eddc"/>
-  <rect x="42" y="36" width="12" height="68" rx="6" fill="#c83d2b"/>
-  <rect x="54" y="36" width="12" height="68" fill="#f0d04f"/>
-  <rect x="66" y="36" width="12" height="68" rx="6" fill="#4b9b27"/>
-  <text x="100" y="56" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#5ea86a">BURKINA FASO</text>
-  <text x="100" y="78" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#163325">Ministère de la Transition</text>
-  <text x="100" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#163325">énergétique, des Mines</text>
-  <text x="100" y="122" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#163325">et des Carrières</text>
+  <text x="42" y="56" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#5ea86a">BURKINA FASO</text>
+  <text x="42" y="78" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#163325">Ministère de la Transition</text>
+  <text x="42" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#163325">énergétique, des Mines</text>
+  <text x="42" y="122" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#163325">et des Carrières</text>
 </svg>

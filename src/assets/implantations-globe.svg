@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Implantations internationales de Koanda Group</title>
+  <desc id="desc">Globe stylisé mettant en évidence le Burkina Faso, la Côte d’Ivoire, le Ghana, la Suisse et Dubaï.</desc>
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9fdf9"/>
+      <stop offset="100%" stop-color="#eaf5ec"/>
+    </linearGradient>
+    <radialGradient id="globeOcean" cx="42%" cy="32%" r="74%">
+      <stop offset="0%" stop-color="#f8fdf9"/>
+      <stop offset="55%" stop-color="#deefe2"/>
+      <stop offset="100%" stop-color="#bddfc6"/>
+    </radialGradient>
+    <linearGradient id="landFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9fd8a8"/>
+      <stop offset="100%" stop-color="#73be83"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#4c7b57" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="960" height="620" rx="34" fill="url(#cardBg)"/>
+  <g filter="url(#shadow)">
+    <circle cx="410" cy="290" r="170" fill="url(#globeOcean)"/>
+  </g>
+  <circle cx="410" cy="290" r="170" fill="none" stroke="rgba(94,168,106,0.28)" stroke-width="3"/>
+  <ellipse cx="410" cy="290" rx="170" ry="58" fill="none" stroke="rgba(94,168,106,0.16)" stroke-width="2"/>
+  <ellipse cx="410" cy="290" rx="170" ry="108" fill="none" stroke="rgba(94,168,106,0.16)" stroke-width="2"/>
+  <path d="M240 290H580" fill="none" stroke="rgba(94,168,106,0.16)" stroke-width="2"/>
+  <path d="M410 120C370 160 350 220 350 290C350 360 370 420 410 460" fill="none" stroke="rgba(94,168,106,0.16)" stroke-width="2"/>
+  <path d="M410 120C450 160 470 220 470 290C470 360 450 420 410 460" fill="none" stroke="rgba(94,168,106,0.16)" stroke-width="2"/>
+  <path d="M334 212C359 190 391 191 417 205C432 213 442 226 457 230C475 236 497 230 515 239C533 248 545 265 543 286C540 313 513 326 489 332C464 338 443 357 420 364C397 371 375 367 357 354C334 338 319 315 316 291C313 267 315 231 334 212Z" fill="url(#landFill)" opacity="0.9"/>
+  <path d="M348 301C362 291 383 292 396 304C408 315 411 334 403 348C394 364 376 374 359 372C343 371 329 359 327 343C324 325 334 309 348 301Z" fill="url(#landFill)" opacity="0.9"/>
+  <path d="M434 164C455 149 483 149 505 161C527 173 541 195 537 220C533 244 511 257 488 258C462 260 438 248 425 227C413 208 413 179 434 164Z" fill="url(#landFill)" opacity="0.84"/>
+  <path d="M506 251C518 243 534 243 546 250C559 258 566 272 564 286C561 300 548 310 533 311C520 312 507 305 501 293C495 281 495 260 506 251Z" fill="url(#landFill)" opacity="0.84"/>
+  <text x="300" y="78" fill="#163325" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700">Cartographie des implantations</text>
+  <text x="210" y="534" fill="#5f7568" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700">Afrique de l’Ouest, Suisse et représentation à Dubaï</text>
+  <g fill="none" stroke="rgba(94,168,106,0.44)" stroke-width="4" stroke-dasharray="9 10">
+    <path d="M415 285L706 160"/>
+    <path d="M396 298L175 378"/>
+    <path d="M406 304L696 310"/>
+    <path d="M451 262L768 260"/>
+  </g>
+  <g>
+    <circle cx="415" cy="285" r="18" fill="rgba(94,168,106,0.24)"/>
+    <circle cx="415" cy="285" r="8" fill="#1c4a35"/>
+    <text x="450" y="280" fill="#163325" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="800">Burkina Faso</text>
+    <text x="450" y="314" fill="#5f7568" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">Base principale du groupe</text>
+  </g>
+  <g>
+    <circle cx="362" cy="324" r="14" fill="rgba(94,168,106,0.24)"/>
+    <circle cx="362" cy="324" r="7" fill="#1c4a35"/>
+    <text x="26" y="386" fill="#163325" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="800">Côte d’Ivoire</text>
+    <text x="26" y="416" fill="#5f7568" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">Distribution pétrolière</text>
+  </g>
+  <g>
+    <circle cx="390" cy="337" r="14" fill="rgba(94,168,106,0.24)"/>
+    <circle cx="390" cy="337" r="7" fill="#1c4a35"/>
+    <text x="707" y="316" fill="#163325" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="800">Ghana</text>
+    <text x="707" y="346" fill="#5f7568" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">Port de Tema et projets</text>
+  </g>
+  <g>
+    <circle cx="490" cy="196" r="14" fill="rgba(94,168,106,0.24)"/>
+    <circle cx="490" cy="196" r="7" fill="#1c4a35"/>
+    <text x="712" y="168" fill="#163325" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="800">Suisse</text>
+    <text x="712" y="198" fill="#5f7568" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">Siège AMKO à Genève</text>
+  </g>
+  <g>
+    <circle cx="539" cy="248" r="14" fill="rgba(94,168,106,0.24)"/>
+    <circle cx="539" cy="248" r="7" fill="#1c4a35"/>
+    <text x="778" y="254" fill="#163325" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="800">Dubaï</text>
+    <text x="778" y="284" fill="#5f7568" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">Représentation AMKO</text>
+  </g>
+</svg>

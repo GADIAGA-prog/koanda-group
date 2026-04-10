@@ -32,7 +32,24 @@ function SubsidiaryCard({ subsidiary }) {
       </div>
 
       <div className="subsidiary-card-media">
-        <img src={gallery[activeImageIndex]} alt={`Illustration ${subsidiary.name}`} />
+        {gallery.map((image, index) => (
+          <img
+            key={`${subsidiary.slug}-${index}`}
+            className={index === activeImageIndex ? 'is-active' : ''}
+            src={image}
+            alt={`Illustration ${subsidiary.name}`}
+          />
+        ))}
+        {gallery.length > 1 ? (
+          <div className="subsidiary-card-dots" aria-hidden="true">
+            {gallery.map((_, index) => (
+              <span
+                key={`${subsidiary.slug}-dot-${index}`}
+                className={index === activeImageIndex ? 'is-active' : ''}
+              />
+            ))}
+          </div>
+        ) : null}
       </div>
 
       <div className="subsidiary-card-head">

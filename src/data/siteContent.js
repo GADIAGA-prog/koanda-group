@@ -35,9 +35,9 @@ import partnerEcobank from '../assets/partner-ecobank.png';
 import partnerCba from '../assets/partner-cba.png';
 import partnerCorisBank from '../assets/partner-coris-bank.png';
 import partnerCorisAssurances from '../assets/partner-coris-assurances.png';
-import partnerCorisBourse from '../assets/partner-coris-bourse.png';
+import partnerCorisBourse from '../assets/partner-coris-bourse.svg';
 import partnerMoovAfrica from '../assets/partner-moov-africa.png';
-import partnerWbi from '../assets/partner-wbi.png';
+import partnerWbi from '../assets/partner-wbi.svg';
 import partnerAneere from '../assets/partner-aneere.svg';
 import partnerMinistereTransition from '../assets/partner-ministere-transition.svg';
 import partner2ie from '../assets/partner-2ie.svg';
@@ -571,6 +571,16 @@ export const presenceItems = [
       'Base de AMKO Trading SA à Genève',
       'Pilotage des activités internationales',
       'Appui au positionnement du groupe hors Afrique de l’Ouest',
+    ],
+  },
+  {
+    title: 'Dubaï',
+    subtitle: 'Point de représentation AMKO',
+    text: 'Dubaï complète le dispositif international de AMKO Trading avec une représentation qui renforce les connexions commerciales, la veille marché et la projection régionale du groupe.',
+    highlights: [
+      'Représentation internationale de AMKO',
+      'Relais commercial et stratégique',
+      'Ouverture sur les flux énergétiques internationaux',
     ],
   },
 ];

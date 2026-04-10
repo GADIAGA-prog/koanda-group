@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 140" role="img" aria-labelledby="title desc">
+  <title id="title">WBI</title>
+  <desc id="desc">Version simplifiée du logo WBI pour le défilement partenaires.</desc>
+  <rect width="420" height="140" rx="28" fill="#ffffff"/>
+  <rect x="18" y="18" width="384" height="104" rx="22" fill="#fbfdff" stroke="#dfe8ef"/>
+  <rect x="48" y="34" width="128" height="72" rx="10" fill="#1b5fb9"/>
+  <path d="M60 90V50h12l13 22 13-22h12v40h-9V63L99 82H95L81 63v27Z" fill="#f0cc49"/>
+  <text x="187" y="77" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#1b5fb9">WBI</text>
+  <text x="188" y="103" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#1b5fb9">Wendkuni Bank International</text>
+</svg>

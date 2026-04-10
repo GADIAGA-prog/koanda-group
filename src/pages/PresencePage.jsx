@@ -1,50 +1,67 @@
 import SectionHeading from '../components/SectionHeading';
 import { presenceItems } from '../data/siteContent';
 
-const mapPoints = [
-  { name: 'Burkina Faso', x: 255, y: 220, labelX: 280, labelY: 212 },
-  { name: 'Côte d’Ivoire', x: 208, y: 278, labelX: 26, labelY: 274 },
-  { name: 'Ghana', x: 278, y: 286, labelX: 305, labelY: 308 },
-  { name: 'Suisse', x: 548, y: 118, labelX: 575, labelY: 110 },
-];
-
 function PresenceMap() {
   return (
     <div className="presence-map-card">
-      <svg viewBox="0 0 760 460" className="presence-map" aria-label="Carte des implantations de Koanda Group">
-        <defs>
-          <linearGradient id="koandaMapBg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#f8fcf8" />
-            <stop offset="100%" stopColor="#edf8ef" />
-          </linearGradient>
-        </defs>
+      <svg
+        className="presence-map"
+        viewBox="0 0 900 620"
+        role="img"
+        aria-labelledby="presence-map-title presence-map-desc"
+      >
+        <title id="presence-map-title">Cartographie des implantations de Koanda Group</title>
+        <desc id="presence-map-desc">
+          Carte stylisée mettant en évidence la Suisse, Dubaï, le Burkina Faso, la Côte d’Ivoire, le Ghana, le Mali et le Niger.
+        </desc>
 
-        <rect x="0" y="0" width="760" height="460" rx="28" fill="url(#koandaMapBg)" />
+        <rect width="900" height="620" rx="28" fill="#f8fbf8" />
+
         <path
-          d="M120 120C150 98 186 88 226 92C256 95 277 86 304 92C334 98 358 116 386 122C418 128 446 118 482 132C514 144 542 168 558 196C574 224 570 255 548 276C527 296 504 313 475 322C438 334 402 340 372 328C346 318 327 296 300 287C268 276 231 288 196 282C160 275 129 253 110 222C92 193 90 145 120 120Z"
-          fill="#dff1e1"
+          className="presence-world-mass"
+          d="M46 114c52-34 112-52 178-48 36 2 78 2 126 0 68-2 136 10 196 34 74 30 128 72 166 126 52 72 70 158 50 238-12 42-34 76-62 98H46Z"
         />
         <path
-          d="M515 74C533 60 557 57 578 62C601 67 621 82 630 101C638 119 634 138 620 152C606 165 584 170 563 167C541 164 522 151 511 133C500 116 500 89 515 74Z"
-          fill="#dff1e1"
+          className="presence-world-mass"
+          d="M566 60c52-18 116-12 180 10 54 18 96 46 126 82 24 28 38 58 42 96H658c-16-40-42-76-92-116Z"
         />
 
-        <text x="150" y="78" className="presence-map-region">Afrique de l’Ouest</text>
-        <text x="522" y="42" className="presence-map-region">Europe</text>
+        <path className="presence-coastline" d="M114 168c38-34 92-54 160-58" />
+        <path className="presence-coastline" d="M236 104c108-18 230 2 326 52" />
+        <path className="presence-coastline" d="M516 168c44 20 82 50 108 80" />
+        <path className="presence-coastline" d="M694 116c56 18 100 52 132 100" />
+        <path className="presence-coastline" d="M662 210c46 0 106 8 170 38" />
+        <path className="presence-coastline" d="M178 470c124 8 254 0 372-38" />
 
-        <path d="M255 220L548 118" className="presence-map-link" />
-        <path d="M208 278L255 220" className="presence-map-link" />
-        <path d="M278 286L255 220" className="presence-map-link" />
+        <path className="presence-country-highlight" d="M154 392l58 0 20 50-38 24-44-10-18-30z" />
+        <path className="presence-country-highlight" d="M212 384l62-10 18 54-30 38-50-4-10-24z" />
+        <path className="presence-country-highlight" d="M264 332l76-4 10 64-24 66-70 0-24-34z" />
+        <path className="presence-country-highlight" d="M338 262l160-8 28 70-18 130-152 6-18-70 6-80z" />
+        <path className="presence-country-highlight" d="M146 266l192-4-10 58-88 12-92 0-34-26z" />
+        <path className="presence-country-highlight" d="M430 152l24-14 20 16-10 24-24 4-16-12z" />
+        <path className="presence-country-highlight" d="M758 244l28-10 18 10-2 26-26 8-22-8z" />
 
-        {mapPoints.map((point) => (
-          <g key={point.name}>
-            <circle cx={point.x} cy={point.y} r="15" className="presence-map-pulse" />
-            <circle cx={point.x} cy={point.y} r="7" className="presence-map-point" />
-            <text x={point.labelX} y={point.labelY} className="presence-map-label">
-              {point.name}
-            </text>
-          </g>
-        ))}
+        <circle className="presence-map-pulse" cx="230" cy="428" r="18" />
+        <circle className="presence-map-pulse" cx="284" cy="416" r="18" />
+        <circle className="presence-map-pulse" cx="304" cy="372" r="18" />
+        <circle className="presence-map-pulse" cx="416" cy="332" r="18" />
+        <circle className="presence-map-pulse" cx="466" cy="160" r="18" />
+        <circle className="presence-map-pulse" cx="782" cy="256" r="18" />
+
+        <circle className="presence-map-point" cx="230" cy="428" r="7" />
+        <circle className="presence-map-point" cx="284" cy="416" r="7" />
+        <circle className="presence-map-point" cx="304" cy="372" r="7" />
+        <circle className="presence-map-point" cx="416" cy="332" r="7" />
+        <circle className="presence-map-point" cx="466" cy="160" r="7" />
+        <circle className="presence-map-point" cx="782" cy="256" r="7" />
+
+        <text className="presence-map-label" x="202" y="474">Côte d’Ivoire</text>
+        <text className="presence-map-label" x="238" y="500">Ghana</text>
+        <text className="presence-map-label" x="248" y="404">Burkina Faso</text>
+        <text className="presence-map-label" x="344" y="344">Niger</text>
+        <text className="presence-map-label" x="146" y="340">Mali</text>
+        <text className="presence-map-label" x="420" y="130">Suisse</text>
+        <text className="presence-map-label" x="792" y="274">Dubaï</text>
       </svg>
     </div>
   );
@@ -57,7 +74,7 @@ function PresencePage() {
         <SectionHeading
           tag="Implantations"
           title="Une présence stratégique en Afrique de l’Ouest et à l’international"
-          text="Koanda Group développe ses activités et ses projets dans plusieurs pays stratégiques, notamment le Burkina Faso, la Côte d’Ivoire, le Ghana, la Suisse, ainsi que d’autres marchés d’Afrique de l’Ouest. Cette présence reflète la volonté du groupe de bâtir un réseau régional solide au service de secteurs essentiels."
+          text="Koanda Group déploie ses activités entre l’Afrique de l’Ouest, la Suisse et une représentation à Dubaï, avec des points d’ancrage qui structurent le développement du groupe."
           split
         />
 
