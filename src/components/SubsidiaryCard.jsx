@@ -2,7 +2,12 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function SubsidiaryCard({ subsidiary }) {
-  const gallery = subsidiary.gallery?.length ? subsidiary.gallery : [subsidiary.image];
+  const gallerySource = subsidiary.cardGallery?.length
+    ? subsidiary.cardGallery
+    : subsidiary.gallery?.length
+      ? subsidiary.gallery
+      : [subsidiary.image];
+  const gallery = gallerySource.map((item) => (typeof item === 'string' ? { src: item } : item));
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   useEffect(() => {
@@ -36,8 +41,13 @@ function SubsidiaryCard({ subsidiary }) {
           <img
             key={`${subsidiary.slug}-${index}`}
             className={index === activeImageIndex ? 'is-active' : ''}
-            src={image}
-            alt={`Illustration ${subsidiary.name}`}
+            src={image.src}
+            alt={image.alt ?? `Illustration ${subsidiary.name}`}
+            style={{
+              objectFit: image.fit ?? 'cover',
+              objectPosition: image.position ?? 'center center',
+              background: image.background ?? '#f6fbf6',
+            }}
           />
         ))}
         {gallery.length > 1 ? (

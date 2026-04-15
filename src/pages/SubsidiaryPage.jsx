@@ -14,6 +14,9 @@ function SubsidiaryPage() {
     return <Navigate to={`/filiales/${subsidiary.slug}`} replace />;
   }
 
+  const heroImage = typeof subsidiary.image === 'string' ? { src: subsidiary.image } : subsidiary.image;
+  const gallery = subsidiary.gallery?.map((item) => (typeof item === 'string' ? { src: item } : item)) ?? [];
+
   return (
     <main className="page">
       <section className="section subsidiary-hero-section">
@@ -38,7 +41,15 @@ function SubsidiaryPage() {
           </div>
 
           <div className="subsidiary-detail-media">
-            <img src={subsidiary.image} alt={`Visuel ${subsidiary.name}`} />
+            <img
+              src={heroImage.src}
+              alt={heroImage.alt ?? `Visuel ${subsidiary.name}`}
+              style={{
+                objectFit: heroImage.fit ?? 'cover',
+                objectPosition: heroImage.position ?? 'center center',
+                background: heroImage.background ?? '#f6fbf6',
+              }}
+            />
           </div>
         </div>
       </section>
@@ -59,6 +70,42 @@ function SubsidiaryPage() {
           ))}
         </div>
       </section>
+
+      {subsidiary.focusCards?.length ? (
+        <section className="section section-soft">
+          <SectionHeading
+            tag="Développement"
+            title="Activités, implantations, résultats et ambition."
+            text="Une lecture plus claire de la filiale, avec ses métiers, ses points d’ancrage et sa trajectoire d’expansion."
+            split
+          />
+
+          <div className="subsidiary-focus-grid">
+            {subsidiary.focusCards.map((item) => (
+              <article className="content-card subsidiary-focus-card" key={item.title}>
+                {item.image ? (
+                  <div className="subsidiary-focus-media">
+                    <img
+                      src={item.image.src}
+                      alt={item.image.alt ?? item.title}
+                      style={{
+                        objectFit: item.image.fit ?? 'cover',
+                        objectPosition: item.image.position ?? 'center center',
+                        background: item.image.background ?? '#f6fbf6',
+                      }}
+                    />
+                  </div>
+                ) : null}
+                <div className="subsidiary-focus-copy">
+                  <p className="mini-text">{item.tag}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {subsidiary.markets?.length ? (
         <section className="section section-soft">
@@ -87,7 +134,7 @@ function SubsidiaryPage() {
         </section>
       ) : null}
 
-      {subsidiary.gallery?.length ? (
+      {gallery.length ? (
         <section className="section section-soft">
           <SectionHeading
             tag="Visuels"
@@ -97,9 +144,17 @@ function SubsidiaryPage() {
           />
 
           <div className="subsidiary-gallery-grid">
-            {subsidiary.gallery.map((image, index) => (
+            {gallery.map((image, index) => (
               <article className="content-card subsidiary-gallery-card" key={`${subsidiary.slug}-gallery-${index + 1}`}>
-                <img src={image} alt={`Visuel ${index + 1} de ${subsidiary.name}`} />
+                <img
+                  src={image.src}
+                  alt={image.alt ?? `Visuel ${index + 1} de ${subsidiary.name}`}
+                  style={{
+                    objectFit: image.fit ?? 'cover',
+                    objectPosition: image.position ?? 'center center',
+                    background: image.background ?? '#f6fbf6',
+                  }}
+                />
               </article>
             ))}
           </div>

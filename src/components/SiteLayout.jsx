@@ -31,8 +31,15 @@ function SiteLayout() {
   const location = useLocation();
   const [openMenuPath, setOpenMenuPath] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const closeSubmenuOnNextRoute = useRef(false);
   const currentYear = new Date().getFullYear();
+  const currentNavigationItem = navigation.find((item) =>
+    item.path === '/'
+      ? location.pathname === '/'
+      : location.pathname === item.path || location.pathname.startsWith(`${item.path}/`),
+  );
+  const rightSidebarItems = currentNavigationItem?.children ?? [];
 
   useEffect(() => {
     if (location.hash) {
@@ -61,7 +68,11 @@ function SiteLayout() {
   }, [location.pathname]);
 
   return (
-    <div className="site-shell">
+    <div
+      className={`site-shell ${rightSidebarItems.length ? 'has-submenu-sidebar' : ''} ${
+        sidebarCollapsed ? 'is-submenu-collapsed' : ''
+      }`}
+    >
       <header className="site-header">
         <div className="navbar">
           <NavLink className="brand" to="/" aria-label="Koanda Group">
@@ -89,7 +100,7 @@ function SiteLayout() {
                   className="social-link"
                   href={item.href}
                   aria-label={item.label}
-                  title={`${item.label} - lien à configurer`}
+                  title={item.label}
                 >
                   <SocialIcon platform={item.platform} />
                 </a>
@@ -151,7 +162,52 @@ function SiteLayout() {
         </div>
       </header>
 
-      <Outlet />
+      <div className="site-content-shell">
+        <div className="site-content-main">
+          <Outlet />
+        </div>
+
+        {rightSidebarItems.length ? (
+          <aside className="submenu-sidebar" aria-label={`Sous-menus ${currentNavigationItem.label}`}>
+            <div className="submenu-sidebar-card">
+              <div className="submenu-sidebar-head">
+                <div className="submenu-sidebar-head-copy">
+                  <p className="mini-text">Navigation locale</p>
+                  <h3>{currentNavigationItem.label}</h3>
+                </div>
+
+                <button
+                  type="button"
+                  className="submenu-sidebar-toggle"
+                  onClick={() => setSidebarCollapsed((current) => !current)}
+                  aria-expanded={!sidebarCollapsed}
+                  aria-label={sidebarCollapsed ? 'Déplier le panneau' : 'Plier le panneau'}
+                  title={sidebarCollapsed ? 'Déplier' : 'Plier'}
+                >
+                  <span>{sidebarCollapsed ? '‹' : '›'}</span>
+                </button>
+              </div>
+
+              <nav className="submenu-sidebar-links">
+                {rightSidebarItems.map((child) => {
+                  const isActive = `${location.pathname}${location.hash}` === child.path;
+
+                  return (
+                    <Link
+                      key={child.path}
+                      to={child.path}
+                      className={`submenu-sidebar-link ${isActive ? 'is-active' : ''}`}
+                      title={child.label}
+                    >
+                      <span>{child.label}</span>
+                    </Link>
+                  );
+                })}
+              </nav>
+            </div>
+          </aside>
+        ) : null}
+      </div>
 
       <footer className="site-footer">
         <div className="footer-main">
@@ -195,7 +251,7 @@ function SiteLayout() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {currentYear} GSF</p>
+          <p>© {currentYear} {groupInfo.name}</p>
         </div>
       </footer>
     </div>

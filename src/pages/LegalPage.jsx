@@ -24,9 +24,10 @@ function LegalPage() {
 
         <article className="content-card">
           <p className="mini-text">Documents</p>
-          <h3>Plaquette groupe</h3>
+          <h3>Ressources corporate</h3>
           <p>
-            Le site peut relayer la plaquette de présentation 2025 ainsi que des supports médias ou corporate téléchargeables.
+            Le site peut mettre à disposition une présentation corporate, des publications institutionnelles et d’autres
+            ressources destinées à présenter les activités, les implantations et les engagements du groupe.
           </p>
         </article>
       </section>

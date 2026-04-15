@@ -19,8 +19,8 @@ function ProjectsPage() {
 
           <div className="about-copy">
             <p>
-              Cette page regroupe les projets phares, les investissements en cours et quelques réalisations visibles
-              mises en avant dans la plaquette du groupe.
+              Cette page regroupe les projets phares, les investissements en cours et plusieurs réalisations qui
+              traduisent la vision de croissance, d’exécution et de transformation portée par Koanda Group.
             </p>
           </div>
         </div>
@@ -29,8 +29,8 @@ function ProjectsPage() {
       <section className="section" id="projets-en-cours">
         <SectionHeading
           tag="Projets en cours"
-          title="Les projets majeurs actuellement mis en avant."
-          text="Les cartes ci-dessous reprennent les principaux projets annoncés par le groupe."
+          title="Les projets majeurs actuellement portés par le groupe."
+          text="Les cartes ci-dessous donnent une lecture claire des investissements structurants qui composent la trajectoire de développement de Koanda Group."
           split
         />
 

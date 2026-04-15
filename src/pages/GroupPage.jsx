@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import SectionHeading from '../components/SectionHeading';
-import { commitments, governanceItems, groupInfo, values } from '../data/siteContent';
+import { engagementCards, governanceItems, groupInfo, values } from '../data/siteContent';
 import donFasoMeebo from '../assets/don-faso-meebo.png';
 
 function GroupPage() {
+  const [openCommitment, setOpenCommitment] = useState(0);
+
   return (
     <main className="page">
       <section className="section page-top" id="qui-sommes-nous">
@@ -20,7 +23,10 @@ function GroupPage() {
           </div>
 
           <article className="about-visual-card">
-            <img src={donFasoMeebo} alt="Action solidaire Don Faso Meebo avec des participants et bénéficiaires." />
+            <img
+              src={donFasoMeebo}
+              alt="Action solidaire Don Faso Meebo avec des participants et bénéficiaires."
+            />
           </article>
         </div>
       </section>
@@ -29,7 +35,6 @@ function GroupPage() {
         <SectionHeading
           tag="Gouvernance"
           title="Des repères de gouvernance déjà prévus pour une lecture institutionnelle claire."
-          text="La page est pensée pour accueillir la direction, l’organigramme simplifié, le comité de direction et les engagements de conformité."
           split
         />
 
@@ -67,14 +72,44 @@ function GroupPage() {
         <SectionHeading
           tag="Engagements"
           title="Qualité, environnement, responsabilité sociale et impact local."
-          text="Les engagements du groupe peuvent intégrer des éléments de conformité et des certifications déjà mentionnées pour certaines filiales."
+          text="Les engagements du groupe intègrent des exigences de conformité, de qualité et des certifications déjà visibles dans certaines filiales."
           split
         />
 
-        <div className="card-grid">
-          {commitments.map((item) => (
-            <article className="content-card" key={item}>
-              <p>{item}</p>
+        <div className="card-grid commitments-grid">
+          {engagementCards.map((item, index) => (
+            <article
+              className={`content-card commitment-card commitment-card-${item.theme} ${
+                openCommitment === index ? 'is-open' : ''
+              }`}
+              key={item.title}
+            >
+              <div className="commitment-card-head">
+                <p className="mini-text">Engagement</p>
+                <button
+                  type="button"
+                  className="commitment-plus-button"
+                  aria-expanded={openCommitment === index}
+                  aria-label={
+                    openCommitment === index
+                      ? `Réduire le contenu ${item.title}`
+                      : `Afficher plus de contenu pour ${item.title}`
+                  }
+                  onClick={() => setOpenCommitment(openCommitment === index ? -1 : index)}
+                >
+                  <span>{openCommitment === index ? '-' : '+'}</span>
+                </button>
+              </div>
+
+              <h3>{item.title}</h3>
+              <p className="commitment-summary">{item.summary}</p>
+
+              <div className="commitment-details" hidden={openCommitment !== index}>
+                <p>{item.details}</p>
+                <a className="button button-ghost commitment-more-link" href="#contact">
+                  En savoir plus
+                </a>
+              </div>
             </article>
           ))}
         </div>

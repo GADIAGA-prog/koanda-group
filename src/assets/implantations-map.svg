@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Implantations de Koanda Group</title>
+  <desc id="desc">Carte des implantations mettant en évidence la Suisse, Dubaï, le Mali, le Niger, le Burkina Faso, la Côte d’Ivoire et le Ghana.</desc>
+  <rect width="900" height="620" rx="28" fill="#f8fbf8"/>
+
+  <g fill="#e4e7e4" stroke="#ffffff" stroke-width="2">
+    <path d="M0 112 42 98 98 88 148 86 190 74 232 92 268 86 298 100 334 118 352 150 338 172 306 176 266 202 218 214 180 240 148 254 124 282 90 290 42 286 8 262 0 234Z"/>
+    <path d="M338 94 370 80 404 78 436 90 462 114 484 128 520 132 548 124 582 126 614 146 630 178 626 208 594 222 566 250 524 266 488 252 450 236 422 218 396 188 356 166 334 132Z"/>
+    <path d="M44 290 100 286 124 278 150 254 182 240 224 216 264 202 308 182 352 174 382 190 394 222 420 248 462 272 490 312 500 348 490 390 470 432 430 468 386 490 330 502 260 506 190 498 134 478 92 446 66 396 50 350Z"/>
+    <path d="M490 272 532 254 566 250 592 220 630 206 676 214 716 242 746 274 760 314 748 350 720 382 678 394 634 386 610 362 592 330 560 316 526 300Z"/>
+    <path d="M672 176 704 164 742 164 776 176 802 198 822 226 820 256 800 278 772 278 744 258 722 230 694 212 676 194Z"/>
+  </g>
+
+  <g fill="none" stroke="#ffffff" stroke-width="1.5">
+    <path d="M186 240 194 498"/>
+    <path d="M258 206 260 506"/>
+    <path d="M330 182 330 502"/>
+    <path d="M410 198 428 488"/>
+    <path d="M522 252 520 384"/>
+    <path d="M590 220 610 362"/>
+    <path d="M698 210 718 378"/>
+    <path d="M58 348 486 346"/>
+    <path d="M82 420 470 420"/>
+    <path d="M110 286 630 286"/>
+    <path d="M330 96 624 178"/>
+    <path d="M670 174 818 254"/>
+  </g>
+
+  <g fill="#2faa63" stroke="#ffffff" stroke-width="3">
+    <path d="M98 382 172 382 176 426 154 462 108 458 84 430 84 396Z"/>
+    <path d="M172 382 232 378 246 422 226 466 172 466 154 428Z"/>
+    <path d="M232 336 300 330 314 376 298 446 244 444 222 402Z"/>
+    <path d="M302 258 424 258 440 322 422 428 314 430 296 372 296 300Z"/>
+    <path d="M128 256 302 256 286 332 174 336 112 322 92 286Z"/>
+    <path d="M430 118 452 108 474 120 474 144 454 156 430 148 420 132Z"/>
+    <path d="M770 228 794 220 810 232 810 256 792 268 768 260 760 242Z"/>
+  </g>
+
+  <g>
+    <circle cx="132" cy="410" r="16" fill="rgba(47,170,99,0.24)"/>
+    <circle cx="196" cy="420" r="16" fill="rgba(47,170,99,0.24)"/>
+    <circle cx="254" cy="376" r="16" fill="rgba(47,170,99,0.24)"/>
+    <circle cx="368" cy="334" r="16" fill="rgba(47,170,99,0.24)"/>
+    <circle cx="448" cy="132" r="16" fill="rgba(47,170,99,0.24)"/>
+    <circle cx="786" cy="244" r="16" fill="rgba(47,170,99,0.24)"/>
+
+    <circle cx="132" cy="410" r="7" fill="#111111"/>
+    <circle cx="196" cy="420" r="7" fill="#111111"/>
+    <circle cx="254" cy="376" r="7" fill="#111111"/>
+    <circle cx="368" cy="334" r="7" fill="#111111"/>
+    <circle cx="448" cy="132" r="7" fill="#111111"/>
+    <circle cx="786" cy="244" r="7" fill="#111111"/>
+  </g>
+
+  <g fill="#111111" font-family="Arial, sans-serif" font-size="18" font-weight="700">
+    <text x="430" y="110">Suisse</text>
+    <text x="796" y="254">Dubaï</text>
+    <text x="102" y="358">Mali</text>
+    <text x="338" y="316">Niger</text>
+    <text x="176" y="392">Burkina Faso</text>
+    <text x="78" y="448">Côte d’Ivoire</text>
+    <text x="170" y="474">Ghana</text>
+  </g>
+</svg>

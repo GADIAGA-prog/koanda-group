@@ -4,6 +4,8 @@ import { groupInfo, partners } from '../data/siteContent';
 
 function PartnersPage() {
   const scrollingPartners = [...partners, ...partners];
+  const getPartnerCardClassName = (title) =>
+    `partner-logo-card is-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 
   return (
     <main className="page">
@@ -20,7 +22,7 @@ function PartnersPage() {
         <div className="partners-marquee" id="logos-partenaires">
           <div className="partners-track">
             {scrollingPartners.map((partner, index) => (
-              <article className="partner-logo-card" key={`${partner.title}-${index}`}>
+              <article className={getPartnerCardClassName(partner.title)} key={`${partner.title}-${index}`}>
                 <img src={partner.image} alt={`Logo ${partner.title}`} />
                 <p className="mini-text">{partner.title}</p>
               </article>

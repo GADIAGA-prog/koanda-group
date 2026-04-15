@@ -2,7 +2,18 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SectionHeading from '../components/SectionHeading';
 import SubsidiaryCard from '../components/SubsidiaryCard';
-import { featuredProjects, groupInfo, homeCarousel, newsHighlights, newsletterItems, stats, subsidiaries } from '../data/siteContent';
+import {
+  featuredProjects,
+  groupInfo,
+  homeCarousel,
+  homeSectors,
+  newsHighlights,
+  newsletterItems,
+  partners,
+  signaturePillars,
+  stats,
+  subsidiaries,
+} from '../data/siteContent';
 
 function HomePage() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -16,6 +27,9 @@ function HomePage() {
   }, []);
 
   const currentSlide = homeCarousel[activeSlide];
+  const featuredPartners = [...partners.slice(0, 6), ...partners.slice(0, 6)];
+  const getPartnerCardClassName = (title) =>
+    `partner-logo-card is-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
   const highlightedSubsidiaries = subsidiaries.filter((item) =>
     ['amko-trading', 'eco-oil', 'gcm-industries', 'faso-energy', 'belchicken'].includes(
       item.slug,
@@ -31,18 +45,38 @@ function HomePage() {
     <main className="page">
       <section className="hero-section home-hero" id="accueil-overview">
         <div className="hero-copy">
-          <p className="section-tag">Accueil</p>
+          <p className="section-tag">Koanda Group</p>
           <h1>{groupInfo.heroTitle}</h1>
           <p className="hero-lead">{groupInfo.heroText}</p>
           <p className="hero-text">{groupInfo.objective}</p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href={groupInfo.plaquetteUrl} target="_blank" rel="noreferrer">
-              Consulter la plaquette
-            </a>
-            <Link className="button button-secondary" to="/filiales">
-              Découvrir les filiales
+            <Link className="button button-primary" to="/koanda-group">
+              Découvrir le groupe
             </Link>
+            <Link className="button button-secondary" to="/filiales">
+              Explorer les filiales
+            </Link>
+            <Link className="button button-ghost" to="/projets-et-realisations">
+              Voir les projets
+            </Link>
+          </div>
+
+          <div className="pill-row home-sector-pills" aria-label="Secteurs d'activité">
+            {homeSectors.map((sector) => (
+              <span className="info-pill" key={sector}>
+                {sector}
+              </span>
+            ))}
+          </div>
+
+          <div className="hero-note-card">
+            <p className="mini-text">Positionnement</p>
+            <h3>Une signature fondée sur la vision, l’exécution et l’impact.</h3>
+            <p>
+              Koanda Group articule investissements, développement d’activités et déploiement
+              opérationnel dans des secteurs essentiels à la transformation des marchés africains.
+            </p>
           </div>
 
           <div className="hero-stats" id="chiffres-cles">
@@ -59,6 +93,7 @@ function HomePage() {
           <article className="carousel-card">
             <img src={currentSlide.image} alt={currentSlide.title} />
             <div className="carousel-copy">
+              <p className="mini-text">Temps fort</p>
               <h3>{currentSlide.title}</h3>
               <p>{currentSlide.text}</p>
             </div>
@@ -74,6 +109,43 @@ function HomePage() {
                 aria-label={item.title}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-soft home-signature-section">
+        <SectionHeading
+          tag="Signature"
+          title="Un groupe pensé pour construire, structurer et durer."
+          text="L’accueil adopte une lecture plus premium avec une hiérarchie plus nette, une preuve de crédibilité plus visible et une meilleure mise en scène des activités."
+          split
+        />
+
+        <div className="summary-grid">
+          {signaturePillars.map((item) => (
+            <article className="content-card summary-card premium-summary-card" key={item.title}>
+              <p className="mini-text">Pilier</p>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="home-trust-strip">
+          <div className="home-trust-copy">
+            <p className="mini-text">Partenaires & institutions</p>
+            <h3>Des relations solides au service de la croissance et de l’exécution.</h3>
+          </div>
+
+          <div className="partners-marquee" aria-label="Partenaires du groupe">
+            <div className="partners-track">
+              {featuredPartners.map((item, index) => (
+                <article className={getPartnerCardClassName(item.title)} key={`${item.title}-${index}`}>
+                  <img src={item.image} alt={`Logo ${item.title}`} />
+                  <p className="mini-text">{item.title}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -96,7 +168,8 @@ function HomePage() {
       <section className="section section-soft" id="apercu-filiales">
         <SectionHeading
           tag="Filiales"
-          title="Un aperçu visuel des filiales du groupe."
+          title="Des filiales pensées comme des plateformes de croissance."
+          text="Chaque entité répond à une logique claire de marché, d’exécution et de création de valeur. L’ensemble compose un portefeuille cohérent, lisible et crédible."
         />
 
         <div className="subsidiary-grid">
@@ -114,9 +187,9 @@ function HomePage() {
 
       <section className="section" id="actualites-groupe">
         <SectionHeading
-          tag="Actualités"
-          title="Les temps forts du groupe, ses dons et ses bulletins d’information."
-          text="Cette rubrique met en avant les projets structurants, les actions solidaires du groupe et un accès direct aux bulletins d’information téléchargeables."
+          tag="Actualités & ressources"
+          title="Les initiatives, avancées et publications qui rythment la trajectoire du groupe."
+          text="Cette rubrique valorise les projets structurants, les engagements du groupe et les ressources téléchargeables destinées aux partenaires, clients et institutions."
           split
         />
 
@@ -138,24 +211,25 @@ function HomePage() {
           ))}
         </div>
 
-        <div className="newsletter-panel">
+        <div className="newsletter-panel resource-panel">
           <div className="newsletter-copy">
-            <p className="mini-text">Newsletter</p>
-            <h3>Bulletins d’information du groupe</h3>
+            <p className="mini-text">Ressources</p>
+            <h3>Documents de référence et publications institutionnelles</h3>
             <p>
-              Consultez et téléchargez les supports d’actualité du groupe pour suivre les activités, les annonces
-              institutionnelles et les faits marquants.
+              Retrouvez une sélection de documents destinés à présenter le groupe, ses activités
+              et ses prises de parole institutionnelles dans un format clair et immédiatement
+              exploitable.
             </p>
           </div>
 
           <div className="card-grid newsletter-grid">
             {newsletterItems.map((item) => (
               <article className="content-card" key={item.title}>
-                <p className="mini-text">Publication</p>
+                <p className="mini-text">Document</p>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
                 <div className="card-actions">
-                  <a className="button button-secondary" href={item.href} download>
+                  <a className="button button-secondary" href={item.href} target="_blank" rel="noreferrer">
                     {item.fileLabel}
                   </a>
                 </div>
@@ -168,8 +242,8 @@ function HomePage() {
       <section className="section" id="projets-a-la-une">
         <SectionHeading
           tag="Projets à la une"
-          title="Des projets phares présentés avec plus de matière visuelle."
-          text="Le site met en avant les grands chantiers du groupe dans l’énergie, le stockage pétrolier, l’hôtellerie et la distribution."
+          title="Des projets emblématiques qui traduisent l’ambition du groupe."
+          text="Énergie, stockage pétrolier, hôtellerie et distribution: ces projets donnent à voir la capacité de Koanda Group à structurer et porter des actifs d’envergure."
           split
         />
 
