@@ -71,7 +71,7 @@ function AdminLoginPage() {
       <section className="section admin-login-shell">
         <form className="admin-card admin-login-card" onSubmit={handleSubmit}>
           <p className="mini-text">Administration</p>
-          <h1>DIRECTRICE DE LA COMMUNICATION</h1>
+          <h2>DIRECTRICE DE LA COMMUNICATION</h2>
           <p className="admin-muted">
             Connectez-vous pour créer, modifier, supprimer et publier les articles du site.
           </p>
