@@ -12,6 +12,10 @@ function hasBlobStore() {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
 }
 
+function getArticleBlobAccess() {
+  return process.env.BLOB_STORE_ACCESS === 'private' ? 'private' : 'public';
+}
+
 function slugify(value) {
   return value
     .normalize('NFD')
@@ -66,18 +70,37 @@ async function streamToText(stream) {
   return response.text();
 }
 
+async function readBlobText(blob) {
+  if (getArticleBlobAccess() === 'private') {
+    const result = await get(blob.pathname, { access: 'private', useCache: false });
+
+    if (!result || result.statusCode !== 200 || !result.stream) {
+      return null;
+    }
+
+    return streamToText(result.stream);
+  }
+
+  const response = await fetch(blob.url, { cache: 'no-store' });
+
+  if (!response.ok) {
+    return null;
+  }
+
+  return response.text();
+}
+
 async function readBlobArticles() {
   const { blobs } = await list({ prefix: articleBlobPrefix });
   const articles = [];
 
   for (const blob of blobs) {
-    const result = await get(blob.pathname, { access: 'private', useCache: false });
+    const raw = await readBlobText(blob);
 
-    if (!result || result.statusCode !== 200 || !result.stream) {
+    if (!raw) {
       continue;
     }
 
-    const raw = await streamToText(result.stream);
     articles.push(JSON.parse(raw));
   }
 
@@ -86,7 +109,7 @@ async function readBlobArticles() {
 
 async function writeBlobArticle(article) {
   await put(buildArticlePathname(article.id), JSON.stringify(article, null, 2), {
-    access: 'private',
+    access: getArticleBlobAccess(),
     allowOverwrite: true,
     contentType: 'application/json',
     addRandomSuffix: false,
