@@ -1,0 +1,18 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/koanda-group", "destination": "/index.html" },
+    { "source": "/filiales", "destination": "/index.html" },
+    { "source": "/filiales/:slug", "destination": "/index.html" },
+    { "source": "/projets-et-realisations", "destination": "/index.html" },
+    { "source": "/implantations", "destination": "/index.html" },
+    { "source": "/partenaires", "destination": "/index.html" },
+    { "source": "/actualites", "destination": "/index.html" },
+    { "source": "/actualites/:slug", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" },
+    { "source": "/politique-generale", "destination": "/index.html" },
+    { "source": "/mentions-legales", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/admin/login", "destination": "/index.html" }
+  ]
+}

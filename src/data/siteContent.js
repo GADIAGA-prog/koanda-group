@@ -151,6 +151,10 @@ export const navigation = [
     path: '/partenaires',
   },
   {
+    label: 'Actualités',
+    path: '/actualites',
+  },
+  {
     label: 'Contact',
     path: '/contact',
   },
@@ -1295,5 +1299,6 @@ export const mediaKit = [
 export const footerLinks = [
   { label: 'Mentions légales', path: '/mentions-legales' },
   { label: 'Politique générale du groupe', path: '/politique-generale' },
+  { label: 'Actualités', path: '/actualites' },
   { label: 'Présentation corporate', path: groupInfo.plaquetteUrl },
 ];
