@@ -117,7 +117,7 @@ function HomePage() {
         <SectionHeading
           tag="Signature"
           title="Un groupe pensé pour construire, structurer et durer."
-          text="L’accueil adopte une lecture plus premium avec une hiérarchie plus nette, une preuve de crédibilité plus visible et une meilleure mise en scène des activités."
+          text=""
           split
         />
 
@@ -189,7 +189,7 @@ function HomePage() {
         <SectionHeading
           tag="Actualités & ressources"
           title="Les initiatives, avancées et publications qui rythment la trajectoire du groupe."
-          text="Cette rubrique valorise les projets structurants, les engagements du groupe et les ressources téléchargeables destinées aux partenaires, clients et institutions."
+          text=""
           split
         />
 
@@ -210,8 +210,8 @@ function HomePage() {
             </article>
           ))}
         </div>
-
-        <div className="newsletter-panel resource-panel">
+          
+        //<div className="newsletter-panel resource-panel">
           <div className="newsletter-copy">
             <p className="mini-text">Ressources</p>
             <h3>Documents de référence et publications institutionnelles</h3>
@@ -221,7 +221,7 @@ function HomePage() {
               exploitable.
             </p>
           </div>
-
+         
           <div className="card-grid newsletter-grid">
             {newsletterItems.map((item) => (
               <article className="content-card" key={item.title}>

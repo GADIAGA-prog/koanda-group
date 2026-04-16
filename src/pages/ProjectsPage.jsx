@@ -19,7 +19,7 @@ function ProjectsPage() {
 
           <div className="about-copy">
             <p>
-              Cette page regroupe les projets phares, les investissements en cours et plusieurs réalisations qui
+              Plusieurs projets phares, des investissements en cours et plusieurs réalisations
               traduisent la vision de croissance, d’exécution et de transformation portée par Koanda Group.
             </p>
           </div>
@@ -30,7 +30,7 @@ function ProjectsPage() {
         <SectionHeading
           tag="Projets en cours"
           title="Les projets majeurs actuellement portés par le groupe."
-          text="Les cartes ci-dessous donnent une lecture claire des investissements structurants qui composent la trajectoire de développement de Koanda Group."
+          text=""
           split
         />
 
@@ -49,7 +49,7 @@ function ProjectsPage() {
         <SectionHeading
           tag="Réalisations"
           title="Des réalisations visibles dans plusieurs secteurs."
-          text="Le groupe valorise ses avancées industrielles, logistiques, pétrolières, immobilières et hôtelières."
+          text=""
           split
         />
 
@@ -66,7 +66,7 @@ function ProjectsPage() {
         <SectionHeading
           tag="Études de cas"
           title="Trois lectures transversales des projets du groupe."
-          text="Ces mini études de cas permettent de mettre en avant la cohérence de la stratégie du groupe."
+          text=""
           split
         />
 
