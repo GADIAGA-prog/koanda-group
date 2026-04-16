@@ -9,13 +9,17 @@ export default async function handler(req, res) {
   try {
     const body = await readJsonBody(req);
     const { username, password } = getAdminCredentials();
+    const submittedUsername = String(body.username || '').trim();
+    const submittedPassword = String(body.password || '').trim();
+    const expectedUsername = String(username || '').trim();
+    const expectedPassword = String(password || '').trim();
 
-    if (body.username !== username || body.password !== password) {
+    if (submittedUsername !== expectedUsername || submittedPassword !== expectedPassword) {
       return sendJson(res, 401, { error: 'Identifiants invalides' });
     }
 
-    setSessionCookie(res, username);
-    return sendJson(res, 200, { ok: true, user: { username } });
+    setSessionCookie(res, expectedUsername);
+    return sendJson(res, 200, { ok: true, user: { username: expectedUsername } });
   } catch {
     return sendJson(res, 400, { error: 'Requête invalide' });
   }

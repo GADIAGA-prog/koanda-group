@@ -52,7 +52,10 @@ function AdminLoginPage() {
     setError('');
 
     try {
-      await loginAdmin({ username, password });
+      await loginAdmin({
+        username: username.trim(),
+        password: password.trim(),
+      });
       setAuthenticated(true);
       const nextPath = location.state?.from?.pathname || '/admin';
       navigate(nextPath, { replace: true });
@@ -75,7 +78,13 @@ function AdminLoginPage() {
 
           <label>
             <span>Identifiant</span>
-            <input value={username} onChange={(event) => setUsername(event.target.value)} />
+            <input
+              value={username}
+              autoComplete="username"
+              autoCapitalize="none"
+              spellCheck={false}
+              onChange={(event) => setUsername(event.target.value)}
+            />
           </label>
 
           <label>
@@ -83,6 +92,7 @@ function AdminLoginPage() {
             <input
               type="password"
               value={password}
+              autoComplete="current-password"
               onChange={(event) => setPassword(event.target.value)}
             />
           </label>

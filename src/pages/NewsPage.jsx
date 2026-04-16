@@ -48,7 +48,7 @@ function NewsPage() {
         <SectionHeading
           tag="Actualités"
           title="Les actualités publiées du groupe"
-          text="Retrouvez ici les articles validés et publiés depuis l’espace d’administration."
+          text=""
           split
         />
       </section>
