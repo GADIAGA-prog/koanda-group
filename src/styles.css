@@ -41,7 +41,7 @@ button, input, textarea { font: inherit; }
 #root, .site-shell { min-height: 100vh; }
 
 h1, h2, h3, p, li, a, span {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .site-header {
@@ -522,7 +522,7 @@ h1, h2, h3, p, li, a, span {
   gap: 18px;
 }
 
-.hero-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 26px; }
+.hero-stats { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin-top: 26px; }
 
 .metric-card {
   padding: 18px;
@@ -534,11 +534,19 @@ h1, h2, h3, p, li, a, span {
 
 .metric-card strong {
   display: block;
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 2.2vw, 2.5rem);
+  line-height: 1.08;
   color: var(--green-deep);
   font-family: 'Space Grotesk', sans-serif;
+  overflow-wrap: normal;
 }
-.metric-card span { display: block; margin-top: 8px; color: var(--muted); font-size: 0.92rem; }
+.metric-card span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  overflow-wrap: normal;
+}
 
 .hero-media { display: grid; gap: 18px; align-content: start; }
 
