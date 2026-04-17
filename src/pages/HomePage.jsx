@@ -38,7 +38,7 @@ function HomePage() {
 
   const visualProjects = featuredProjects.map((item, index) => ({
     ...item,
-    image: homeCarousel[index % homeCarousel.length].image,
+    image: item.image ?? homeCarousel[index % homeCarousel.length].image,
   }));
 
   return (
@@ -196,9 +196,23 @@ function HomePage() {
         <div className="news-highlight-grid">
           {newsHighlights.map((item) => (
             <article className="news-highlight-card" key={item.title}>
-              <div className="news-highlight-image">
-                <img src={item.image} alt={item.title} />
-              </div>
+              {typeof item.image === 'string' ? (
+                <div className="news-highlight-image">
+                  <img src={item.image} alt={item.title} />
+                </div>
+              ) : (
+                <div className="news-highlight-image">
+                  <img
+                    src={item.image.src}
+                    alt={item.image.alt ?? item.title}
+                    style={{
+                      objectFit: item.image.fit ?? 'cover',
+                      objectPosition: item.image.position ?? 'center center',
+                      background: item.image.background ?? '#f6fbf6',
+                    }}
+                  />
+                </div>
+              )}
 
               <div className="news-highlight-body">
                 <h3>{item.title}</h3>

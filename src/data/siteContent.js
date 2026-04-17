@@ -23,14 +23,14 @@ import belchickenMenu from '../assets/belchicken-menu.png';
 import belchickenSoben from '../assets/belchicken-soben.png';
 import cimentLogo from '../assets/ciment-logo.svg';
 import constructionLogo from '../assets/construction-logo.svg';
+import ecoOilStationTotem from '../assets/eco-oil-1.png';
+import ecoOilStationModern from '../assets/eco-oil-2.png';
 import ecoOilAddressCard from '../assets/eco-oil-address-card.png';
 import ecoOilAddressDetail from '../assets/eco-oil-address-detail.png';
-import ecoOilGaz from '../assets/eco-oil-gaz.png';
 import ecoOilLavage from '../assets/eco-oil-lavage.png';
 import ecoOilLavageDetail from '../assets/eco-oil-lavage-detail.png';
 import ecoOilLogoSource from '../assets/eco-oil-logo-source.png';
 import ecoOilServicesBoard from '../assets/eco-oil-services-board.png';
-import ecoOilStationForecourt from '../assets/eco-oil-station-forecourt.png';
 import ecoOilStationZaca from '../assets/eco-oil-station-zaca.png';
 import fasoEnergyLogo from '../assets/faso-energy-logo-raster.png';
 import fasoEnergyPanels from '../assets/faso-energy-panels.png';
@@ -388,8 +388,8 @@ export const subsidiaries = [
     country: 'Burkina Faso et Côte d’Ivoire',
     sector: 'Distribution de produits pétroliers',
     image: {
-      src: ecoOilStationZaca,
-      alt: 'Station Eco Oil Burkina présentée pour le site web',
+      src: ecoOilStationModern,
+      alt: 'Station Eco Oil avec aire de service et aménagement paysager',
       fit: 'cover',
       position: 'center center',
     },
@@ -411,8 +411,8 @@ export const subsidiaries = [
         title: 'Un réseau déjà structuré et une feuille de route 2027',
         text: 'Eco Oil s’appuie sur deux paliers de croissance déjà lisibles: 32 stations complétées au Burkina Faso et 10 en Côte d’Ivoire, avec des objectifs de 60 et 25 stations d’ici 2027.',
         image: {
-          src: ecoOilServicesBoard,
-          alt: 'Visuel Eco Oil présentant les services et le réseau',
+          src: ecoOilStationModern,
+          alt: 'Station Eco Oil illustrant le déploiement du réseau',
           fit: 'cover',
           position: 'center center',
         },
@@ -422,8 +422,8 @@ export const subsidiaries = [
         title: 'Carburants, GPL et services de proximité',
         text: 'L’offre dépasse le ravitaillement classique et associe carburants, vente de GPL, lavage auto et services de station destinés à renforcer la proximité avec les clients et la fréquence de visite.',
         image: {
-          src: ecoOilGaz,
-          alt: 'Offre GPL Eco Oil',
+          src: ecoOilStationTotem,
+          alt: 'Totem Eco Oil présentant les services disponibles en station',
           fit: 'cover',
           position: 'center center',
         },
@@ -454,14 +454,20 @@ export const subsidiaries = [
     ],
     cardGallery: [
       {
+        src: ecoOilStationModern,
+        alt: 'Station Eco Oil avec espace client et aménagement extérieur',
+        fit: 'cover',
+        position: 'center center',
+      },
+      {
         src: ecoOilStationZaca,
         alt: 'Station Eco Oil Burkina',
         fit: 'cover',
         position: 'center center',
       },
       {
-        src: ecoOilGaz,
-        alt: 'Bouteilles de gaz Eco Oil',
+        src: ecoOilStationTotem,
+        alt: 'Totem Eco Oil et liste des services en station',
         fit: 'cover',
         position: 'center center',
       },
@@ -501,7 +507,7 @@ export const subsidiaries = [
           'Contact commercial : dg@ecooilbf.com',
         ],
         image: {
-          src: ecoOilStationForecourt,
+          src: ecoOilStationZaca,
           alt: 'Station Eco Oil Burkina en exploitation',
           fit: 'cover',
           position: 'center center',
@@ -530,8 +536,8 @@ export const subsidiaries = [
     ],
     gallery: [
       {
-        src: ecoOilStationForecourt,
-        alt: 'Vue de station Eco Oil Burkina',
+        src: ecoOilStationModern,
+        alt: 'Vue d’ensemble d’une station Eco Oil',
         fit: 'cover',
         position: 'center center',
       },
@@ -542,14 +548,14 @@ export const subsidiaries = [
         position: 'center center',
       },
       {
-        src: ecoOilServicesBoard,
-        alt: 'Montage des services Eco Oil',
+        src: ecoOilStationTotem,
+        alt: 'Totem Eco Oil présentant carburants, gaz et services de proximité',
         fit: 'cover',
         position: 'center center',
       },
       {
-        src: ecoOilGaz,
-        alt: 'Offre gaz Eco Oil',
+        src: ecoOilServicesBoard,
+        alt: 'Montage des services Eco Oil',
         fit: 'cover',
         position: 'center center',
       },
@@ -607,7 +613,12 @@ export const subsidiaries = [
     name: 'Faso Energy',
     country: 'Burkina Faso',
     sector: 'Fabrication de panneaux photovoltaïques',
-    image: fasoEnergyFactory,
+    image: {
+      src: fasoEnergyFactory,
+      alt: 'Ligne de fabrication Faso Energy pour panneaux photovoltaïques',
+      fit: 'cover',
+      position: 'center center',
+    },
     logo: fasoEnergyLogo,
     watermarkLabel: 'Faso Energy',
     summary:
@@ -615,7 +626,58 @@ export const subsidiaries = [
     description:
       'Faso Energy est spécialisée dans la fabrication de panneaux photovoltaïques, avec une capacité industrielle forte et un projet de centrale solaire structurant.',
     facts: ['Capacité annuelle annoncée : 30 MW', 'Projet de centrale solaire de 30 MW', 'Positionnement industriel en Afrique de l’Ouest'],
-    gallery: [fasoEnergyFactory, fasoEnergyPanels],
+    focusCards: [
+      {
+        tag: 'Industrie',
+        title: 'Une base industrielle dédiée à la fabrication locale',
+        text: 'Faso Energy met en avant une capacité de production de panneaux photovoltaïques ancrée localement, pensée pour soutenir l’industrialisation et la disponibilité d’équipements solaires dans la sous-région.',
+        image: {
+          src: fasoEnergyFactory,
+          alt: 'Atelier Faso Energy de fabrication de panneaux photovoltaïques',
+          fit: 'cover',
+          position: 'center center',
+        },
+      },
+      {
+        tag: 'Transition énergétique',
+        title: 'Des réalisations solaires au service d’un projet de plus grande ampleur',
+        text: 'Au-delà de la production, Faso Energy s’inscrit dans une logique de transition énergétique avec un projet structurant de centrale solaire de 30 MW et une ambition de montée en puissance sur le marché ouest-africain.',
+        image: {
+          src: fasoEnergyPanels,
+          alt: 'Champ solaire illustrant la dynamique de Faso Energy',
+          fit: 'cover',
+          position: 'center center',
+        },
+      },
+    ],
+    cardGallery: [
+      {
+        src: fasoEnergyFactory,
+        alt: 'Production industrielle Faso Energy',
+        fit: 'cover',
+        position: 'center center',
+      },
+      {
+        src: fasoEnergyPanels,
+        alt: 'Installation solaire liée à Faso Energy',
+        fit: 'cover',
+        position: 'center center',
+      },
+    ],
+    gallery: [
+      {
+        src: fasoEnergyFactory,
+        alt: 'Production industrielle Faso Energy',
+        fit: 'cover',
+        position: 'center center',
+      },
+      {
+        src: fasoEnergyPanels,
+        alt: 'Installation solaire liée à Faso Energy',
+        fit: 'cover',
+        position: 'center center',
+      },
+    ],
   },
   {
     slug: 'gcm-industries',
@@ -959,6 +1021,7 @@ export const featuredProjects = [
   {
     title: 'Projet de centrale solaire de 30 MW',
     text: 'Projet énergétique majeur développé autour de Faso Energy dans une logique de transition énergétique.',
+    image: fasoEnergyPanels,
   },
   {
     title: 'Dépôt pétrolier AMKO Energy Ghana',
@@ -971,6 +1034,7 @@ export const featuredProjects = [
   {
     title: 'Expansion des stations-service Eco Oil',
     text: 'Déploiement d’un réseau Eco Oil déjà matérialisé par 32 stations au Burkina Faso et 10 en Côte d’Ivoire, avec des objectifs annoncés de 60 et 25 stations d’ici 2027.',
+    image: ecoOilStationModern,
   },
 ];
 
@@ -984,7 +1048,12 @@ export const newsHighlights = [
   {
     title: 'Transition énergétique : une centrale solaire de 30 MW',
     text: 'Faso Energy porte un projet structurant de centrale solaire destiné à accompagner durablement la capacité énergétique locale.',
-    image: koandaIndustries,
+    image: {
+      src: amkoDepot,
+      alt: 'Dépôt AMKO',
+      fit: 'cover',
+      position: 'center center',
+    },
     to: '/projets-et-realisations#projets-en-cours',
   },
   {
