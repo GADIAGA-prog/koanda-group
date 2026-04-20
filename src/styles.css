@@ -721,7 +721,7 @@ h1, h2, h3, p, li, a, span {
 
 .news-highlight-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 26px;
   margin-top: 24px;
 }
@@ -765,42 +765,6 @@ h1, h2, h3, p, li, a, span {
 
 .news-highlight-body .button {
   justify-self: start;
-}
-
-.newsletter-panel {
-  display: grid;
-  gap: 18px;
-  margin-top: 30px;
-  padding: 24px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, #fcfffc, #f2f9f3);
-}
-
-.resource-panel {
-  background:
-    radial-gradient(circle at top right, rgba(137, 201, 149, 0.16), transparent 26%),
-    linear-gradient(180deg, #fcfffc, #f3f8f4);
-}
-
-.newsletter-copy {
-  display: grid;
-  gap: 10px;
-}
-
-.newsletter-copy h3 {
-  margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(1.4rem, 2.4vw, 2rem);
-}
-
-.newsletter-copy p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.newsletter-grid {
-  margin-top: 0;
 }
 
 .pdg-layout {
@@ -1154,13 +1118,6 @@ h1, h2, h3, p, li, a, span {
   box-shadow: 0 28px 56px rgba(17, 52, 36, 0.14);
 }
 
-.commitment-card-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
 .commitment-card h3,
 .commitment-summary,
 .commitment-details p {
@@ -1175,36 +1132,6 @@ h1, h2, h3, p, li, a, span {
   display: grid;
   gap: 14px;
   padding-top: 6px;
-}
-
-.commitment-plus-button {
-  display: inline-grid;
-  place-items: center;
-  width: 46px;
-  height: 46px;
-  padding: 0;
-  border: 0;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.7);
-  color: var(--green-deep);
-  box-shadow: 0 12px 24px rgba(17, 52, 36, 0.1);
-  cursor: pointer;
-  transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
-}
-
-.commitment-plus-button:hover {
-  transform: scale(1.04);
-  background: rgba(255, 255, 255, 0.92);
-}
-
-.commitment-plus-button span {
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.commitment-card.is-open .commitment-plus-button {
-  background: linear-gradient(135deg, #2a8a59, var(--green-deep));
-  color: var(--white);
 }
 
 .commitment-more-link {
@@ -1236,6 +1163,326 @@ h1, h2, h3, p, li, a, span {
 }
 
 .commitment-card-certifications {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 28%),
+    linear-gradient(145deg, #fffdf5, #f4ebcf);
+}
+
+.org-chart-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.org-chart-sidebar,
+.org-chart-detail {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.org-chart-search-card,
+.org-chart-group,
+.org-focus-card,
+.org-empty-state {
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.org-chart-search {
+  display: grid;
+  gap: 10px;
+}
+
+.org-chart-search input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(17, 52, 36, 0.12);
+  background: #ffffff;
+  color: var(--text);
+  font: inherit;
+}
+
+.org-chart-lanes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.org-lane-chip {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(94, 168, 106, 0.18);
+  background: var(--green-soft);
+  color: var(--green-deep);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.org-lane-chip:hover,
+.org-lane-chip.is-active {
+  transform: translateY(-2px);
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--green), var(--green-deep));
+  color: var(--white);
+}
+
+.org-chart-list {
+  display: grid;
+  gap: 16px;
+}
+
+.org-chart-group {
+  display: grid;
+  gap: 14px;
+}
+
+.org-chart-group-items {
+  display: grid;
+  gap: 10px;
+}
+
+.org-node-button {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(17, 52, 36, 0.08);
+  background: linear-gradient(180deg, #ffffff, #f5faf5);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.org-node-button strong,
+.org-child-card strong,
+.org-related-link strong {
+  font-size: 1rem;
+}
+
+.org-node-button span,
+.org-child-card span,
+.org-related-link span,
+.org-focus-lead {
+  color: var(--muted);
+}
+
+.org-node-button:hover,
+.org-node-button.is-active {
+  transform: translateY(-2px);
+  border-color: rgba(42, 138, 89, 0.24);
+  box-shadow: 0 18px 34px rgba(17, 52, 36, 0.1);
+}
+
+.org-chart-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.org-chart-breadcrumb button {
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 52, 36, 0.08);
+  background: #ffffff;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.org-focus-card {
+  display: grid;
+  gap: 18px;
+}
+
+.org-focus-card h3,
+.org-focus-card p,
+.org-detail-block p {
+  margin: 0;
+}
+
+.org-focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.org-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.org-detail-block {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(17, 52, 36, 0.06);
+}
+
+.org-related-links,
+.org-child-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.org-related-link,
+.org-child-card {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(17, 52, 36, 0.08);
+  background: linear-gradient(180deg, #ffffff, #f7fbf7);
+  color: inherit;
+  text-decoration: none;
+}
+
+.org-child-card {
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.org-focus-card-direction {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.48), transparent 28%),
+    linear-gradient(145deg, #f6fff7, #e5f4e8);
+}
+
+.org-focus-card-support {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.42), transparent 28%),
+    linear-gradient(145deg, #f8fcff, #e5f0f8);
+}
+
+.org-focus-card-poles {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.44), transparent 28%),
+    linear-gradient(145deg, #effbf0, #d8f0d8);
+}
+
+.org-focus-card-filiales {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 28%),
+    linear-gradient(145deg, #fffdf5, #f4ebcf);
+}
+
+.certificate-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.certificate-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.certificate-visual {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 100%;
+  padding: 22px;
+  border-radius: 26px;
+  border: 1px solid rgba(17, 52, 36, 0.08);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.certificate-visual h3,
+.certificate-visual p,
+.certificate-copy p {
+  margin: 0;
+}
+
+.certificate-seal,
+.certificate-logo-shell {
+  display: grid;
+  place-items: center;
+  min-height: 160px;
+  padding: 20px;
+  border-radius: 22px;
+  border: 1px solid rgba(17, 52, 36, 0.1);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 56%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(240, 247, 240, 0.9));
+}
+
+.certificate-seal {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--green-deep);
+  text-align: center;
+}
+
+.certificate-logo {
+  display: block;
+  width: min(100%, 180px);
+  max-height: 110px;
+  object-fit: contain;
+}
+
+.certificate-copy {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.certificate-points {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.certificate-points li + li {
+  margin-top: 8px;
+}
+
+.certificate-card-quality {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.46), transparent 28%),
+    linear-gradient(145deg, #f6fff7, #e5f4e8);
+}
+
+.certificate-card-environment {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.44), transparent 28%),
+    linear-gradient(145deg, #effbf0, #d8f0d8);
+}
+
+.certificate-card-social {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.4), transparent 28%),
+    linear-gradient(145deg, #f8fdf4, #e7f2cf);
+}
+
+.certificate-card-impact {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.42), transparent 28%),
+    linear-gradient(145deg, #f6fcff, #dff0e7);
+}
+
+.certificate-card-certifications {
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 28%),
     linear-gradient(145deg, #fffdf5, #f4ebcf);
@@ -1556,7 +1803,7 @@ h1, h2, h3, p, li, a, span {
 .timeline-card { background: rgba(255, 255, 255, 0.86); }
 .timeline-step { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: rgba(143, 207, 152, 0.3); color: var(--text); font-weight: 800; }
 .feature-list { margin: 14px 0 0; padding-left: 18px; }
-.news-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .job-card { border-left: 4px solid var(--green-deep); }
 .career-panel { display: grid; align-content: start; }
 .career-note { margin-top: 18px; color: var(--muted); }
@@ -1992,12 +2239,16 @@ h1, h2, h3, p, li, a, span {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .org-chart-shell,
+  .org-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
   .commitment-card {
     min-height: 0;
   }
 
   .presence-map-copy,
-  .newsletter-panel,
   .hero-note-card {
     padding: 20px;
   }
@@ -2096,6 +2347,10 @@ h1, h2, h3, p, li, a, span {
   .pdg-visual-placeholder,
   .pdg-visual-card p { max-width: none; width: 100%; }
   .subsidiary-card { gap: 14px; }
+  .org-chart-search-card,
+  .org-chart-group,
+  .org-focus-card,
+  .org-empty-state { padding: 18px; }
   .subsidiary-card-head {
     padding: 0 18px;
     align-items: flex-start;
@@ -2107,11 +2362,7 @@ h1, h2, h3, p, li, a, span {
     min-height: 0;
     padding: 18px;
   }
-  .commitment-plus-button {
-    width: 42px;
-    height: 42px;
-    border-radius: 14px;
-  }
+  .certificate-card { grid-template-columns: 1fr; }
   .subsidiary-card-watermark {
     inset: 110px 12px 12px auto;
     width: min(52%, 160px);

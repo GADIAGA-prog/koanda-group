@@ -8,7 +8,6 @@ import {
   homeCarousel,
   homeSectors,
   newsHighlights,
-  newsletterItems,
   partners,
   signaturePillars,
   stats,
@@ -27,6 +26,8 @@ function HomePage() {
   }, []);
 
   const currentSlide = homeCarousel[activeSlide];
+  const currentSlideImage =
+    typeof currentSlide.image === 'string' ? { src: currentSlide.image } : currentSlide.image;
   const featuredPartners = [...partners.slice(0, 6), ...partners.slice(0, 6)];
   const getPartnerCardClassName = (title) =>
     `partner-logo-card is-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
@@ -91,7 +92,15 @@ function HomePage() {
 
         <div className="hero-media">
           <article className="carousel-card">
-            <img src={currentSlide.image} alt={currentSlide.title} />
+            <img
+              src={currentSlideImage.src}
+              alt={currentSlide.title}
+              style={{
+                objectFit: currentSlideImage.fit ?? 'cover',
+                objectPosition: currentSlideImage.position ?? 'center center',
+                background: currentSlideImage.background ?? '#f6fbf6',
+              }}
+            />
             <div className="carousel-copy">
               <p className="mini-text">Temps fort</p>
               <h3>{currentSlide.title}</h3>
@@ -223,33 +232,6 @@ function HomePage() {
               </div>
             </article>
           ))}
-        </div>
-          
-        //<div className="newsletter-panel resource-panel">
-          <div className="newsletter-copy">
-            <p className="mini-text">Ressources</p>
-            <h3>Documents de référence et publications institutionnelles</h3>
-            <p>
-              Retrouvez une sélection de documents destinés à présenter le groupe, ses activités
-              et ses prises de parole institutionnelles dans un format clair et immédiatement
-              exploitable.
-            </p>
-          </div>
-         
-          <div className="card-grid newsletter-grid">
-            {newsletterItems.map((item) => (
-              <article className="content-card" key={item.title}>
-                <p className="mini-text">Document</p>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <div className="card-actions">
-                  <a className="button button-secondary" href={item.href} target="_blank" rel="noreferrer">
-                    {item.fileLabel}
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 

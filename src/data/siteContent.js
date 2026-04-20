@@ -4,6 +4,7 @@ import koandaIndustries from '../assets/koanda-plaquette-industries.png';
 import koandaProjects from '../assets/koanda-plaquette-projects.png';
 import koandaContact from '../assets/koanda-plaquette-contact.png';
 import koandaPdgPortrait from '../assets/koanda-pdg-portrait.png';
+import koandaGroupDomain from '../assets/koanda-group-domain.png';
 import donFasoMeebo from '../assets/don-faso-meebo.png';
 import amkoBanner from '../assets/amko-trading-image.png';
 import amkoGasoline from '../assets/amko-gasoline.png';
@@ -35,6 +36,13 @@ import ecoOilStationZaca from '../assets/eco-oil-station-zaca.png';
 import fasoEnergyLogo from '../assets/faso-energy-logo-raster.png';
 import fasoEnergyPanels from '../assets/faso-energy-panels.png';
 import fasoEnergyFactory from '../assets/faso-energy-factory.png';
+import altLogo from '../assets/alt-logo-real.png';
+import altFleet from '../assets/alt-fleet.png';
+import altForecast from '../assets/alt-forecast.png';
+import altLogisticsBanner from '../assets/alt-logistics-banner.png';
+import altSectors from '../assets/alt-sectors.png';
+import altTransportTypes from '../assets/alt-transport-types.png';
+import gcmImmobilierLogo from '../assets/gcm-immobilier-logo.svg';
 import satiLogo from '../assets/sati-logo.png';
 import gcmIndustries1 from '../assets/gcm-industries-1.png';
 import gcmIndustries2 from '../assets/gcm-industries-2.png';
@@ -86,6 +94,12 @@ export const groupInfo = {
   industriesImage: koandaIndustries,
   projectsImage: koandaProjects,
   contactImage: koandaContact,
+  aboutImage: {
+    src: koandaGroupDomain,
+    fit: 'contain',
+    position: 'center center',
+    background: '#ffffff',
+  },
   pdgPortrait: koandaPdgPortrait,
   plaquetteUrl: '/documents/plaquette-koanda-group-2025.pdf',
   newsletterUrl: '/documents/bulletin-information-koanda-group.docx',
@@ -114,6 +128,7 @@ export const navigation = [
     children: [
       { label: 'Qui sommes-nous ?', path: '/koanda-group#qui-sommes-nous' },
       { label: 'Gouvernance', path: '/koanda-group#gouvernance' },
+      { label: 'Organigramme', path: '/koanda-group#organigramme' },
       { label: 'Valeurs', path: '/koanda-group#valeurs' },
       { label: 'Engagements', path: '/koanda-group#engagements' },
     ],
@@ -170,7 +185,12 @@ export const homeCarousel = [
   {
     title: 'Vision et ambition',
     text: 'Koanda Group avance avec une ambition claire: bâtir des plateformes d’activité robustes, visibles et capables de soutenir la croissance des économies africaines.',
-    image: koandaCover,
+    image: {
+      src: koandaGroupDomain,
+      fit: 'contain',
+      position: 'center center',
+      background: '#ffffff',
+    },
   },
   {
     title: 'Présence multisectorielle',
@@ -840,6 +860,15 @@ export const subsidiaries = [
     sector: 'Transport international',
     image: koandaProjects,
     logo: satiLogo,
+    cardGallery: [
+      {
+        src: satiLogo,
+        alt: 'Logo SATI',
+        fit: 'contain',
+        position: 'center center',
+        background: '#f8fcf8',
+      },
+    ],
     watermarkLabel: 'SATI',
     summary:
       'Société Africaine de Transport International spécialisée dans le transport d’hydrocarbures, d’agrégats et de biens de consommation.',
@@ -847,18 +876,128 @@ export const subsidiaries = [
       'SATI est un acteur du transport national et international, mobilisé sur les hydrocarbures, les agrégats et les biens de consommation.',
     facts: ['Transport d’hydrocarbures', 'Transport d’agrégats', 'Transport de biens de consommation'],
   },
-  {
+    {
     slug: 'alt',
     name: 'ALT',
-    country: 'Burkina Faso et corridors régionaux',
+    country: 'Burkina Faso et corridors regionaux',
     sector: 'Transit et logistique',
-    image: koandaProjects,
+    image: {
+      src: altLogisticsBanner,
+      alt: 'Afrik Logistik & Transit avec une flotte de camions',
+      fit: 'cover',
+      position: 'center center',
+    },
+    logo: altLogo,
+    cardGallery: [
+      {
+        src: altTransportTypes,
+        alt: 'Types de transport et services ALT',
+        fit: 'cover',
+        position: 'center center',
+      },
+      {
+        src: altFleet,
+        alt: 'Flotte de 200 camions ALT',
+        fit: 'cover',
+        position: 'center center',
+      },
+      {
+        src: altSectors,
+        alt: 'Secteurs d activite ALT',
+        fit: 'cover',
+        position: 'center center',
+      },
+    ],
     watermarkLabel: 'ALT',
     summary:
-      'Afrik Logistik et Transit, spécialisée dans le transport de produits vrac et les activités de transit.',
+      'Afrik Logistik et Transit, specialiste du transport de produits vrac, du transit international et des solutions logistiques sur les corridors africains.',
     description:
-      'ALT est positionnée dans la logistique et le transit, avec un focus sur le transport de produits vrac et les activités de circulation de marchandises.',
-    facts: ['Transport de produits vrac', 'Activités de transit', 'Chaîne logistique régionale'],
+      'ALT se positionne comme une solution africaine de logistique et de transit, avec une flotte importante, une capacite de transport regional et une offre tournee vers les flux de marchandises, le vrac et l accompagnement des operations de circulation internationale.',
+    facts: [
+      'Flotte : 200 camions',
+      'Transport de produits vrac',
+      'Transit international',
+      'Entreposage et logistique',
+      'Chiffre d affaires previsionnel 2024 : 12 milliards de FCFA',
+    ],
+    focusCards: [
+      {
+        tag: 'Positionnement',
+        title: 'Une solution africaine en logistique',
+        text: 'ALT evolue dans le secteur du transport et du transit en Afrique avec une promesse de solutions de transport efficaces, fiables et adaptees aux besoins regionaux.',
+        image: {
+          src: altLogisticsBanner,
+          alt: 'Banner ALT solution africaine en logistique',
+          fit: 'cover',
+          position: 'center center',
+        },
+      },
+      {
+        tag: 'Capacite',
+        title: 'Une flotte de 200 camions',
+        text: 'Les visuels de presentation mettent en avant une flotte moderne de 200 camions, mobilisable pour repondre aux besoins de transport et de transit a travers l Afrique.',
+        image: {
+          src: altFleet,
+          alt: 'Flotte de camions ALT',
+          fit: 'cover',
+          position: 'center center',
+        },
+      },
+      {
+        tag: 'Offre',
+        title: 'Transit, vrac, entreposage et logistique',
+        text: 'ALT articule son offre autour du transport de produits vrac, du transit international ainsi que des services d entreposage et de logistique.',
+        image: {
+          src: altTransportTypes,
+          alt: 'Types de transport ALT',
+          fit: 'cover',
+          position: 'center center',
+        },
+      },
+      {
+        tag: 'Objectif',
+        title: 'Une ambition de 12 milliards de FCFA en 2024',
+        text: 'La communication ALT affiche un chiffre d affaires previsionnel de 12 milliards de FCFA pour 2024, signe d une ambition de croissance forte et structuree.',
+        image: {
+          src: altForecast,
+          alt: 'Prevision de chiffre d affaires ALT',
+          fit: 'cover',
+          position: 'center center',
+        },
+      },
+    ],
+    gallery: [
+      {
+        src: altLogisticsBanner,
+        alt: 'Camions Afrik Logistik & Transit',
+        fit: 'cover',
+        position: 'center center',
+      },
+      {
+        src: altFleet,
+        alt: 'Flotte de 200 camions ALT',
+        fit: 'cover',
+        position: 'center center',
+      },
+      {
+        src: altSectors,
+        alt: 'Secteurs d activite ALT',
+        fit: 'cover',
+        position: 'center center',
+      },
+      {
+        src: altTransportTypes,
+        alt: 'Services de transport et transit ALT',
+        fit: 'cover',
+        position: 'center center',
+      },
+      {
+        src: altForecast,
+        alt: 'Objectif de chiffre d affaires ALT pour 2024',
+        fit: 'cover',
+        position: 'center center',
+      },
+    ],
   },
   {
     slug: 'gcm-immobilier',
@@ -866,6 +1005,16 @@ export const subsidiaries = [
     country: 'Burkina Faso',
     sector: 'Immobilier',
     image: koandaProjects,
+    logo: gcmImmobilierLogo,
+    cardGallery: [
+      {
+        src: gcmImmobilierLogo,
+        alt: 'Logo GCM Immobilier',
+        fit: 'contain',
+        position: 'center center',
+        background: '#f8fcf8',
+      },
+    ],
     watermarkLabel: 'GCM Immo',
     summary:
       'Pôle immobilier engagé dans la promotion du logement, avec une ambition marquée sur les logements sociaux et différents actifs résidentiels.',
@@ -1040,7 +1189,7 @@ export const featuredProjects = [
 
 export const newsHighlights = [
   {
-    title: 'Koanda Group engagé sur le volet social avec Don Faso Meebo',
+    title: 'Koanda Group engagé sur le volet social avec un don à Faso Meebo',
     text: 'Le groupe met aussi en avant ses actions solidaires à travers des initiatives de dons, de mobilisation terrain et d’accompagnement social.',
     image: donFasoMeebo,
     to: '/koanda-group#engagements',
@@ -1104,6 +1253,166 @@ export const governanceItems = [
   },
 ];
 
+export const orgChartNodes = [
+  {
+    id: 'presidence',
+    title: 'Presidence / Direction generale',
+    lead: 'El Adj Moussa KOANDA',
+    lane: 'direction',
+    level: 0,
+    summary: 'Instance de pilotage strategic du groupe, chargee de la vision, des arbitrages et de la coordination generale.',
+    tags: ['vision', 'pilotage', 'arbitrage'],
+  },
+  {
+    id: 'gouvernance-conformite',
+    parentId: 'presidence',
+    title: 'Gouvernance, conformite et partenariats',
+    lane: 'support',
+    level: 1,
+    summary: 'Cadre de gouvernance qui structure la qualite, la conformite, les certifications et les relations institutionnelles.',
+    tags: ['conformite', 'certifications', 'partenaires'],
+  },
+  {
+    id: 'support-corporate',
+    parentId: 'presidence',
+    title: 'Support corporate et developpement',
+    lane: 'support',
+    level: 1,
+    summary: 'Fonctions transverses dediees au developpement du groupe, a la coordination des projets et au soutien des entites.',
+    tags: ['coordination', 'support', 'developpement'],
+  },
+  {
+    id: 'pole-hydrocarbures',
+    parentId: 'presidence',
+    title: 'Pole Hydrocarbures',
+    lane: 'poles',
+    level: 1,
+    summary: 'Pole consacre au trading, a la distribution, au stockage et a la logistique petroliere.',
+    tags: ['trading', 'distribution', 'stockage'],
+    linkedSubsidiaries: ['amko-trading', 'eco-oil'],
+  },
+  {
+    id: 'pole-industrie-energie',
+    parentId: 'presidence',
+    title: 'Pole Industrie, energie et BTP',
+    lane: 'poles',
+    level: 1,
+    summary: 'Pole dedie aux activites industrielles, a l energie solaire, aux infrastructures et aux travaux publics.',
+    tags: ['industrie', 'energie', 'BTP'],
+    linkedSubsidiaries: ['gcm-industries', 'faso-energy', 'tpb-sa'],
+  },
+  {
+    id: 'pole-logistique-immobilier',
+    parentId: 'presidence',
+    title: 'Pole Logistique, immobilier et hotellerie',
+    lane: 'poles',
+    level: 1,
+    summary: 'Pole oriente vers le transport, le transit, l immobilier et le developpement hotelier du groupe.',
+    tags: ['logistique', 'immobilier', 'hotellerie'],
+    linkedSubsidiaries: ['sati', 'alt', 'gcm-immobilier'],
+  },
+  {
+    id: 'pole-restauration-services',
+    parentId: 'presidence',
+    title: 'Pole Restauration et services',
+    lane: 'poles',
+    level: 1,
+    summary: 'Pole de services centres sur l offre de restauration, l experience client et la croissance commerciale.',
+    tags: ['restauration', 'services', 'experience client'],
+    linkedSubsidiaries: ['belchicken'],
+  },
+  {
+    id: 'amko-trading-node',
+    parentId: 'pole-hydrocarbures',
+    title: 'AMKO Trading SA',
+    lane: 'filiales',
+    level: 2,
+    summary: 'Entite de trading petrolier et de developpement logistique a vocation regionale.',
+    tags: ['hydrocarbures', 'trading', 'Geneve'],
+    linkedSubsidiaries: ['amko-trading'],
+  },
+  {
+    id: 'eco-oil-node',
+    parentId: 'pole-hydrocarbures',
+    title: 'Eco Oil',
+    lane: 'filiales',
+    level: 2,
+    summary: 'Reseau de distribution de carburants, GPL et services de proximite.',
+    tags: ['stations-service', 'distribution', 'carburants'],
+    linkedSubsidiaries: ['eco-oil'],
+  },
+  {
+    id: 'gcm-industries-node',
+    parentId: 'pole-industrie-energie',
+    title: 'GCM Industries',
+    lane: 'filiales',
+    level: 2,
+    summary: 'Plateforme industrielle du groupe avec un ancrage fort dans la production et les materiaux.',
+    tags: ['industrie', 'ciment', 'acier'],
+    linkedSubsidiaries: ['gcm-industries'],
+  },
+  {
+    id: 'faso-energy-node',
+    parentId: 'pole-industrie-energie',
+    title: 'Faso Energy',
+    lane: 'filiales',
+    level: 2,
+    summary: 'Entite portant les ambitions du groupe sur l energie solaire et les projets energetiques structurants.',
+    tags: ['solaire', 'energie', '30 MW'],
+    linkedSubsidiaries: ['faso-energy'],
+  },
+  {
+    id: 'tpb-node',
+    parentId: 'pole-industrie-energie',
+    title: 'TPB SA',
+    lane: 'filiales',
+    level: 2,
+    summary: 'Entreprise orientee vers les travaux publics, les batiments et les infrastructures.',
+    tags: ['infrastructures', 'routes', 'BTP'],
+    linkedSubsidiaries: ['tpb-sa'],
+  },
+  {
+    id: 'sati-node',
+    parentId: 'pole-logistique-immobilier',
+    title: 'SATI',
+    lane: 'filiales',
+    level: 2,
+    summary: 'Transport international mobilise sur les hydrocarbures, les agregats et les biens de consommation.',
+    tags: ['transport', 'international', 'corridors'],
+    linkedSubsidiaries: ['sati'],
+  },
+  {
+    id: 'alt-node',
+    parentId: 'pole-logistique-immobilier',
+    title: 'ALT',
+    lane: 'filiales',
+    level: 2,
+    summary: 'Entite de transit et logistique regionale specialisee dans les flux et les produits vrac.',
+    tags: ['transit', 'logistique', 'vrac'],
+    linkedSubsidiaries: ['alt'],
+  },
+  {
+    id: 'gcm-immobilier-node',
+    parentId: 'pole-logistique-immobilier',
+    title: 'GCM Immobilier',
+    lane: 'filiales',
+    level: 2,
+    summary: 'Developpement immobilier du groupe axe sur le logement et les actifs residentiels.',
+    tags: ['immobilier', 'habitat', 'promotion'],
+    linkedSubsidiaries: ['gcm-immobilier'],
+  },
+  {
+    id: 'belchicken-node',
+    parentId: 'pole-restauration-services',
+    title: 'Belchicken',
+    lane: 'filiales',
+    level: 2,
+    summary: 'Filiale de restauration rapide dediee a l experience client et a la dynamique commerciale du groupe.',
+    tags: ['restauration', 'retail', 'service'],
+    linkedSubsidiaries: ['belchicken'],
+  },
+];
+
 export const values = [
   {
     title: 'Innovation',
@@ -1133,39 +1442,39 @@ export const commitments = [
 
 export const commitmentCards = [
   {
-    title: 'QualitÃ©',
+    title: 'Qualité',
     theme: 'quality',
-    summary: 'Des standards dâ€™exÃ©cution exigeants dans les activitÃ©s industrielles, Ã©nergÃ©tiques et de services du groupe.',
+    summary: 'Des standards d’exécution exigeants dans les activités industrielles, énergétiques et de services du groupe.',
     details:
-      'Koanda Group structure ses activitÃ©s autour de la rigueur opÃ©rationnelle, de la fiabilitÃ© des process, du suivi terrain et dâ€™une culture de rÃ©sultat qui renforce la confiance des partenaires, clients et institutions.',
+      'Koanda Group structure ses activités autour de la rigueur opérationnelle, de la fiabilité des process, du suivi terrain et d’une culture de résultat qui renforce la confiance des partenaires, clients et institutions.',
   },
   {
     title: 'Environnement',
     theme: 'environment',
-    summary: 'Une croissance pensÃ©e avec une attention concrÃ¨te Ã  lâ€™efficience, Ã  lâ€™Ã©nergie et aux impacts environnementaux.',
+    summary: 'Une croissance pensée avec une attention concrète à l’efficience, à l’énergie et aux impacts environnementaux.',
     details:
-      'Le groupe porte des projets dans lâ€™Ã©nergie solaire, lâ€™industrie et les services avec une logique de modernisation des infrastructures, de meilleure maÃ®trise des ressources et dâ€™intÃ©gration progressive des normes environnementales dans ses dÃ©ploiements.',
+      'Le groupe porte des projets dans l’énergie solaire, l’industrie et les services avec une logique de modernisation des infrastructures, de meilleure maîtrise des ressources et d’intégration progressive des normes environnementales dans ses déploiements.',
   },
   {
-    title: 'ResponsabilitÃ© sociale',
+    title: 'Responsabilité sociale',
     theme: 'social',
-    summary: 'Un dÃ©veloppement qui place les femmes, les hommes et les territoires au cÅ“ur de la trajectoire du groupe.',
+    summary: 'Un développement qui place les femmes, les hommes et les territoires au cœur de la trajectoire du groupe.',
     details:
-      'Koanda Group valorise lâ€™emploi, la montÃ©e en compÃ©tences, la sÃ©curitÃ©, la qualitÃ© des conditions de travail et les dynamiques de solidaritÃ© qui accompagnent durablement ses implantations et ses filiales.',
+      'Koanda Group valorise l’emploi, la montée en compétences, la sécurité, la qualité des conditions de travail et les dynamiques de solidarité qui accompagnent durablement ses implantations et ses filiales.',
   },
   {
     title: 'Impact local',
     theme: 'impact',
-    summary: 'Des activitÃ©s conÃ§ues pour produire de la valeur Ã©conomique utile et visible sur les marchÃ©s oÃ¹ le groupe opÃ¨re.',
+    summary: 'Des activités conçues pour produire de la valeur économique utile et visible sur les marchés où le groupe opère.',
     details:
-      'Les investissements du groupe soutiennent lâ€™industrialisation, lâ€™offre de services, la distribution de produits essentiels, la logistique, lâ€™Ã©nergie et lâ€™attractivitÃ© des territoires avec une logique dâ€™ancrage local et dâ€™effet dâ€™entraÃ®nement.',
+      'Les investissements du groupe soutiennent l’industrialisation, l’offre de services, la distribution de produits essentiels, la logistique, l’énergie et l’attractivité des territoires avec une logique d’ancrage local et d’effet d’entraînement.',
   },
   {
-    title: 'ConformitÃ© & certifications',
+    title: 'Conformité & certifications',
     theme: 'certifications',
-    summary: 'Des repÃ¨res de conformitÃ© et de certification dÃ©jÃ  visibles dans certaines entitÃ©s du portefeuille.',
+    summary: 'Des repères de conformité et de certification déjà visibles dans certaines entités du portefeuille.',
     details:
-      'CIM Metal met notamment en avant les certifications ISO 9001:2015 et ISO 14001:2015, qui illustrent une dÃ©marche de qualitÃ© et dâ€™organisation que le groupe peut valoriser dans son discours institutionnel global.',
+      'CIM Metal met notamment en avant les certifications ISO 9001:2015 et ISO 14001:2015, qui illustrent une démarche de qualité et d’organisation que le groupe peut valoriser dans son discours institutionnel global.',
   },
 ];
 
@@ -1209,6 +1518,70 @@ export const engagementCards = [
       'Des repères de conformité et de certification déjà visibles dans plusieurs activités du portefeuille.',
     details:
       'Le groupe peut valoriser des repères de conformité déjà identifiés dans ses activités, notamment ISO 9001:2015, ISO 14001:2015, TÜV Rheinland, NBF et ANEERE. Ensemble, ils traduisent une démarche de qualité, d’organisation et de reconnaissance institutionnelle utile au discours corporate.',
+  },
+];
+
+export const certificateReferences = [
+  {
+    title: 'ISO 9001:2015',
+    theme: 'quality',
+    issuer: 'Référence internationale',
+    visualLabel: 'ISO 9001',
+    headline: 'Système de management de la qualité',
+    description:
+      'Cette norme sert de repère pour structurer les processus, améliorer la qualité d’exécution et renforcer la satisfaction des parties prenantes.',
+    content:
+      'Dans la lecture institutionnelle du groupe, ISO 9001:2015 illustre une exigence d’organisation, de traçabilité et d’amélioration continue qui soutient la crédibilité des opérations.',
+    points: ['Processus documentés', 'Amélioration continue', 'Qualité de service et fiabilité opérationnelle'],
+  },
+  {
+    title: 'ISO 14001:2015',
+    theme: 'environment',
+    issuer: 'Référence internationale',
+    visualLabel: 'ISO 14001',
+    headline: 'Management environnemental',
+    description:
+      'ISO 14001:2015 apporte un cadre reconnu pour identifier, suivre et réduire les impacts environnementaux dans les activités industrielles et de services.',
+    content:
+      'Cette référence renforce le discours du groupe sur l’efficience, la maîtrise des ressources et l’intégration progressive des standards environnementaux dans ses déploiements.',
+    points: ['Gestion des impacts', 'Maîtrise des ressources', 'Démarche environnementale structurée'],
+  },
+  {
+    title: 'TÜV Rheinland',
+    theme: 'certifications',
+    issuer: 'Organisme tiers',
+    visualLabel: 'TÜV',
+    headline: 'Repère de conformité et de contrôle',
+    description:
+      'TÜV Rheinland est associé à des démarches de vérification, d’évaluation et de conformité reconnues à l’international.',
+    content:
+      'Dans le contexte de Koanda Group, cette référence est valorisée comme un signe de sérieux technique, de contrôle externe et de fiabilité pour certaines activités du portefeuille.',
+    points: ['Contrôle externe', 'Lecture technique crédible', 'Réassurance pour les partenaires'],
+  },
+  {
+    title: 'NBF',
+    theme: 'impact',
+    issuer: 'Repère mis en avant',
+    visualLabel: 'NBF',
+    headline: 'Référence de conformité valorisée par le groupe',
+    description:
+      'NBF est présenté comme un repère de conformité utilisé dans le discours corporate pour souligner la structuration et la reconnaissance de certaines activités.',
+    content:
+      'Cette référence contribue à la démonstration de sérieux, de normalisation progressive et de lisibilité institutionnelle auprès des clients, partenaires et parties prenantes.',
+    points: ['Lisibilité institutionnelle', 'Conformité valorisée', 'Crédibilité du portefeuille'],
+  },
+  {
+    title: 'ANEERE',
+    theme: 'social',
+    issuer: 'Référence institutionnelle',
+    visualLabel: 'ANEERE',
+    headline: 'Repère institutionnel lié aux enjeux énergétiques',
+    description:
+      'ANEERE figure parmi les repères cités par le groupe pour illustrer son inscription dans des cadres institutionnels et techniques reconnus.',
+    content:
+      'Cette référence vient appuyer le positionnement du groupe sur les sujets d’énergie, de conformité et d’alignement avec les exigences publiques et sectorielles.',
+    points: ['Reconnaissance institutionnelle', 'Ancrage sectoriel', 'Cohérence avec les projets énergétiques'],
+    logo: partnerAneere,
   },
 ];
 
@@ -1371,3 +1744,4 @@ export const footerLinks = [
   { label: 'Actualités', path: '/actualites' },
   { label: 'Présentation corporate', path: groupInfo.plaquetteUrl },
 ];
+

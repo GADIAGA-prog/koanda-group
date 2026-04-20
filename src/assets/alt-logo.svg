@@ -1,0 +1,16 @@
+<svg width="640" height="260" viewBox="0 0 640 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="260" rx="32" fill="#F7FCF8"/>
+  <rect x="38" y="38" width="112" height="112" rx="28" fill="url(#paint0_linear)"/>
+  <path d="M73 104H116" stroke="white" stroke-width="14" stroke-linecap="round"/>
+  <path d="M89 82L73 104L89 126" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M111 82L127 104L111 126" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="178" y="106" fill="#123425" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800">ALT</text>
+  <text x="180" y="146" fill="#2D7A53" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">AFRIK LOGISTIK &amp; TRANSIT</text>
+  <text x="180" y="184" fill="#587564" font-family="Segoe UI, Arial, sans-serif" font-size="22">Transit, logistique et corridors regionaux</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="38" y1="38" x2="150" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8BCB8E"/>
+      <stop offset="1" stop-color="#1F7A46"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SiteLayout from './components/SiteLayout';
 import ContactPage from './pages/ContactPage';
+import CertificatesPage from './pages/CertificatesPage';
 import GroupPage from './pages/GroupPage';
 import HomePage from './pages/HomePage';
 import LegalPage from './pages/LegalPage';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/actualites" element={<NewsPage />} />
           <Route path="/actualites/:slug" element={<NewsDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/certificats" element={<CertificatesPage />} />
           <Route path="/politique-generale" element={<PolicyPage />} />
           <Route path="/mentions-legales" element={<LegalPage />} />
         </Route>

@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import OrgChartExplorer from '../components/OrgChartExplorer';
 import SectionHeading from '../components/SectionHeading';
-import { engagementCards, governanceItems, groupInfo, values } from '../data/siteContent';
-import donFasoMeebo from '../assets/don-faso-meebo.png';
+import { engagementCards, governanceItems, groupInfo, orgChartNodes, subsidiaries, values } from '../data/siteContent';
 
 function GroupPage() {
-  const [openCommitment, setOpenCommitment] = useState(0);
+  const aboutImage =
+    typeof groupInfo.aboutImage === 'string' ? { src: groupInfo.aboutImage } : groupInfo.aboutImage;
 
   return (
     <main className="page">
@@ -24,8 +25,13 @@ function GroupPage() {
 
           <article className="about-visual-card">
             <img
-              src={donFasoMeebo}
-              alt="Action solidaire Don Faso Meebo avec des participants et bénéficiaires."
+              src={aboutImage.src}
+              alt="Visuel institutionnel Koanda Group illustrant les secteurs d'activite du groupe."
+              style={{
+                objectFit: aboutImage.fit ?? 'cover',
+                objectPosition: aboutImage.position ?? 'center center',
+                background: aboutImage.background ?? '#f6fbf6',
+              }}
             />
           </article>
         </div>
@@ -47,6 +53,17 @@ function GroupPage() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="section" id="organigramme">
+        <SectionHeading
+          tag="Organigramme"
+          title="Une methode intelligente pour consulter la structure du groupe."
+          text="Recherchez une fonction, filtrez par type de structure et naviguez entre rattachements, poles et entites liees sans quitter la page."
+          split
+        />
+
+        <OrgChartExplorer nodes={orgChartNodes} subsidiaries={subsidiaries} />
       </section>
 
       <section className="section" id="valeurs">
@@ -77,38 +94,18 @@ function GroupPage() {
         />
 
         <div className="card-grid commitments-grid">
-          {engagementCards.map((item, index) => (
-            <article
-              className={`content-card commitment-card commitment-card-${item.theme} ${
-                openCommitment === index ? 'is-open' : ''
-              }`}
-              key={item.title}
-            >
-              <div className="commitment-card-head">
-                <p className="mini-text">Engagement</p>
-                <button
-                  type="button"
-                  className="commitment-plus-button"
-                  aria-expanded={openCommitment === index}
-                  aria-label={
-                    openCommitment === index
-                      ? `Réduire le contenu ${item.title}`
-                      : `Afficher plus de contenu pour ${item.title}`
-                  }
-                  onClick={() => setOpenCommitment(openCommitment === index ? -1 : index)}
-                >
-                  <span>{openCommitment === index ? '-' : '+'}</span>
-                </button>
-              </div>
-
+          {engagementCards.map((item) => (
+            <article className={`content-card commitment-card commitment-card-${item.theme}`} key={item.title}>
               <h3>{item.title}</h3>
               <p className="commitment-summary">{item.summary}</p>
 
-              <div className="commitment-details" hidden={openCommitment !== index}>
+              <div className="commitment-details">
                 <p>{item.details}</p>
-                <a className="button button-ghost commitment-more-link" href="#contact">
-                  En savoir plus
-                </a>
+                {item.theme === 'certifications' ? (
+                  <Link className="button button-ghost commitment-more-link" to="/certificats">
+                    En savoir plus
+                  </Link>
+                ) : null}
               </div>
             </article>
           ))}

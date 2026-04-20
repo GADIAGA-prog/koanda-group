@@ -1,0 +1,59 @@
+<svg width="720" height="880" viewBox="0 0 720 880" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="880" fill="#FFFFFF"/>
+  <circle cx="364" cy="430" r="154" fill="#FFFFFF"/>
+  <path d="M320 70H538L601 132V260C536 235 474 206 420 170C374 140 340 108 320 70Z" fill="#74BE37"/>
+  <path d="M565 168L665 268V424C612 412 565 392 520 358C490 334 464 304 442 266L565 168Z" fill="#050505"/>
+  <path d="M538 438H672V634L570 730C521 674 500 624 500 574C500 526 513 482 538 438Z" fill="#74BE37"/>
+  <path d="M458 714L570 784V880H360C372 824 406 770 458 714Z" fill="#74BE37"/>
+  <path d="M226 706H404C366 774 352 832 360 880H226V706Z" fill="#74BE37"/>
+  <path d="M210 288C252 234 316 202 392 194C348 252 312 298 210 288Z" fill="#74BE37"/>
+  <path d="M406 366C365 332 314 314 256 314C228 314 202 318 178 326C213 260 275 218 350 208C404 224 452 252 489 294C459 308 430 332 406 366Z" fill="#74BE37"/>
+  <path d="M526 338C550 364 571 396 586 433L672 433V640L591 693C522 607 500 470 526 338Z" fill="url(#paint0_linear)"/>
+  <path d="M67 392H87V455H67V392ZM102 367H122V455H102V367ZM137 339H157V455H137V339ZM172 307H192V455H172V307ZM52 455H204" stroke="#0F2F23" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M166 319L184 299L198 314" stroke="#0F2F23" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M568 244H624V324H568V244Z" stroke="#74BE37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M582 324V350" stroke="#74BE37" stroke-width="8" stroke-linecap="round"/>
+  <path d="M610 324V350" stroke="#74BE37" stroke-width="8" stroke-linecap="round"/>
+  <path d="M554 350H638" stroke="#74BE37" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="596" cy="286" r="16" stroke="#74BE37" stroke-width="8"/>
+  <path d="M644 530H696" stroke="#0F2F23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M672 470V584" stroke="#0F2F23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M616 584H694" stroke="#0F2F23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M632 584L644 526L660 560L680 488L694 584" stroke="#0F2F23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M620 478L644 466L632 444" stroke="#0F2F23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="620" cy="445" r="5" fill="#0F2F23"/>
+  <path d="M570 736V642L616 598V736" stroke="#0F2F23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M616 736V620L664 580V736" stroke="#0F2F23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M532 736H692" stroke="#0F2F23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M592 676H594" stroke="#0F2F23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M592 700H594" stroke="#0F2F23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M638 654H640" stroke="#0F2F23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M638 680H640" stroke="#0F2F23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M638 706H640" stroke="#0F2F23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M82 786H208" stroke="#0F2F23" stroke-width="10" stroke-linecap="round"/>
+  <path d="M100 786V744H168L192 786" stroke="#0F2F23" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="120" cy="791" r="16" fill="#0F2F23"/>
+  <circle cx="164" cy="791" r="16" fill="#0F2F23"/>
+  <path d="M34 478L70 442V506" stroke="#74BE37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 518L70 482V546" stroke="#74BE37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 558L70 522V586" stroke="#74BE37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 598L70 562V626" stroke="#74BE37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M72 618H138" stroke="#74BE37" stroke-width="8" stroke-linecap="round"/>
+  <path d="M72 566H138" stroke="#74BE37" stroke-width="8" stroke-linecap="round"/>
+  <path d="M72 514H138" stroke="#74BE37" stroke-width="8" stroke-linecap="round"/>
+  <path d="M72 462H138" stroke="#74BE37" stroke-width="8" stroke-linecap="round"/>
+  <path d="M114 524L154 484L174 504" stroke="#74BE37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 472V628" stroke="#74BE37" stroke-width="8" stroke-linecap="round"/>
+  <path d="M40 462L27 478L40 494" stroke="#74BE37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M54 420H130L88 456H12L54 420Z" fill="#74BE37"/>
+  <path d="M49 412H143L119 438H25L49 412Z" fill="#FFFFFF"/>
+  <path d="M60 444H95V500H60V444Z" fill="#FFFFFF"/>
+  <text x="68" y="590" fill="#143225" font-family="Segoe UI, Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="4">KOANDA</text>
+  <text x="178" y="650" fill="#74BE37" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="500" letter-spacing="18">GROUP</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="528" y1="338" x2="648" y2="688" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#74BE37"/>
+      <stop offset="1" stop-color="#040404"/>
+    </linearGradient>
+  </defs>
+</svg>
