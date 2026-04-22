@@ -3,5 +3,3 @@ dist
 .env
 .codex/
 *.log
-.vercel
-.env*.local

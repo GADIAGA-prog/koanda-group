@@ -2504,3 +2504,58 @@ h1, h2, h3, p, li, a, span {
   .news-highlight-body { gap: 14px; }
   .footer-main { padding: 20px; }
 }
+.fact-card {
+  min-height: 160px;
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid #d9e3de;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.fact-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.fact-card--green {
+  background-color: #e8f5e9;
+}
+
+.fact-card--blue {
+  background-color: #e3f2fd;
+}
+
+.fact-card--orange {
+  background-color: #fff3e0;
+}
+
+.fact-card--purple {
+  background-color: #f3e5f5;
+}
+
+.fact-card--pink {
+  background-color: #fce4ec;
+}
+
+.fact-card--cyan {
+  background-color: #e0f7fa;
+}
+
+.fact-card--lime {
+  background-color: #f1f8e9;
+}
+.focus-card-text {
+  line-height: 1.7;
+}
+
+.focus-card-text strong {
+  font-weight: 700;
+}
+
+.focus-card-text p {
+  margin: 0 0 12px;
+}

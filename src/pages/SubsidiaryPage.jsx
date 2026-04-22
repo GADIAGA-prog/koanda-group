@@ -74,12 +74,20 @@ function SubsidiaryPage() {
         />
 
         <div className="detail-facts-grid">
-          {subsidiary.facts.map((fact) => (
-            <article className="content-card" key={fact}>
-              <p>{fact}</p>
-            </article>
-          ))}
-        </div>
+  {subsidiary.facts.map((fact, index) => {
+    const factText = typeof fact === "string" ? fact : fact.text;
+    const factTone = typeof fact === "string" ? "" : fact.tone;
+
+    return (
+      <article
+        className={`content-card fact-card ${factTone ? `fact-card--${factTone}` : ""}`}
+        key={`${factText}-${index}`}
+      >
+        <p>{factText}</p>
+      </article>
+    );
+  })}
+</div>
       </section>
 
       {subsidiary.focusCards?.length ? (
@@ -92,25 +100,45 @@ function SubsidiaryPage() {
           />
 
           <div className="subsidiary-focus-grid">
-            {subsidiary.focusCards.map((item) => (
-              <article className="content-card subsidiary-focus-card" key={item.title}>
-                {item.image ? (
-                  <div className="subsidiary-focus-media">
-                    <img
-                      src={item.image.src}
-                      alt={item.image.alt ?? item.title}
-                      style={getSubsidiaryMediaStyle(item.image, 'focus')}
-                    />
-                  </div>
-                ) : null}
-                <div className="subsidiary-focus-copy">
-                  <p className="mini-text">{item.tag}</p>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+  {subsidiary.focusCards.map((item) => (
+    <article className="content-card subsidiary-focus-card" key={item.title}>
+      {item.image ? (
+        <div className="subsidiary-focus-media">
+          <img
+            src={item.image.src}
+            alt={item.image.alt ?? item.title}
+            style={getSubsidiaryMediaStyle(item.image, 'focus')}
+          />
+        </div>
+      ) : null}
+      <div className="subsidiary-focus-copy">
+        <p className="mini-text">{item.tag}</p>
+        <h3>{item.title}</h3>
+        <div className="focus-card-text">
+          {String(item.text)
+            .split("\n\n")
+            .map((paragraph, index) => {
+              const trimmed = paragraph.trim();
+
+              if (!trimmed) {
+                return null;
+              }
+
+              if (trimmed.startsWith("**") && trimmed.endsWith("**")) {
+                return (
+                  <p key={index}>
+                    <strong>{trimmed.slice(2, -2)}</strong>
+                  </p>
+                );
+              }
+
+              return <p key={index}>{trimmed}</p>;
+            })}
+        </div>
+      </div>
+    </article>
+  ))}
+</div>
         </section>
       ) : null}
 

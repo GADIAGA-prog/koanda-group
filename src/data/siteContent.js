@@ -510,8 +510,8 @@ export const subsidiaries = [
       },
       {
         tag: "GPL",
-        title: "Une offre Eco Gaz visible dans les supports",
-        text: "Les visuels de la filiale montrent aussi une offre GPL structurée autour des bouteilles Eco Gaz. Cet axe renforce le positionnement de proximité de la marque au-delà du carburant classique.",
+        title: "Offre Eco Gaz",
+        text: "Eco Oil propose des bouteilles de gaz qui repondent aux normes d'exigence en matière de sécurité. Elle se positionne comme un acteur clé de",
         image: {
           src: ecoOilGaz,
           alt: "Offre Eco Gaz de Eco Oil",
@@ -792,22 +792,44 @@ export const subsidiaries = [
     },
     logo: fasoEnergyLogo,
     watermarkLabel: "Faso Energy",
-    summary:
-      "Filiale industrielle dédiée à la fabrication de panneaux photovoltaïques, avec une ambition de production locale, de déploiement solaire et de montée en puissance régionale.",
-    description:
-      "Située dans la zone industrielle de Kossodo, Faso Energy se présente comme un acteur de la fabrication locale de panneaux photovoltaïques au Burkina Faso. Les supports montrent une vraie base industrielle, des équipes au travail, des lignes de fabrication, des panneaux en stockage et une communication orientée performance, qualité et transition énergétique.",
+    summary: "",
+    description: `Située dans la zone industrielle de Kossodo, Faso Energy est le premier fabriquant de panneaux photovoltaïques en Afrique de l’ouest.  Faso Energy se positionne comme un acteur clé dans la production de panneaux solaires. Grâce à des machines de dernière génération d’origine européenne et l’accompagnement d’experts nationaux et internationaux, Faso Energy répond aux besoins croissants en énergie renouvelable.
+A la clé, des plaques solaires de 50W à 720W sont produites en cellule standard et en cellule half cel. La capacité de production journalière est de 300 à 600 panneaux photovoltaïques par jour selon le type de panneau.`,
     facts: [
-      "Premier fabricant de panneaux photovoltaïques au Burkina Faso mis en avant dans les supports",
-      "1 800 panneaux solaires par semaine affichés dans la communication",
-      "2 000 emplois directs et indirects mis en avant",
-      "20 certifications nationales et internationales mentionnées",
-      "Projet de centrale solaire de 30 MW",
+      {
+        text: "Premier fabricant de panneaux photovoltaïques au Burkina Faso et dans la sous-région.",
+        tone: "green",
+      },
+      {
+        text: "300 à 600 panneaux photovoltaïques par jour",
+        tone: "blue",
+      },
+      {
+        text: "Des plaques solaires de 50W à 720W",
+        tone: "orange",
+      },
+      {
+        text: "Production en cellule standard et en cellule half cel",
+        tone: "purple",
+      },
+      {
+        text: "2 000 emplois directs et indirects",
+        tone: "pink",
+      },
+      {
+        text: "20 certifications nationales et internationales",
+        tone: "cyan",
+      },
+      {
+        text: "Projet de centrale solaire de 30 MW",
+        tone: "lime",
+      },
     ],
     focusCards: [
       {
         tag: "Production",
-        title: "Une chaîne locale de fabrication photovoltaïque",
-        text: "Les visuels montrent une activité industrielle concrète autour de l’assemblage et de la manipulation de panneaux solaires. Cette base locale renforce la crédibilité du discours industriel de la filiale.",
+        title: "Une chaîne de fabrication photovoltaïque",
+        text: "A la clé, des plaques solaires de 50W à 720W sont produites en cellule standard et en cellule half cel. La capacité de production journalière est de 300 à 600 panneaux photovoltaïques par jour selon le type de panneau.",
         image: {
           src: fasoEnergyFabrication,
           alt: "Fabrication de panneaux solaires chez Faso Energy",
@@ -817,8 +839,18 @@ export const subsidiaries = [
       },
       {
         tag: "Équipe",
-        title: "Des équipes visibles sur le site industriel",
-        text: "La communication de Faso Energy met aussi en avant les équipes mobilisées autour de la production, de l’encadrement et du transfert de savoir-faire, ce qui donne plus de substance humaine à la filiale.",
+        title: "L'Équipe de Faso Energy : Une force multiculturelle",
+        text: `Chez Faso Energy, notre équipe internationale et multiculturelle constitue notre plus grand atout. Mobilisée autour de la production et du transfert de savoir-faire, elle crée un environnement dynamique dans lequel chaque collaborateur apporte des compétences uniques et une réelle valeur ajoutée.
+
+          **Engagement et synergie**
+
+Nous sommes unis par une vision commune : proposer des solutions énergétiques durables et performantes. Grâce à la collaboration, à la complémentarité des expertises et à l’engagement de chacun, nous relevons les défis du secteur tout en contribuant activement au développement local.
+
+**Ensemble vers l’avenir**
+
+Notre culture du partage, de l’apprentissage et de la formation continue favorise l’épanouissement professionnel de chacun. Ensemble, nous construisons un avenir énergétique meilleur, centré sur l’humain, l’innovation et la durabilité.
+
+Rejoignez-nous pour transformer l’énergie!`,
         image: {
           src: fasoEnergyTeam,
           alt: "Équipe Faso Energy sur le site industriel",
@@ -830,7 +862,7 @@ export const subsidiaries = [
         tag: "Performance",
         title:
           "Une communication structurée autour des capacités et des repères",
-        text: "Un visuel dédié met en avant 500 partenaires satisfaits, 1 800 panneaux solaires par semaine, 2 000 emplois directs et indirects ainsi que 20 certifications. Ces repères sont utilisés ici comme éléments de communication institutionnelle visibles dans les supports.",
+        text: "500 partenaires satisfaits, 300 à 600 panneaux solaires par jour selon le type de panneau, 2 000 emplois directs et indirects ainsi que 20 certifications.",
         image: {
           src: fasoEnergyStats,
           alt: "Indicateurs de performance Faso Energy",
@@ -841,8 +873,8 @@ export const subsidiaries = [
       },
       {
         tag: "Déploiement",
-        title: "Production, stockage et projection solaire",
-        text: "Au-delà de l’atelier, les images montrent aussi le stockage des panneaux et leur destination finale. Cela permet de présenter Faso Energy comme une filiale à la fois industrielle et tournée vers les usages concrets de l’énergie solaire.",
+        title: "Enlèvement des panneaux solaires : Un processus essentiel",
+        text: "L’enlèvement des panneaux solaires est une étape cruciale dans notre processus de production chez Faso Energy. Ce processus garantit que chaque panneau est transporté en toute sécurité vers son lieu d’installation, prêt à capter l’énergie solaire et à fournir des solutions durables.",
         image: {
           src: fasoEnergyStockage,
           alt: "Stockage de panneaux solaires Faso Energy",
