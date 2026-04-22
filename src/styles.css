@@ -1541,7 +1541,8 @@ h1, h2, h3, p, li, a, span {
 .subsidiary-card-media {
   position: relative;
   margin: -1px -1px 0;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
+  min-height: 240px;
   overflow: hidden;
   background: linear-gradient(180deg, #edf7ef, #dcefdc);
 }
@@ -1558,10 +1559,11 @@ h1, h2, h3, p, li, a, span {
 
 .subsidiary-card-media img {
   position: absolute;
-  inset: 0;
-  aspect-ratio: 16 / 9;
+  inset: 12px;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
   opacity: 0;
-  transform: scale(1.04);
+  transform: scale(0.985);
   transition: opacity 520ms ease, transform 1400ms ease;
 }
 
@@ -1634,10 +1636,24 @@ h1, h2, h3, p, li, a, span {
 }
 .presence-map-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 24px;
+  align-items: start;
+}
+
+.presence-support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
   gap: 24px;
   margin-top: 24px;
   align-items: start;
+}
+
+.presence-side-stack {
+  display: grid;
+  gap: 18px;
+  align-content: start;
 }
 
 .presence-map-stack {
@@ -1662,7 +1678,13 @@ h1, h2, h3, p, li, a, span {
 }
 
 .presence-reference-card {
-  padding: 16px;
+  padding: 22px;
+}
+
+.presence-map-artwork {
+  min-height: 0;
+  max-height: none;
+  object-fit: contain;
 }
 
 .presence-map-card-copy {
@@ -1674,7 +1696,7 @@ h1, h2, h3, p, li, a, span {
 .presence-map-card-copy h3 {
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
 }
 
 .presence-map {
@@ -1686,7 +1708,7 @@ h1, h2, h3, p, li, a, span {
 .presence-continental-map {
   border-radius: 24px;
   background: #eef1ed;
-  aspect-ratio: 1.3 / 1;
+  aspect-ratio: auto;
   object-fit: contain;
 }
 
@@ -1719,6 +1741,65 @@ h1, h2, h3, p, li, a, span {
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1.4rem, 2.4vw, 2rem);
+}
+
+.presence-overview-visual {
+  display: grid;
+  gap: 14px;
+}
+
+.presence-overview-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  background: #f5f9f5;
+}
+
+.presence-region-grid,
+.presence-activity-grid,
+.presence-country-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.presence-region-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.presence-activity-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.presence-country-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.presence-region-card,
+.presence-activity-card,
+.presence-country-card {
+  min-height: 100%;
+}
+
+.presence-country-card {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.presence-country-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.presence-activity-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .presence-map-region {
@@ -1868,7 +1949,21 @@ h1, h2, h3, p, li, a, span {
 .subsidiary-hero-section { padding-top: 34px; }
 .subsidiary-detail-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr); gap: 24px; align-items: center; }
 .subsidiary-detail-copy { display: grid; gap: 14px; }
-.subsidiary-detail-media img { border-radius: var(--radius-lg); aspect-ratio: 16 / 10; }
+.subsidiary-detail-media {
+  display: grid;
+  align-items: center;
+  min-height: 360px;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, #eef6ef, #dbeedb);
+}
+
+.subsidiary-detail-media img {
+  height: 100%;
+  max-height: 460px;
+  border-radius: calc(var(--radius-lg) - 6px);
+  aspect-ratio: 16 / 10;
+}
 .detail-facts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; }
 .subsidiary-focus-grid {
   display: grid;
@@ -1886,11 +1981,14 @@ h1, h2, h3, p, li, a, span {
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background: #eef6ef;
+  min-height: 250px;
+  padding: 14px;
 }
 
 .subsidiary-focus-media img {
   display: block;
   width: 100%;
+  height: 100%;
   aspect-ratio: 16 / 9;
 }
 
@@ -1917,6 +2015,8 @@ h1, h2, h3, p, li, a, span {
 }
 
 .subsidiary-gallery-card {
+  display: grid;
+  align-items: center;
   padding: 0;
   background: #f7fbf6;
 }
@@ -1924,8 +2024,9 @@ h1, h2, h3, p, li, a, span {
 .subsidiary-gallery-card img {
   display: block;
   width: 100%;
+  height: 100%;
+  min-height: 260px;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
   border-radius: inherit;
 }
 .legal-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -2204,6 +2305,14 @@ h1, h2, h3, p, li, a, span {
   .spotlight-nav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .hero-mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .news-highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .presence-support-grid { grid-template-columns: 1fr; }
+  .presence-region-grid,
+  .presence-activity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .presence-country-grid { grid-template-columns: 1fr; }
+  .subsidiary-card-media { min-height: 220px; }
+  .subsidiary-detail-media { min-height: 320px; }
+  .subsidiary-focus-media { min-height: 230px; }
+  .subsidiary-gallery-card img { min-height: 230px; }
   .news-public-grid,
   .admin-image-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2328,7 +2437,7 @@ h1, h2, h3, p, li, a, span {
   }
   .partner-logo-card img { height: 58px; }
   .brand img { width: min(100%, 180px); }
-  .hero-stats, .values-grid, .subsidiary-grid, .card-grid, .news-grid, .timeline-grid, .detail-facts-grid, .footer-main, .legal-grid, .sector-chip-grid, .news-featured-grid, .summary-grid, .key-figures-grid, .spotlight-nav, .four-cols, .subsidiary-gallery-grid, .subsidiary-focus-grid { grid-template-columns: 1fr; }
+  .hero-stats, .values-grid, .subsidiary-grid, .card-grid, .news-grid, .timeline-grid, .detail-facts-grid, .footer-main, .legal-grid, .sector-chip-grid, .news-featured-grid, .summary-grid, .key-figures-grid, .spotlight-nav, .four-cols, .subsidiary-gallery-grid, .subsidiary-focus-grid, .presence-region-grid, .presence-activity-grid, .presence-country-grid { grid-template-columns: 1fr; }
   .subsidiary-grid-two { grid-template-columns: 1fr; }
   .news-public-grid,
   .admin-image-grid,
@@ -2347,6 +2456,13 @@ h1, h2, h3, p, li, a, span {
   .pdg-visual-placeholder,
   .pdg-visual-card p { max-width: none; width: 100%; }
   .subsidiary-card { gap: 14px; }
+  .presence-map-artwork { min-height: 0; }
+  .presence-country-head { align-items: flex-start; }
+  .presence-reference-card { padding: 16px; }
+  .subsidiary-card-media { min-height: 200px; }
+  .subsidiary-detail-media { min-height: 260px; padding: 14px; }
+  .subsidiary-focus-media { min-height: 210px; padding: 12px; }
+  .subsidiary-gallery-card img { min-height: 210px; }
   .org-chart-search-card,
   .org-chart-group,
   .org-focus-card,

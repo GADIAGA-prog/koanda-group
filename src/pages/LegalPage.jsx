@@ -18,7 +18,9 @@ function LegalPage() {
           <p className="mini-text">Confidentialité</p>
           <h3>Données et formulaires</h3>
           <p>
-            Les formulaires de contact du site sont fournis à titre de prise de contact. Les données saisies servent uniquement à préparer un email vers les équipes de Koanda Group.
+            Les formulaires de contact du site sont fournis à titre de prise de contact. Les
+            données saisies servent uniquement à préparer un email vers les équipes de Koanda
+            Group.
           </p>
         </article>
 
@@ -26,8 +28,9 @@ function LegalPage() {
           <p className="mini-text">Documents</p>
           <h3>Ressources corporate</h3>
           <p>
-            Le site peut mettre à disposition une présentation corporate, des publications institutionnelles et d’autres
-            ressources destinées à présenter les activités, les implantations et les engagements du groupe.
+            Le site peut mettre à disposition une présentation corporate, des publications
+            institutionnelles et d'autres ressources destinées à présenter les activités, les
+            implantations et les engagements du groupe.
           </p>
         </article>
       </section>

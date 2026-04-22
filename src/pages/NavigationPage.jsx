@@ -12,12 +12,12 @@ function NavigationPage() {
         <p className="section-tag">Navigation</p>
         <h1>{title}</h1>
         <p className="hero-lead">
-          Cette section s’intègre dans une architecture éditoriale clarifiée, pensée pour donner une lecture plus
-          institutionnelle et plus directe du groupe.
+          Cette section s'intègre dans une architecture éditoriale clarifiée, pensée pour donner
+          une lecture plus institutionnelle et plus directe du groupe.
         </p>
         <p className="hero-text">
-          L’objectif est de guider rapidement le visiteur vers les pages stratégiques du site: groupe, filiales,
-          implantations, projets, partenaires et contact.
+          L'objectif est de guider rapidement le visiteur vers les pages stratégiques du site :
+          groupe, filiales, implantations, projets, partenaires et contact.
         </p>
 
         <div className="hero-actions">
@@ -25,7 +25,7 @@ function NavigationPage() {
             Ouvrir la présentation
           </a>
           <Link className="button button-secondary" to="/">
-            Revenir à l’accueil
+            Revenir à l'accueil
           </Link>
         </div>
       </section>

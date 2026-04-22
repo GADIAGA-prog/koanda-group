@@ -1,5 +1,5 @@
 import SectionHeading from '../components/SectionHeading';
-import { caseStudies, groupInfo, projectsInProgress, realizations } from '../data/siteContent';
+import { groupInfo, projectsInProgress, realizations } from '../data/siteContent';
 
 function ProjectsPage() {
   return (
@@ -7,7 +7,7 @@ function ProjectsPage() {
       <section className="section page-top">
         <SectionHeading
           tag="Projets et réalisations"
-          title="Des projets structurants dans l’énergie, l’industrie, la logistique, l’immobilier et l’hôtellerie."
+          title="Des projets structurants dans l'énergie, l'industrie, la logistique, l'immobilier et l'hôtellerie."
           text="Koanda Group pilote des projets structurants avec une volonté de répondre durablement aux besoins des marchés africains."
           split
         />
@@ -20,7 +20,8 @@ function ProjectsPage() {
           <div className="about-copy">
             <p>
               Plusieurs projets phares, des investissements en cours et plusieurs réalisations
-              traduisent la vision de croissance, d’exécution et de transformation portée par Koanda Group.
+              traduisent la vision de croissance, d'exécution et de transformation portée par
+              Koanda Group.
             </p>
           </div>
         </div>
@@ -57,24 +58,6 @@ function ProjectsPage() {
           {realizations.map((item) => (
             <article className="content-card" key={item}>
               <p>{item}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section" id="etudes-de-cas">
-        <SectionHeading
-          tag="Études de cas"
-          title="Trois lectures transversales des projets du groupe."
-          text=""
-          split
-        />
-
-        <div className="card-grid three-cols">
-          {caseStudies.map((item) => (
-            <article className="content-card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
             </article>
           ))}
         </div>

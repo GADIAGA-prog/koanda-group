@@ -1,6 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+function getSubsidiaryMediaStyle(image) {
+  return {
+    objectFit: image.cardFit ?? image.displayFit ?? 'contain',
+    objectPosition: image.position ?? 'center center',
+    background: image.background ?? '#f6fbf6',
+  };
+}
+
 function SubsidiaryCard({ subsidiary }) {
   const gallerySource = subsidiary.cardGallery?.length
     ? subsidiary.cardGallery
@@ -43,11 +51,7 @@ function SubsidiaryCard({ subsidiary }) {
             className={index === activeImageIndex ? 'is-active' : ''}
             src={image.src}
             alt={image.alt ?? `Illustration ${subsidiary.name}`}
-            style={{
-              objectFit: image.fit ?? 'cover',
-              objectPosition: image.position ?? 'center center',
-              background: image.background ?? '#f6fbf6',
-            }}
+            style={getSubsidiaryMediaStyle(image)}
           />
         ))}
         {gallery.length > 1 ? (

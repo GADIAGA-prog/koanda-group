@@ -47,7 +47,7 @@ function SubsidiariesPage() {
         <SectionHeading
           tag="Industrie"
           title="Industrie, énergie et infrastructures."
-          text="Des filiales positionnées sur l’acier, la cimenterie, le solaire et les travaux publics."
+          text="Des filiales positionnées sur l'acier, la cimenterie, le solaire et les travaux publics."
           split
         />
 

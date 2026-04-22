@@ -5,7 +5,7 @@ const laneLabels = {
   all: 'Vue globale',
   direction: 'Direction',
   support: 'Support',
-  poles: 'Poles',
+  poles: 'Pôles',
   filiales: 'Filiales',
 };
 
@@ -39,8 +39,8 @@ function OrgChartExplorer({ nodes, subsidiaries }) {
 
   const groups = [
     { id: 'direction', label: 'Direction', items: filteredNodes.filter((node) => node.level === 0) },
-    { id: 'poles', label: 'Poles', items: filteredNodes.filter((node) => node.level === 1) },
-    { id: 'filiales', label: 'Entites', items: filteredNodes.filter((node) => node.level >= 2) },
+    { id: 'poles', label: 'Pôles', items: filteredNodes.filter((node) => node.level === 1) },
+    { id: 'filiales', label: 'Entités', items: filteredNodes.filter((node) => node.level >= 2) },
   ].filter((group) => group.items.length);
 
   const parentNode = activeNode?.parentId ? nodes.find((node) => node.id === activeNode.parentId) : null;
@@ -70,7 +70,7 @@ function OrgChartExplorer({ nodes, subsidiaries }) {
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Rechercher une direction, un pole ou une filiale"
+              placeholder="Rechercher une direction, un pôle ou une filiale"
             />
           </label>
 
@@ -146,7 +146,7 @@ function OrgChartExplorer({ nodes, subsidiaries }) {
               <div className="org-detail-grid">
                 <div className="org-detail-block">
                   <p className="mini-text">Rattachement direct</p>
-                  <p>{parentNode ? parentNode.title : 'Niveau le plus eleve du groupe'}</p>
+                  <p>{parentNode ? parentNode.title : 'Niveau le plus élévé du groupe'}</p>
                   {parentNode ? (
                     <button type="button" className="button button-ghost" onClick={() => setActiveNodeId(parentNode.id)}>
                       Voir le rattachement
@@ -155,7 +155,7 @@ function OrgChartExplorer({ nodes, subsidiaries }) {
                 </div>
 
                 <div className="org-detail-block">
-                  <p className="mini-text">Entites reliees</p>
+                  <p className="mini-text">Entités reliées</p>
                   {relatedSubsidiaries.length ? (
                     <div className="org-related-links">
                       {relatedSubsidiaries.map((subsidiary) => (
@@ -166,7 +166,7 @@ function OrgChartExplorer({ nodes, subsidiaries }) {
                       ))}
                     </div>
                   ) : (
-                    <p>Aucune filiale directement rattachee a cet element.</p>
+                    <p>Aucune filiale directement rattachée à cet élément.</p>
                   )}
                 </div>
               </div>

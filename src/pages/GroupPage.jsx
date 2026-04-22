@@ -1,7 +1,14 @@
 import { Link } from 'react-router-dom';
 import OrgChartExplorer from '../components/OrgChartExplorer';
 import SectionHeading from '../components/SectionHeading';
-import { engagementCards, governanceItems, groupInfo, orgChartNodes, subsidiaries, values } from '../data/siteContent';
+import {
+  engagementCards,
+  governanceItems,
+  groupInfo,
+  orgChartNodes,
+  subsidiaries,
+  values,
+} from '../data/siteContent';
 
 function GroupPage() {
   const aboutImage =
@@ -26,7 +33,7 @@ function GroupPage() {
           <article className="about-visual-card">
             <img
               src={aboutImage.src}
-              alt="Visuel institutionnel Koanda Group illustrant les secteurs d'activite du groupe."
+              alt="Visuel institutionnel Koanda Group illustrant les secteurs d'activité du groupe."
               style={{
                 objectFit: aboutImage.fit ?? 'cover',
                 objectPosition: aboutImage.position ?? 'center center',
@@ -58,8 +65,8 @@ function GroupPage() {
       <section className="section" id="organigramme">
         <SectionHeading
           tag="Organigramme"
-          title="Une methode intelligente pour consulter la structure du groupe."
-          text="Recherchez une fonction, filtrez par type de structure et naviguez entre rattachements, poles et entites liees sans quitter la page."
+          title="Consultez la structure organisationnelle du groupe."
+          text="Recherchez une fonction, filtrez par type de structure et naviguez entre rattachements, pôles et entités liées sans quitter la page."
           split
         />
 

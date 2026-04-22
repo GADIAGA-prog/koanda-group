@@ -2,6 +2,21 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import SectionHeading from '../components/SectionHeading';
 import { subsidiaries } from '../data/siteContent';
 
+function getSubsidiaryMediaStyle(image, variant = 'default') {
+  const fitByVariant = {
+    hero: image.heroFit ?? image.displayFit ?? 'contain',
+    focus: image.focusFit ?? image.displayFit ?? 'contain',
+    gallery: image.galleryFit ?? image.displayFit ?? 'contain',
+    default: image.displayFit ?? 'contain',
+  };
+
+  return {
+    objectFit: fitByVariant[variant],
+    objectPosition: image.position ?? 'center center',
+    background: image.background ?? '#f6fbf6',
+  };
+}
+
 function SubsidiaryPage() {
   const { slug } = useParams();
   const subsidiary = subsidiaries.find((item) => item.slug === slug || item.aliases?.includes(slug));
@@ -44,11 +59,7 @@ function SubsidiaryPage() {
             <img
               src={heroImage.src}
               alt={heroImage.alt ?? `Visuel ${subsidiary.name}`}
-              style={{
-                objectFit: heroImage.fit ?? 'cover',
-                objectPosition: heroImage.position ?? 'center center',
-                background: heroImage.background ?? '#f6fbf6',
-              }}
+              style={getSubsidiaryMediaStyle(heroImage, 'hero')}
             />
           </div>
         </div>
@@ -57,8 +68,8 @@ function SubsidiaryPage() {
       <section className="section">
         <SectionHeading
           tag="Informations clés"
-          title="Des repères synthétiques sur la filiale."
-          text="Chaque fiche filiale peut servir de point d’entrée avant l’ajout ultérieur de contenus plus détaillés."
+          title="Les repères synthétiques sur la filiale."
+          text=""
           split
         />
 
@@ -76,7 +87,7 @@ function SubsidiaryPage() {
           <SectionHeading
             tag="Développement"
             title="Activités, implantations, résultats et ambition."
-            text="Une lecture plus claire de la filiale, avec ses métiers, ses points d’ancrage et sa trajectoire d’expansion."
+            text="Une lecture plus claire de la filiale, avec ses métiers, ses points d'ancrage et sa trajectoire d'expansion."
             split
           />
 
@@ -88,11 +99,7 @@ function SubsidiaryPage() {
                     <img
                       src={item.image.src}
                       alt={item.image.alt ?? item.title}
-                      style={{
-                        objectFit: item.image.fit ?? 'cover',
-                        objectPosition: item.image.position ?? 'center center',
-                        background: item.image.background ?? '#f6fbf6',
-                      }}
+                      style={getSubsidiaryMediaStyle(item.image, 'focus')}
                     />
                   </div>
                 ) : null}
@@ -112,7 +119,7 @@ function SubsidiaryPage() {
           <SectionHeading
             tag="Détails par pays"
             title="Une lecture séparée des implantations Eco Oil."
-            text="Les informations sont distinguées entre le Burkina Faso et la Côte d’Ivoire pour donner un aperçu plus clair des activités et des ambitions sur chaque marché."
+            text="Les informations sont distinguées entre le Burkina Faso et la Côte d'Ivoire pour donner un aperçu plus clair des activités et des ambitions sur chaque marché."
             split
           />
 
@@ -138,7 +145,7 @@ function SubsidiaryPage() {
         <section className="section section-soft">
           <SectionHeading
             tag="Visuels"
-            title="Des images directement liées à l’activité de la filiale."
+            title="Des images directement liées à l'activité de la filiale."
             text="Cette galerie reprend les visuels fournis pour mieux illustrer les installations, les produits ou les réalisations de la filiale."
             split
           />
@@ -149,11 +156,7 @@ function SubsidiaryPage() {
                 <img
                   src={image.src}
                   alt={image.alt ?? `Visuel ${index + 1} de ${subsidiary.name}`}
-                  style={{
-                    objectFit: image.fit ?? 'cover',
-                    objectPosition: image.position ?? 'center center',
-                    background: image.background ?? '#f6fbf6',
-                  }}
+                  style={getSubsidiaryMediaStyle(image, 'gallery')}
                 />
               </article>
             ))}

@@ -73,9 +73,9 @@ function HomePage() {
 
           <div className="hero-note-card">
             <p className="mini-text">Positionnement</p>
-            <h3>Une signature fondée sur la vision, l’exécution et l’impact.</h3>
+            <h3>Une signature fondée sur la vision, l'exécution et l'impact.</h3>
             <p>
-              Koanda Group articule investissements, développement d’activités et déploiement
+              Koanda Group articule investissements, développement d'activités et déploiement
               opérationnel dans des secteurs essentiels à la transformation des marchés africains.
             </p>
           </div>
@@ -143,7 +143,7 @@ function HomePage() {
         <div className="home-trust-strip">
           <div className="home-trust-copy">
             <p className="mini-text">Partenaires & institutions</p>
-            <h3>Des relations solides au service de la croissance et de l’exécution.</h3>
+            <h3>Des relations solides au service de la croissance et de l'exécution.</h3>
           </div>
 
           <div className="partners-marquee" aria-label="Partenaires du groupe">
@@ -178,7 +178,7 @@ function HomePage() {
         <SectionHeading
           tag="Filiales"
           title="Des filiales pensées comme des plateformes de croissance."
-          text="Chaque entité répond à une logique claire de marché, d’exécution et de création de valeur. L’ensemble compose un portefeuille cohérent, lisible et crédible."
+          text="Chaque entité répond à une logique claire de marché, d'exécution et de création de valeur. L'ensemble compose un portefeuille cohérent, lisible et crédible."
         />
 
         <div className="subsidiary-grid">
@@ -238,8 +238,8 @@ function HomePage() {
       <section className="section" id="projets-a-la-une">
         <SectionHeading
           tag="Projets à la une"
-          title="Des projets emblématiques qui traduisent l’ambition du groupe."
-          text="Énergie, stockage pétrolier, hôtellerie et distribution: ces projets donnent à voir la capacité de Koanda Group à structurer et porter des actifs d’envergure."
+          title="Des projets emblématiques qui traduisent l'ambition du groupe."
+          text="Énergie, ciment, stockage pétrolier et hôtellerie : ces projets donnent à voir la capacité de Koanda Group à structurer et porter des actifs d'envergure."
           split
         />
 
