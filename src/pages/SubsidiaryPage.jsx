@@ -68,12 +68,12 @@ function SubsidiaryPage() {
       <section className="section">
         <SectionHeading
           tag="Informations clés"
-          title="Les repères synthétiques sur la filiale."
+          title={`Les informations essentielles sur ${subsidiary.name}.`}
           text=""
           split
         />
 
-        <div className="detail-facts-grid">
+         <div className="detail-facts-grid">
   {subsidiary.facts.map((fact, index) => {
     const factText = typeof fact === "string" ? fact : fact.text;
     const factTone = typeof fact === "string" ? "" : fact.tone;
@@ -95,7 +95,7 @@ function SubsidiaryPage() {
           <SectionHeading
             tag="Développement"
             title="Activités, implantations, résultats et ambition."
-            text="Une lecture plus claire de la filiale, avec ses métiers, ses points d'ancrage et sa trajectoire d'expansion."
+            text=""
             split
           />
 
@@ -173,8 +173,8 @@ function SubsidiaryPage() {
         <section className="section section-soft">
           <SectionHeading
             tag="Visuels"
-            title="Des images directement liées à l'activité de la filiale."
-            text="Cette galerie reprend les visuels fournis pour mieux illustrer les installations, les produits ou les réalisations de la filiale."
+            title={`Des images directement liées à l'activité de ${subsidiary.name}.`}
+            text=""
             split
           />
 

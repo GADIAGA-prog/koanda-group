@@ -2522,23 +2522,27 @@ h1, h2, h3, p, li, a, span {
 }
 
 .fact-card--green {
-  background-color: #e8f5e9;
+  background-color: #2eb139;
 }
 
 .fact-card--blue {
-  background-color: #e3f2fd;
+  background-color: #5ab6f7;
 }
-
+.fact-card--yellow {
+  background-color: #f8e482;
+}
 .fact-card--orange {
-  background-color: #fff3e0;
+  background-color: #f8b74e;
 }
 
 .fact-card--purple {
-  background-color: #f3e5f5;
+  background-color: #e15ef5;
 }
-
+.fact-card--red {
+  background-color: #f75457;
+}
 .fact-card--pink {
-  background-color: #fce4ec;
+  background-color: #d2f008;
 }
 
 .fact-card--cyan {
@@ -2546,7 +2550,7 @@ h1, h2, h3, p, li, a, span {
 }
 
 .fact-card--lime {
-  background-color: #f1f8e9;
+  background-color: #0beda5;
 }
 .focus-card-text {
   line-height: 1.7;

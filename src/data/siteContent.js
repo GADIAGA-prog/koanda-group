@@ -30,7 +30,7 @@ import ecoOilAddressCard from "../assets/eco-oil-address-card.png";
 import ecoOilAddressDetail from "../assets/eco-oil-address-detail.png";
 import ecoOilClient from "../assets/eco-oil-client.jpeg";
 import ecoOilFoyer from "../assets/eco-oil-foyer.jpeg";
-import ecoOilGaz from "../assets/eco-oil-gaz.png";
+import ecoOilGaz from "../assets/eco-oil-foyer.jpeg";
 import ecoOilLavage from "../assets/eco-oil-lavage.png";
 import ecoOilLavageDetail from "../assets/eco-oil-lavage-detail.png";
 import ecoOilLogoSource from "../assets/eco-oil-logo-source.png";
@@ -332,10 +332,22 @@ export const subsidiaries = [
     description:
       "AMKO Trading SA est un acteur du trading de produits pétroliers en Afrique de l’Ouest. Le groupe s’appuie sur son siège en Suisse, une représentation au Burkina Faso et une présence à Dubaï pour renforcer ses opérations, tout en préparant une extension stratégique au Ghana autour du port de Tema.",
     facts: [
-      "Siège : Genève, Suisse",
-      "Représentations : Burkina Faso et Dubaï",
-      "Production annoncée : 600 000 tonnes de produits",
-      "Extension visée : dépôts pétroliers au Ghana, port de Tema",
+      {
+        text: "Siège : Genève, Suisse",
+        tone: "orange",
+      },
+      {
+        text: "Représentations : Burkina Faso et Dubaï",
+        tone: "blue",
+      },
+      {
+        text: "Production annoncée : 600 000 tonnes de produits",
+        tone: "yellow",
+      },
+      {
+        text: "Extension visée : dépôts pétroliers au Ghana, port de Tema",
+        tone: "green",
+      },
     ],
     focusCards: [
       {
@@ -480,10 +492,22 @@ export const subsidiaries = [
     description:
       "Eco Oil est un opérateur burkinabè multi-sites, ancré localement, qui combine distribution de carburants, GPL et services de proximité. La marque s’appuie sur l’accessibilité, la proximité commerciale, la visibilité du réseau et une capacité de déploiement déjà matérialisée au Burkina Faso et en Côte d’Ivoire.",
     facts: [
-      "32 stations-service complétées au Burkina Faso",
-      "10 stations-service complétées en Côte d’Ivoire",
-      "Objectifs 2027 : 60 stations au Burkina Faso et 25 en Côte d’Ivoire",
-      "Distribution de produits pétroliers, GPL et services de proximité",
+      {
+        text: "32 stations-service complétées au Burkina Faso",
+        tone: "green",
+      },
+      {
+        text: "10 stations-service complétées en Côte d’Ivoire",
+        tone: "blue",
+      },
+      {
+        text: "Objectifs 2027 : 60 stations au Burkina Faso et 25 en Côte d’Ivoire",
+        tone: "yellow",
+      },
+      {
+        text: "Distribution de produits pétroliers, GPL et services de proximité",
+        tone: "pink",
+      },
     ],
     focusCards: [
       {
@@ -511,7 +535,7 @@ export const subsidiaries = [
       {
         tag: "GPL",
         title: "Offre Eco Gaz",
-        text: "Eco Oil propose des bouteilles de gaz qui repondent aux normes d'exigence en matière de sécurité. Elle se positionne comme un acteur clé de",
+        text: "Eco Oil propose des bouteilles de gaz qui repondent aux normes d'exigence en matière de sécurité. Elle se positionne comme un acteur clé de proximité.",
         image: {
           src: ecoOilGaz,
           alt: "Offre Eco Gaz de Eco Oil",
@@ -522,7 +546,8 @@ export const subsidiaries = [
       },
       {
         tag: "Terrain",
-        title: "Une marque visible sur le terrain et dans les contenus publics",
+        title:
+          "Eco Oil bénéficie d'une visibilité sur le terrain et dans les contenus publics",
         text: "La marque bénéficie d’une visibilité terrain nourrie par les ouvertures de stations, l’offre GPL, les promotions commerciales et les services additionnels comme le lavage auto.",
         image: {
           src: ecoOilLavage,
@@ -534,7 +559,7 @@ export const subsidiaries = [
       {
         tag: "Contact",
         title: "Un ancrage local lisible pour le site",
-        text: "Eco Oil Burkina est visible à l’Avenue de l’UEMOA, 06 BP 9249 Ouagadougou 06, avec le contact dg@ecooilbf.com et des numéros commerciaux dédiés. Cette implantation renforce la lisibilité de la marque et de ses appels à l’action.",
+        text: "Eco Oil Burkina est visible à l’avenue de l’UEMOA, 06 BP 9249 Ouagadougou 06, avec le contact dg@ecooilbf.com et des numéros commerciaux dédiés. Cette implantation renforce la lisibilité de la marque et de ses appels à l’action.",
         image: {
           src: ecoOilAddressDetail,
           alt: "Coordonnées Eco Oil Burkina",
@@ -995,10 +1020,22 @@ Rejoignez-nous pour transformer l’énergie!`,
     description:
       "GCM Industries SA est une société industrielle du groupe positionnée dans la production de ciment. Les supports mettent en avant une base industrielle moderne, la marque CIM ÉTOILE, un ancrage citoyen et une trajectoire d’industrialisation destinée à répondre aux besoins du marché burkinabè et sous-régional.",
     facts: [
-      "Capacité annoncée : 640 000 tonnes par an, extensible à 1 200 000 tonnes",
-      "Plus de 1 200 emplois directs et indirects mis en avant dans les supports",
-      "Technologie moderne d’origine allemande",
-      "Marque de ciment : CIM ÉTOILE",
+      {
+        text: "Capacité annoncée : 640 000 tonnes par an, extensible à 1 200 000 tonnes",
+        tone: "yellow",
+      },
+      {
+        text: "Plus de 1 200 emplois directs et indirects mis en avant dans les supports",
+        tone: "green",
+      },
+      {
+        text: "Technologie moderne d’origine allemande",
+        tone: "blue",
+      },
+      {
+        text: "Marque de ciment : CIM ÉTOILE",
+        tone: "red",
+      },
     ],
     focusCards: [
       {
@@ -1188,11 +1225,26 @@ Rejoignez-nous pour transformer l’énergie!`,
     description:
       "TPB SA apparaît dans les supports comme une filiale de terrain orientée exécution, capable d’intervenir sur des chantiers de terrassement, de routes, d’ouvrages hydrauliques, de réseaux enterrés et d’électrification. Les visuels montrent une organisation de chantier visible, des équipes équipées et des moyens de génie civil mobilisés sur plusieurs types d’infrastructures.",
     facts: [
-      "Terrassement et préparation de plateformes",
-      "Routes, voiries et aménagements",
-      "Ouvrages hydrauliques et de franchissement",
-      "Canalisations et réseaux enterrés",
-      "Électrification et aménagement urbain",
+      {
+        text: "Terrassement et préparation de plateformes",
+        tone: "yellow",
+      },
+      {
+        text: "Routes, voiries et aménagements",
+        tone: "blue",
+      },
+      {
+        text: "Ouvrages hydrauliques et de franchissement",
+        tone: "green",
+      },
+      {
+        text: "Canalisations et réseaux enterrés",
+        tone: "red",
+      },
+      {
+        text: "Électrification et aménagement urbain",
+        tone: "purple",
+      },
     ],
     focusCards: [
       {

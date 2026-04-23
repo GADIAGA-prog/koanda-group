@@ -88,11 +88,21 @@ function SubsidiaryCard({ subsidiary }) {
 
       <p>{subsidiary.summary}</p>
 
-      <ul className="feature-list">
-        {subsidiary.facts.slice(0, 2).map((fact) => (
-          <li key={fact}>{fact}</li>
-        ))}
-      </ul>
+       <ul className="feature-list">
+  {subsidiary.facts.slice(0, 2).map((fact, index) => {
+    const factText = typeof fact === 'string' ? fact : fact.text;
+    const factTone = typeof fact === 'string' ? '' : fact.tone;
+
+    return (
+      <li
+        key={`${subsidiary.slug}-fact-${index}`}
+        className={factTone ? `fact-item fact-item--${factTone}` : 'fact-item'}
+      >
+        {factText}
+      </li>
+    );
+  })}
+</ul>
 
       <div className="card-actions">
         <Link className="button button-secondary" to={`/filiales/${subsidiary.slug}`}>
