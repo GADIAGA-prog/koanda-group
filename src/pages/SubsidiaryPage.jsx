@@ -4,10 +4,10 @@ import { subsidiaries } from '../data/siteContent';
 
 function getSubsidiaryMediaStyle(image, variant = 'default') {
   const fitByVariant = {
-    hero: image.heroFit ?? image.displayFit ?? 'contain',
-    focus: image.focusFit ?? image.displayFit ?? 'contain',
-    gallery: image.galleryFit ?? image.displayFit ?? 'contain',
-    default: image.displayFit ?? 'contain',
+    hero: image.heroFit ?? image.displayFit ?? image.fit ?? 'cover',
+    focus: image.focusFit ?? image.displayFit ?? image.fit ?? 'cover',
+    gallery: image.galleryFit ?? image.displayFit ?? image.fit ?? 'cover',
+    default: image.displayFit ?? image.fit ?? 'cover',
   };
 
   return {

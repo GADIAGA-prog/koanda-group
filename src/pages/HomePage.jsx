@@ -33,7 +33,7 @@ function HomePage() {
   const getPartnerCardClassName = (title) =>
     `partner-logo-card is-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
   const highlightedSubsidiaries = subsidiaries.filter((item) =>
-    ['amko-trading', 'eco-oil', 'gcm-industries', 'faso-energy', 'belchicken'].includes(
+    ['amko-trading', 'eco-oil', 'gcm-industries', 'faso-energy', 'fasofood'].includes(
       item.slug,
     ),
   );

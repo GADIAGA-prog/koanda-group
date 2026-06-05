@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function getSubsidiaryMediaStyle(image) {
   return {
-    objectFit: image.cardFit ?? image.displayFit ?? 'contain',
+    objectFit: image.cardFit ?? image.displayFit ?? image.fit ?? 'cover',
     objectPosition: image.position ?? 'center center',
     background: image.background ?? '#f6fbf6',
   };

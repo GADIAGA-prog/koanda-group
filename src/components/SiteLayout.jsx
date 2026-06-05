@@ -96,8 +96,7 @@ function SiteLayout() {
         sidebarCollapsed ? 'is-submenu-collapsed' : ''
       }`}
     >
-      <a className="skip-nav" href="#main-content">Aller au contenu principal</a>
-      <header className={`site-header ${headerScrolled ? 'is-scrolled' : ''}`}>
+<header className={`site-header ${headerScrolled ? 'is-scrolled' : ''}`}>
         <div className="navbar">
           <NavLink className="brand" to="/" aria-label="Koanda Group">
             <img src={koandaHeaderLogo} alt="Logo Koanda Group" />

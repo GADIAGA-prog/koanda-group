@@ -676,6 +676,11 @@ h1, h2, h3, p, li, a, span {
 }
 
 .hero-image-card img { aspect-ratio: 1.1 / 1; }
+.about-visual-card img,
+.projects-visual-card img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
 .hero-banner-stack { display: grid; gap: 14px; }
 .hero-banner-card { padding: 20px; background: linear-gradient(180deg, #ffffff, #f4fbf5); }
 .hero-banner-card p { color: var(--muted); }
@@ -2310,7 +2315,8 @@ h1, h2, h3, p, li, a, span {
   }
   .submenu-sidebar { display: none; }
   .hero-section, .about-layout, .projects-layout, .careers-layout, .contact-layout, .subsidiary-detail-layout, .pdg-layout, .presence-map-layout { grid-template-columns: 1fr; }
-  .hero-stats, .values-grid, .subsidiary-grid, .card-grid, .news-grid, .timeline-grid, .detail-facts-grid, .footer-main, .legal-grid, .sector-chip-grid, .news-featured-grid, .summary-grid, .key-figures-grid, .four-cols, .subsidiary-gallery-grid, .subsidiary-focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-stats, .values-grid, .subsidiary-grid, .card-grid, .news-grid, .timeline-grid, .detail-facts-grid, .footer-main, .legal-grid, .sector-chip-grid, .news-featured-grid, .summary-grid, .key-figures-grid, .four-cols, .three-cols, .subsidiary-gallery-grid, .subsidiary-focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .certificate-card { grid-template-columns: 1fr; }
   .subsidiary-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .navbar { grid-template-columns: minmax(160px, 190px) minmax(0, 1fr); }
   .nav-links { gap: 8px; }
@@ -2439,7 +2445,8 @@ h1, h2, h3, p, li, a, span {
   .hero-lead { margin-top: 14px; font-size: 1rem; }
   .hero-text { font-size: 0.96rem; }
   .carousel-copy, .pdg-copy, .pdg-visual-card, .contact-form-card, .contact-card-panel, .content-card, .timeline-card, .job-card { padding: 18px; }
-  .hero-actions, .section-actions, .card-actions, .pill-row { flex-direction: column; align-items: stretch; }
+  .hero-actions, .section-actions, .card-actions { flex-direction: column; align-items: stretch; }
+  .pill-row { flex-wrap: wrap; flex-direction: row; align-items: flex-start; }
   .partners-marquee { padding: 10px; }
   .partners-track { gap: 12px; }
   .partner-logo-card {
@@ -2449,7 +2456,7 @@ h1, h2, h3, p, li, a, span {
   }
   .partner-logo-card img { height: 58px; }
   .brand img { width: min(100%, 180px); }
-  .hero-stats, .values-grid, .subsidiary-grid, .card-grid, .news-grid, .timeline-grid, .detail-facts-grid, .footer-main, .legal-grid, .sector-chip-grid, .news-featured-grid, .summary-grid, .key-figures-grid, .spotlight-nav, .four-cols, .subsidiary-gallery-grid, .subsidiary-focus-grid, .presence-region-grid, .presence-activity-grid, .presence-country-grid { grid-template-columns: 1fr; }
+  .hero-stats, .values-grid, .subsidiary-grid, .card-grid, .news-grid, .timeline-grid, .detail-facts-grid, .footer-main, .legal-grid, .sector-chip-grid, .news-featured-grid, .summary-grid, .key-figures-grid, .spotlight-nav, .four-cols, .three-cols, .subsidiary-gallery-grid, .subsidiary-focus-grid, .presence-region-grid, .presence-activity-grid, .presence-country-grid { grid-template-columns: 1fr; }
   .subsidiary-grid-two { grid-template-columns: 1fr; }
   .news-public-grid,
   .admin-image-grid,
@@ -2514,7 +2521,16 @@ h1, h2, h3, p, li, a, span {
   .presence-map-label { font-size: 16px; }
   .news-highlight-card { gap: 14px; }
   .news-highlight-body { gap: 14px; }
-  .footer-main { padding: 20px; }
+  .footer-main { padding: 20px; border-radius: 18px; }
+  .pdg-visual-card img { max-height: 320px; width: auto; margin: 0 auto; }
+  .about-visual-card img, .projects-visual-card img { aspect-ratio: 4 / 3; }
+  .org-chart-shell { gap: 14px; }
+  .section-head { gap: 14px; }
+  .contact-form-card { padding: 20px; }
+  .contact-card-panel { padding: 20px; }
+  .admin-article-item { padding: 14px; }
+  .home-engagements-head { padding: 0; }
+  .subsidiary-focus-copy h3 { font-size: clamp(1.1rem, 5vw, 1.5rem); }
 }
 .fact-card {
   min-height: 160px;
@@ -2879,4 +2895,111 @@ body {
   color: rgba(233, 242, 236, 0.78);
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+/* ============================================================
+   ACCESSIBILITÉ — skip nav
+   ============================================================ */
+.skip-nav {
+  position: absolute;
+  left: -999em;
+  top: 0;
+}
+.skip-nav:focus {
+  left: 12px;
+  top: 12px;
+  z-index: 9999;
+  padding: 10px 20px;
+  border-radius: 14px;
+  background: var(--green-deep);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ============================================================
+   RESPONSIVE EXTRA — très petits écrans (≤ 480 px)
+   ============================================================ */
+@media (max-width: 480px) {
+  :root { --container: min(100% - 12px, 1380px); }
+
+  .section, .hero-section { padding: 14px; border-radius: 18px; }
+  .page { gap: 12px; padding: 16px 0 28px; }
+
+  .hero-copy h1 { font-size: clamp(1.75rem, 9vw, 2.4rem); }
+  .section h2, .section h1, .subsidiary-detail-copy h1 { font-size: clamp(1.4rem, 7vw, 1.9rem); }
+  .hero-lead { font-size: 0.96rem; }
+
+  .metric-card { padding: 14px; }
+  .metric-card strong { font-size: clamp(1.45rem, 6vw, 1.9rem); }
+
+  .button { min-height: 44px; padding: 0 14px; font-size: 0.92rem; }
+
+  .partner-logo-card { width: 130px; min-width: 130px; padding: 12px 10px; }
+  .partner-logo-card img { height: 50px; }
+
+  .subsidiary-card-head { gap: 10px; }
+  .subsidiary-logo, .subsidiary-fallback-logo { width: 44px; height: 44px; flex-basis: 44px; }
+
+  .content-card, .timeline-card, .job-card, .contact-form-card, .contact-card-panel { padding: 16px; }
+  .carousel-copy, .pdg-copy, .pdg-visual-card { padding: 14px; }
+
+  .footer-main { padding: 16px; }
+  .footer-bottom { font-size: 0.82rem; }
+
+  .admin-card { padding: 14px; }
+  .home-hero .hero-copy h1 { font-size: clamp(1.75rem, 9vw, 2.4rem); }
+
+  .hero-note-card { padding: 14px 16px; }
+  .section-head { gap: 10px; }
+
+  .news-highlight-image img { aspect-ratio: 4 / 3; }
+  .carousel-card img { aspect-ratio: 4 / 3; }
+}
+
+/* ============================================================
+   RESPONSIVE EXTRA — tablette portrait (761 px – 960 px)
+   Hamburger nav aussi sur cette plage (8 items ne tiennent pas)
+   ============================================================ */
+@media (min-width: 761px) and (max-width: 960px) {
+  .hero-copy h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); }
+  .navbar { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
+  .mobile-nav-toggle { display: inline-flex; }
+  .nav-panel {
+    grid-column: 1 / -1;
+    display: none;
+    width: 100%;
+    justify-items: stretch;
+    gap: 12px;
+    padding-top: 4px;
+  }
+  .nav-panel.is-open { display: grid; }
+  .social-links { justify-content: flex-start; flex-wrap: wrap; }
+  .nav-links {
+    width: 100%;
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding-bottom: 2px;
+  }
+  .nav-item { width: 100%; justify-items: stretch; }
+  .nav-item > a { width: 100%; justify-content: flex-start; min-height: 46px; padding: 0 16px; }
+  .nav-submenu {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    margin-top: 8px;
+    max-height: 0;
+    padding: 0 12px;
+    overflow: hidden;
+    opacity: 1;
+    transform: none;
+    pointer-events: none;
+    transition: max-height 180ms ease, padding 180ms ease;
+  }
+  .nav-submenu.is-open { max-height: 400px; padding: 12px; pointer-events: auto; }
+  .submenu-sidebar { display: none; }
+  .site-shell.has-submenu-sidebar .site-content-shell,
+  .site-shell.is-submenu-collapsed .site-content-shell { display: block; width: var(--container); }
 }

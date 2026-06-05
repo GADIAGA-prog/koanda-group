@@ -2,12 +2,12 @@ import SectionHeading from '../components/SectionHeading';
 import SubsidiaryCard from '../components/SubsidiaryCard';
 import { subsidiaries } from '../data/siteContent';
 
-const hydrocarbonSubsidiaries = subsidiaries.filter((item) =>
-  ['amko-trading', 'eco-oil'].includes(item.slug),
-);
-
 const industrySubsidiaries = subsidiaries.filter((item) =>
   ['faso-energy', 'gcm-industries', 'tpb-sa'].includes(item.slug),
+);
+
+const hydrocarbonSubsidiaries = subsidiaries.filter((item) =>
+  ['amko-trading', 'eco-oil'].includes(item.slug),
 );
 
 const logisticsSubsidiaries = subsidiaries.filter((item) =>
@@ -15,7 +15,7 @@ const logisticsSubsidiaries = subsidiaries.filter((item) =>
 );
 
 const restaurantSubsidiaries = subsidiaries.filter((item) =>
-  ['belchicken'].includes(item.slug),
+  ['fasofood'].includes(item.slug),
 );
 
 function SubsidiariesPage() {
@@ -29,7 +29,22 @@ function SubsidiariesPage() {
         />
       </section>
 
-      <section className="section" id="hydrocarbures">
+      <section className="section" id="industrie">
+        <SectionHeading
+          tag="Industrie &amp; Énergie"
+          title="Industrie, énergie et infrastructures."
+          text="Des filiales positionnées sur l'acier, la cimenterie, le solaire et les travaux publics."
+          split
+        />
+
+        <div className="subsidiary-grid">
+          {industrySubsidiaries.map((subsidiary) => (
+            <SubsidiaryCard key={subsidiary.slug} subsidiary={subsidiary} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section section-soft" id="hydrocarbures">
         <SectionHeading
           tag="Hydrocarbures"
           title="Trading et distribution pétrolière."
@@ -38,21 +53,6 @@ function SubsidiariesPage() {
 
         <div className="subsidiary-grid subsidiary-grid-two">
           {hydrocarbonSubsidiaries.map((subsidiary) => (
-            <SubsidiaryCard key={subsidiary.slug} subsidiary={subsidiary} />
-          ))}
-        </div>
-      </section>
-
-      <section className="section section-soft" id="industrie">
-        <SectionHeading
-          tag="Industrie"
-          title="Industrie, énergie et infrastructures."
-          text="Des filiales positionnées sur l'acier, la cimenterie, le solaire et les travaux publics."
-          split
-        />
-
-        <div className="subsidiary-grid">
-          {industrySubsidiaries.map((subsidiary) => (
             <SubsidiaryCard key={subsidiary.slug} subsidiary={subsidiary} />
           ))}
         </div>
