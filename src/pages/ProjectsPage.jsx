@@ -54,9 +54,9 @@ function ProjectsPage() {
           split
         />
 
-        <div className="card-grid">
-          {realizations.map((item) => (
-            <article className="content-card" key={item}>
+        <div className="card-grid realizations-grid">
+          {realizations.map((item, index) => (
+            <article className={`content-card realization-card realization-card--${index + 1}`} key={item}>
               <p>{item}</p>
             </article>
           ))}

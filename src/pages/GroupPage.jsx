@@ -51,10 +51,14 @@ function GroupPage() {
           split
         />
 
-        <div className="card-grid">
+        <div className="card-grid four-cols">
           {governanceItems.map((item) => (
-            <article className="content-card" key={item.title}>
-              <p className="mini-text">Gouvernance</p>
+            <article
+              className="content-card"
+              key={item.title}
+              style={{ background: item.color, borderColor: 'transparent' }}
+            >
+              <p className="mini-text" style={item.accent ? { color: item.accent } : {}}>Gouvernance</p>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>

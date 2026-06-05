@@ -543,6 +543,9 @@ h1, h2, h3, p, li, a, span {
   background: rgba(255, 255, 255, 0.84);
   backdrop-filter: blur(12px);
 }
+.presence-metrics .metric-card:nth-child(3n+1) { background: linear-gradient(135deg, #d4f0da, #b8e8c4); border-color: transparent; }
+.presence-metrics .metric-card:nth-child(3n+2) { background: linear-gradient(135deg, #d0e8fb, #b8d8f8); border-color: transparent; }
+.presence-metrics .metric-card:nth-child(3n+3) { background: linear-gradient(135deg, #fef0c0, #fde490); border-color: transparent; }
 
 .metric-card strong {
   display: block;
@@ -1266,6 +1269,7 @@ h1, h2, h3, p, li, a, span {
 
 .org-chart-group-items {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 10px;
 }
 
@@ -1798,6 +1802,21 @@ h1, h2, h3, p, li, a, span {
 .presence-country-card {
   min-height: 100%;
 }
+.presence-region-grid .presence-region-card:nth-child(3n+1) { background: linear-gradient(135deg, #d4f0da, #b8e8c4); border-color: transparent; }
+.presence-region-grid .presence-region-card:nth-child(3n+2) { background: linear-gradient(135deg, #d0e8fb, #b8d8f8); border-color: transparent; }
+.presence-region-grid .presence-region-card:nth-child(3n+3) { background: linear-gradient(135deg, #fef0c0, #fde490); border-color: transparent; }
+
+.presence-activity-grid .presence-activity-card:nth-child(5n+1) { background: linear-gradient(135deg, #d4f0da, #b8e8c4); border-color: transparent; }
+.presence-activity-grid .presence-activity-card:nth-child(5n+2) { background: linear-gradient(135deg, #d0e8fb, #b8d8f8); border-color: transparent; }
+.presence-activity-grid .presence-activity-card:nth-child(5n+3) { background: linear-gradient(135deg, #fef0c0, #fde490); border-color: transparent; }
+.presence-activity-grid .presence-activity-card:nth-child(5n+4) { background: linear-gradient(135deg, #fde0c0, #fbc898); border-color: transparent; }
+.presence-activity-grid .presence-activity-card:nth-child(5n+5) { background: linear-gradient(135deg, #ead8f8, #d8bef5); border-color: transparent; }
+
+.presence-country-grid .presence-country-card:nth-child(5n+1) { background: linear-gradient(135deg, #d4f0da, #b8e8c4); border-color: transparent; }
+.presence-country-grid .presence-country-card:nth-child(5n+2) { background: linear-gradient(135deg, #d0e8fb, #b8d8f8); border-color: transparent; }
+.presence-country-grid .presence-country-card:nth-child(5n+3) { background: linear-gradient(135deg, #fef0c0, #fde490); border-color: transparent; }
+.presence-country-grid .presence-country-card:nth-child(5n+4) { background: linear-gradient(135deg, #fde0c0, #fbc898); border-color: transparent; }
+.presence-country-grid .presence-country-card:nth-child(5n+5) { background: linear-gradient(135deg, #ead8f8, #d8bef5); border-color: transparent; }
 
 .presence-country-card {
   display: grid;
@@ -1898,7 +1917,11 @@ h1, h2, h3, p, li, a, span {
 .section-dark { background: radial-gradient(circle at top right, rgba(143, 207, 152, 0.22), transparent 30%), linear-gradient(135deg, #f7fcf8, #eef8ef); }
 .projects-layout { align-items: start; }
 .timeline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.timeline-card { background: rgba(255, 255, 255, 0.86); }
+.timeline-card { background: rgba(255, 255, 255, 0.86); border-color: transparent; }
+.timeline-grid .timeline-card:nth-child(4n+1) { background: linear-gradient(135deg, #d4f0da, #b8e8c4); }
+.timeline-grid .timeline-card:nth-child(4n+2) { background: linear-gradient(135deg, #d0e8fb, #b8d8f8); }
+.timeline-grid .timeline-card:nth-child(4n+3) { background: linear-gradient(135deg, #fef0c0, #fde490); }
+.timeline-grid .timeline-card:nth-child(4n+4) { background: linear-gradient(135deg, #fde0c0, #fbc898); }
 .timeline-step { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: rgba(143, 207, 152, 0.3); color: var(--text); font-weight: 800; }
 .feature-list { margin: 14px 0 0; padding-left: 18px; }
 .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1982,6 +2005,12 @@ h1, h2, h3, p, li, a, span {
   aspect-ratio: 16 / 10;
 }
 .detail-facts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; }
+.realizations-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.realization-card { border-color: transparent; text-align: center; min-height: 140px; display: flex; align-items: center; justify-content: center; }
+.realization-card--1 { background: linear-gradient(135deg, #d4f0da, #b8e8c4); }
+.realization-card--2 { background: linear-gradient(135deg, #d0e8fb, #b8d8f8); }
+.realization-card--3 { background: linear-gradient(135deg, #fef0c0, #fde490); }
+.realization-card--4 { background: linear-gradient(135deg, #fde0c0, #fbc898); }
 .subsidiary-focus-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2536,7 +2565,7 @@ h1, h2, h3, p, li, a, span {
   min-height: 160px;
   padding: 28px;
   border-radius: 24px;
-  border: 1px solid #d9e3de;
+  border: 1px solid transparent;
   text-align: center;
   display: flex;
   align-items: center;
@@ -2548,6 +2577,12 @@ h1, h2, h3, p, li, a, span {
   margin: 0;
   line-height: 1.5;
 }
+
+.detail-facts-grid .fact-card:nth-child(5n+1) { background: linear-gradient(135deg, #d4f0da, #b8e8c4); }
+.detail-facts-grid .fact-card:nth-child(5n+2) { background: linear-gradient(135deg, #d0e8fb, #b8d8f8); }
+.detail-facts-grid .fact-card:nth-child(5n+3) { background: linear-gradient(135deg, #fef0c0, #fde490); }
+.detail-facts-grid .fact-card:nth-child(5n+4) { background: linear-gradient(135deg, #fde0c0, #fbc898); }
+.detail-facts-grid .fact-card:nth-child(5n+5) { background: linear-gradient(135deg, #ead8f8, #d8bef5); }
 
 .fact-card--green {
   background-color: #2eb139;
@@ -2760,7 +2795,10 @@ body {
 .home-hero .carousel-card {
   border: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.34);
+  color: var(--text);
 }
+.home-hero .carousel-copy h3 { color: var(--green-deep); }
+.home-hero .carousel-copy p { color: var(--muted); }
 .home-hero .carousel-dot { background: rgba(255, 255, 255, 0.3); }
 .home-hero .carousel-dot.is-active { background: var(--gold); }
 

@@ -32,11 +32,10 @@ function HomePage() {
   const featuredPartners = [...partners.slice(0, 6), ...partners.slice(0, 6)];
   const getPartnerCardClassName = (title) =>
     `partner-logo-card is-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-  const highlightedSubsidiaries = subsidiaries.filter((item) =>
-    ['amko-trading', 'eco-oil', 'gcm-industries', 'faso-energy', 'fasofood'].includes(
-      item.slug,
-    ),
-  );
+  const subsidiaryDisplayOrder = ['faso-energy', 'gcm-industries', 'fasofood', 'eco-oil', 'amko-trading', 'gcm-immobilier'];
+  const highlightedSubsidiaries = subsidiaryDisplayOrder
+    .map((slug) => subsidiaries.find((item) => item.slug === slug))
+    .filter(Boolean);
 
   const visualProjects = featuredProjects.map((item, index) => ({
     ...item,

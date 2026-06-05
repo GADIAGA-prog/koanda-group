@@ -79,6 +79,7 @@ import gcmIndustries3 from "../assets/gcm-industries-3.png";
 import gcmIndustries4 from "../assets/gcm-industries-4.png";
 import gcmIndustries5 from "../assets/gcm-industries-5.png";
 import gcmIndustriesLogo from "../assets/gcm-industries-logo.png";
+import gcmIndustriesLogoBrand from "../assets/gcm-industries-logo.svg";
 import cimEtoile from "../assets/cim-etoile.png";
 import gcmDirecteur from "../assets/gcm-directeur.png";
 import gcmDon from "../assets/gcm-don.png";
@@ -1012,7 +1013,7 @@ Rejoignez-nous pour transformer l’énergie!`,
       position: "center center",
       background: "#ffffff",
     },
-    logo: gcmIndustriesLogo,
+    logo: gcmIndustriesLogoBrand,
     watermarkLabel: "GCM Industries",
     summary:
       "Acteur industriel de la cimenterie à Ouagadougou, avec une capacité de production structurante, une marque visible et une ambition de montée en puissance.",
@@ -1664,7 +1665,7 @@ Rejoignez-nous pour transformer l’énergie!`,
       position: "center center",
       background: "#ffffff",
     },
-    logo: gcmImmobilierLogo,
+    logo: gcmIndustriesLogo,
     watermarkLabel: "GCM Immo",
     summary:
       "GCM Immobilier porte l’ambition du groupe dans le logement et l’habitat résidentiel avec une promesse claire : bâtir aujourd’hui, valoriser demain.",
@@ -2037,18 +2038,26 @@ export const governanceItems = [
   {
     title: "Mot du Président / Directeur Général",
     text: "Une parole de direction qui exprime la vision du groupe, sa trajectoire de croissance et ses engagements.",
+    color: "linear-gradient(145deg, #e8f3ed, #d4ebe0)",
+    accent: "#156b4d",
   },
   {
     title: "Organigramme simplifié",
     text: "Une lecture claire de la maison mère, des pôles de pilotage et des principales filiales opérationnelles.",
+    color: "linear-gradient(145deg, #edf4fb, #d8ebf8)",
+    accent: "#1a5c8a",
   },
   {
     title: "Comité de direction",
     text: "Un dispositif de pilotage dédié aux arbitrages, au suivi des activités et à l’exécution des projets structurants.",
+    color: "linear-gradient(145deg, #fef6e4, #faecd0)",
+    accent: "#8a6020",
   },
   {
     title: "Gouvernance et conformité",
     text: "Une approche centrée sur la maîtrise des opérations, la qualité, la conformité et les partenariats solides.",
+    color: "linear-gradient(145deg, #f4edfb, #e8d8f5)",
+    accent: "#6a3a8a",
   },
 ];
 
@@ -2104,7 +2113,6 @@ export const orgChartNodes = [
       "Pôle dédié aux activités industrielles, à l’énergie solaire, aux infrastructures et aux travaux publics.",
     tags: ["industrie", "energie", "BTP"],
     linkedSubsidiaries: [
-      "cim-metal",
       "faso-energy",
       "gcm-industries",
       "tpb-sa",
@@ -2130,7 +2138,7 @@ export const orgChartNodes = [
     summary:
       "Pôle de services centré sur l’offre de restauration, l’expérience client et la croissance commerciale.",
     tags: ["restauration", "services", "experience client"],
-    linkedSubsidiaries: ["belchicken"],
+    linkedSubsidiaries: ["fasofood"],
   },
   {
     id: "amko-trading-node",
@@ -2153,17 +2161,6 @@ export const orgChartNodes = [
       "Réseau de distribution de carburants, GPL et services de proximité.",
     tags: ["stations-service", "distribution", "carburants"],
     linkedSubsidiaries: ["eco-oil"],
-  },
-  {
-    id: "cim-metal-node",
-    parentId: "pole-industrie-energie",
-    title: "CIM Metal",
-    lane: "filiales",
-    level: 2,
-    summary:
-      "Plateforme sidérurgique du groupe avec un positionnement qualité et conformité.",
-    tags: ["acier", "industrie", "conformite"],
-    linkedSubsidiaries: ["cim-metal"],
   },
   {
     id: "faso-energy-node",
@@ -2232,15 +2229,15 @@ export const orgChartNodes = [
     linkedSubsidiaries: ["gcm-immobilier"],
   },
   {
-    id: "belchicken-node",
+    id: "fasofood-node",
     parentId: "pole-restauration-services",
-    title: "Belchicken",
+    title: "FASOFOOD",
     lane: "filiales",
     level: 2,
     summary:
-      "Filiale de restauration rapide dédiée à l’expérience client et à la dynamique commerciale du groupe.",
-    tags: ["restauration", "retail", "service"],
-    linkedSubsidiaries: ["belchicken"],
+      "Filiale de restauration du groupe, exploitant la franchise Belchicken à Ouagadougou.",
+    tags: ["restauration", "franchise", "Belchicken"],
+    linkedSubsidiaries: ["fasofood"],
   },
 ];
 export const values = [
