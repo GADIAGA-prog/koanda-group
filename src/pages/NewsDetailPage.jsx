@@ -69,8 +69,8 @@ function NewsDetailPage() {
               <p><strong>Publié le :</strong> {formatDate(article.publishedAt)}</p>
 
               <div className="news-detail-content">
-                {article.content.split(/\n\s*\n/).map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                {article.content.split(/\n\s*\n/).map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
                 ))}
               </div>
 

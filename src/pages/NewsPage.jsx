@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import SectionHeading from '../components/SectionHeading';
+import { SkeletonGrid } from '../components/SkeletonCard';
 import { fetchPublishedArticles } from '../lib/newsApi';
 
 function formatDate(value) {
@@ -27,19 +28,13 @@ function NewsPage() {
         }
       })
       .catch((requestError) => {
-        if (active) {
-          setError(requestError.message);
-        }
+        if (active) setError(requestError.message);
       })
       .finally(() => {
-        if (active) {
-          setLoading(false);
-        }
+        if (active) setLoading(false);
       });
 
-    return () => {
-      active = false;
-    };
+    return () => { active = false; };
   }, []);
 
   return (
@@ -54,34 +49,41 @@ function NewsPage() {
       </section>
 
       <section className="section section-soft">
-        {loading ? <p className="admin-muted">Chargement des actualités...</p> : null}
+        {loading ? <SkeletonGrid count={3} hasImage /> : null}
         {error ? <p className="form-feedback error">{error}</p> : null}
         {!loading && !error && !articles.length ? (
           <p className="admin-muted">Aucun article publié pour le moment.</p>
         ) : null}
 
-        <div className="news-public-grid">
-          {articles.map((article) => (
-            <article className="content-card news-public-card" key={article.id}>
-              {article.coverImage ? (
-                <div className="content-card-image">
-                  <img src={article.coverImage} alt={article.title} />
-                </div>
-              ) : null}
+        {!loading && !error && articles.length ? (
+          <div className="news-public-grid">
+            {articles.map((article, index) => (
+              <article
+                className="content-card news-public-card"
+                key={article.id}
+                data-sr
+                data-sr-delay={String(index * 80)}
+              >
+                {article.coverImage ? (
+                  <div className="content-card-image">
+                    <img src={article.coverImage} alt={article.title} loading="lazy" />
+                  </div>
+                ) : null}
 
-              <div className="content-card-copy">
-                <p className="mini-text">{formatDate(article.publishedAt)}</p>
-                <h3>{article.title}</h3>
-                <p>{article.excerpt}</p>
-                <div className="card-actions">
-                  <Link className="button button-secondary" to={`/actualites/${article.slug}`}>
-                    Lire l’article
-                  </Link>
+                <div className="content-card-copy">
+                  <p className="mini-text">{formatDate(article.publishedAt)}</p>
+                  <h3>{article.title}</h3>
+                  <p>{article.excerpt}</p>
+                  <div className="card-actions">
+                    <Link className="button button-secondary" to={`/actualites/${article.slug}`}>
+                      Lire l'article
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        ) : null}
       </section>
     </main>
   );

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SectionHeading from '../components/SectionHeading';
 import SubsidiaryCard from '../components/SubsidiaryCard';
 import {
+  engagementCards,
   featuredProjects,
   groupInfo,
   homeCarousel,
@@ -191,6 +192,29 @@ function HomePage() {
           <Link className="button button-secondary" to="/filiales">
             Voir toutes les filiales
           </Link>
+        </div>
+      </section>
+
+      <section className="section home-engagements" id="engagements-groupe">
+        <div className="home-engagements-head">
+          <p className="section-tag">Engagements</p>
+          <h2>Des valeurs qui guident chaque décision et chaque investissement.</h2>
+          <p className="home-engagements-lead">
+            Au-delà de ses activités, Koanda Group structure sa croissance autour de repères
+            exigeants : qualité, environnement, responsabilité sociale, impact local et conformité.
+          </p>
+        </div>
+
+        <div className="engagement-grid">
+          {engagementCards.map((item, index) => (
+            <article className="engagement-card" key={item.title}>
+              <span className="engagement-index" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+            </article>
+          ))}
         </div>
       </section>
 

@@ -24,7 +24,7 @@ function ContactPage() {
             <div id="coordonnees-contact">
             {contactItems.map((item) => (
               <article className="content-card contact-card-panel" key={item.title}>
-                <p className="mini-text">{item.title}</p>
+                <p className="mini-text">Contact</p>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>

@@ -2,6 +2,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import koandaHeaderLogo from '../assets/koanda-group-logo-wide.png';
 import { footerLinks, groupInfo, navigation, socialLinks } from '../data/siteContent';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 function SocialIcon({ platform }) {
   if (platform === 'linkedin') {
@@ -32,8 +33,30 @@ function SiteLayout() {
   const [openMenuPath, setOpenMenuPath] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [headerScrolled, setHeaderScrolled] = useState(false);
   const closeSubmenuOnNextRoute = useRef(false);
   const currentYear = new Date().getFullYear();
+
+  useScrollReveal();
+
+  useEffect(() => {
+    function handleScroll() {
+      setHeaderScrolled(window.scrollY > 18);
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    for (const img of images) {
+      if (img.complete) {
+        img.classList.add('img-loaded');
+      } else {
+        img.addEventListener('load', () => img.classList.add('img-loaded'), { once: true });
+      }
+    }
+  }, [location.pathname]);
   const currentNavigationItem = navigation.find((item) =>
     item.path === '/'
       ? location.pathname === '/'
@@ -73,7 +96,8 @@ function SiteLayout() {
         sidebarCollapsed ? 'is-submenu-collapsed' : ''
       }`}
     >
-      <header className="site-header">
+      <a className="skip-nav" href="#main-content">Aller au contenu principal</a>
+      <header className={`site-header ${headerScrolled ? 'is-scrolled' : ''}`}>
         <div className="navbar">
           <NavLink className="brand" to="/" aria-label="Koanda Group">
             <img src={koandaHeaderLogo} alt="Logo Koanda Group" />
@@ -163,7 +187,7 @@ function SiteLayout() {
       </header>
 
       <div className="site-content-shell">
-        <div className="site-content-main">
+        <div className="site-content-main" id="main-content">
           <Outlet />
         </div>
 

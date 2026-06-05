@@ -1,7 +1,21 @@
 <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="240" height="240" rx="40" fill="#F4E7D7"/>
-  <rect x="52" y="124" width="136" height="72" rx="12" fill="#A85F29"/>
-  <path d="M120 52L188 116H52L120 52Z" fill="#173A36"/>
-  <rect x="108" y="142" width="24" height="54" rx="8" fill="#F6F2EB"/>
-  <text x="120" y="220" text-anchor="middle" fill="#173A36" font-family="Arial, sans-serif" font-size="22" font-weight="700">KOANDA BUILD</text>
+  <rect width="240" height="240" rx="40" fill="#F5EBE0"/>
+  <!-- Toit / fronton -->
+  <path d="M36 138L120 62L204 138Z" fill="#173A36"/>
+  <!-- Liseré de faîtage -->
+  <line x1="120" y1="62" x2="120" y2="138" stroke="#255045" stroke-width="2" opacity="0.3"/>
+  <!-- Corps du bâtiment -->
+  <rect x="54" y="132" width="132" height="60" rx="10" fill="#A85F29"/>
+  <!-- Fenêtre gauche -->
+  <rect x="70" y="144" width="24" height="22" rx="5" fill="#F5EBE0" opacity="0.75"/>
+  <!-- Fenêtre droite -->
+  <rect x="146" y="144" width="24" height="22" rx="5" fill="#F5EBE0" opacity="0.75"/>
+  <!-- Porte centrale -->
+  <rect x="106" y="150" width="28" height="42" rx="7" fill="#F5EBE0"/>
+  <!-- Poignée de porte -->
+  <circle cx="129" cy="174" r="3" fill="#A85F29" opacity="0.6"/>
+  <!-- Plateforme sol -->
+  <rect x="44" y="192" width="152" height="6" rx="3" fill="#173A36" opacity="0.2"/>
+  <!-- Nom -->
+  <text x="120" y="213" text-anchor="middle" fill="#173A36" font-family="Arial, sans-serif" font-size="15.5" font-weight="800" letter-spacing="2.5">KOANDA BUILD</text>
 </svg>

@@ -79,6 +79,7 @@ function AdminLoginPage() {
           <label>
             <span>Identifiant</span>
             <input
+              type="text"
               value={username}
               autoComplete="username"
               autoCapitalize="none"

@@ -23,14 +23,13 @@ import belchickenLogo from "../assets/belchicken-logo.jpg";
 import belchickenMenu from "../assets/belchicken-menu.png";
 import belchickenSoben from "../assets/belchicken-soben.png";
 import cimentLogo from "../assets/ciment-logo.svg";
-import constructionLogo from "../assets/construction-logo.svg";
 import ecoOilStationTotem from "../assets/eco-oil-1.png";
 import ecoOilStationModern from "../assets/eco-oil-2.png";
 import ecoOilAddressCard from "../assets/eco-oil-address-card.png";
 import ecoOilAddressDetail from "../assets/eco-oil-address-detail.png";
 import ecoOilClient from "../assets/eco-oil-client.jpeg";
 import ecoOilFoyer from "../assets/eco-oil-foyer.jpeg";
-import ecoOilGaz from "../assets/eco-oil-foyer.jpeg";
+import ecoOilGaz from "../assets/eco-oil-gz.png";
 import ecoOilLavage from "../assets/eco-oil-lavage.png";
 import ecoOilLavageDetail from "../assets/eco-oil-lavage-detail.png";
 import ecoOilLogoSource from "../assets/eco-oil-logo-source.png";
@@ -2630,5 +2629,44 @@ export const footerLinks = [
   { label: "Mentions légales", path: "/mentions-legales" },
   { label: "Politique générale du groupe", path: "/politique-generale" },
   { label: "Actualités", path: "/actualites" },
+  { label: "FAQ", path: "/faq" },
   { label: "Présentation corporate", path: groupInfo.plaquetteUrl },
+];
+
+export const faqItems = [
+  {
+    question: "Qu'est-ce que le Groupe Koanda ?",
+    answer:
+      "Koanda Group est une holding multisectorielle basée à Ouagadougou, au Burkina Faso. Le groupe opère à travers plusieurs filiales dans les hydrocarbures, le BTP, le ciment, l'énergie solaire, la logistique, l'immobilier et la restauration en Afrique de l'Ouest.",
+  },
+  {
+    question: "Quelles sont les filiales du groupe ?",
+    answer:
+      "Le groupe réunit notamment AMKO Trading SA (trading pétrolier, Genève/Burkina/Dubaï), Eco Oil BF (stations-service), Faso Energy (fabrication de panneaux solaires), GCM Industries (cimenterie), TPB SA (travaux publics), SATI (transport), ALT (logistique et transit), GCM Immobilier (promotion résidentielle) et Bel Chicken (restauration rapide).",
+  },
+  {
+    question: "Dans quels pays le groupe est-il présent ?",
+    answer:
+      "Koanda Group est actif au Burkina Faso (siège principal), en Côte d'Ivoire, au Ghana, en Suisse (siège d'AMKO Trading à Genève) et dispose d'une représentation à Dubaï. Le groupe développe également des projets en Sierra Leone.",
+  },
+  {
+    question: "Comment prendre contact avec le groupe ?",
+    answer:
+      "Vous pouvez nous contacter par email à contact@adholding.com, par téléphone au +226 70 20 97 18, ou via le formulaire disponible sur notre page Contact. Notre siège est situé dans la zone industrielle de Kossodo, Ouagadougou, Burkina Faso.",
+  },
+  {
+    question: "Comment devenir partenaire ou fournisseur de Koanda Group ?",
+    answer:
+      "Les demandes de partenariat, de prestation ou de collaboration commerciale doivent être adressées à notre direction via le formulaire de contact en précisant votre secteur d'activité, votre proposition de valeur et vos références. Toute demande est étudiée avec attention.",
+  },
+  {
+    question: "Le groupe recrute-t-il ?",
+    answer:
+      "Koanda Group et ses filiales recrutent régulièrement. Pour soumettre une candidature spontanée, utilisez le formulaire de contact en mentionnant le poste visé et en joignant votre CV. Les offres d'emploi disponibles sont communiquées via nos canaux officiels.",
+  },
+  {
+    question: "Où trouver la présentation institutionnelle du groupe ?",
+    answer:
+      "La plaquette corporate du Groupe Koanda est disponible en téléchargement direct depuis notre page d'accueil ou via le lien \"Présentation corporate\" en bas de page. Elle présente le groupe, ses filiales, ses secteurs d'activité et ses projets structurants.",
+  },
 ];
