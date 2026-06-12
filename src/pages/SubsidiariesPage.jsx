@@ -15,7 +15,7 @@ const logisticsSubsidiaries = subsidiaries.filter((item) =>
 );
 
 const restaurantSubsidiaries = subsidiaries.filter((item) =>
-  ['fasofood'].includes(item.slug),
+  ['ecofood'].includes(item.slug),
 );
 
 function SubsidiariesPage() {

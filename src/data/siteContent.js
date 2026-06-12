@@ -1817,25 +1817,25 @@ Rejoignez-nous pour transformer l’énergie!`,
     ],
   },
   {
-    slug: "fasofood",
+    slug: "ecofood",
     aliases: ["belchicken"],
-    name: "FASOFOOD",
+    name: "ECOFOOD",
     country: "Burkina Faso",
     sector: "Restauration",
     image: {
       src: belchickenLesPlats,
-      alt: "Sélection de plats FASOFOOD — franchise Belchicken",
+      alt: "Sélection de plats ECOFOOD — franchise Belchicken",
       fit: "cover",
       position: "center center",
     },
     logo: belchickenLogo,
-    watermarkLabel: "FASOFOOD",
+    watermarkLabel: "ECOFOOD",
     summary:
-      "FASOFOOD est la filiale de restauration du groupe Koanda, opérant à Ouagadougou sous la franchise Belchicken — une enseigne de restauration rapide proposant wraps, plats, extras et menus à partager.",
+      "ECOFOOD est la filiale de restauration du groupe Koanda, opérant à Ouagadougou sous la franchise Belchicken — une enseigne de restauration rapide proposant wraps, plats, extras et menus à partager.",
     description:
-      "FASOFOOD porte le pôle restauration du groupe Koanda. La société détient et exploite la franchise Belchicken, une enseigne de restauration rapide à forte identité visuelle, implantée à Ouagadougou. Belchicken propose une carte variée — wraps, plats chauds, accompagnements et boissons — adaptée à une clientèle jeune et familiale, avec un service orienté proximité et réactivité.",
+      "ECOFOOD porte le pôle restauration du groupe Koanda. La société détient et exploite la franchise Belchicken, une enseigne de restauration rapide à forte identité visuelle, implantée à Ouagadougou. Belchicken propose une carte variée — wraps, plats chauds, accompagnements et boissons — adaptée à une clientèle jeune et familiale, avec un service orienté proximité et réactivité.",
     facts: [
-      "Filiale : FASOFOOD — pôle restauration du groupe Koanda",
+      "Filiale : ECOFOOD — pôle restauration du groupe Koanda",
       "Franchise exploitée : Belchicken",
       "Implantation : Ouagadougou, Burkina Faso",
       "Téléphone : 05 23 48 48",
@@ -1847,11 +1847,11 @@ Rejoignez-nous pour transformer l’énergie!`,
     focusCards: [
       {
         tag: "Structure",
-        title: "FASOFOOD, société mère — Belchicken, franchise",
-        text: "FASOFOOD est la société holding du pôle restauration. Elle détient et développe la franchise Belchicken, qui constitue l’enseigne commerciale visible du groupe dans le secteur de la restauration rapide à Ouagadougou.",
+        title: "ECOFOOD, société mère — Belchicken, franchise",
+        text: "ECOFOOD est la société holding du pôle restauration. Elle détient et développe la franchise Belchicken, qui constitue l’enseigne commerciale visible du groupe dans le secteur de la restauration rapide à Ouagadougou.",
         image: {
           src: belchickenSoben,
-          alt: "Identité visuelle FASOFOOD / Belchicken",
+          alt: "Identité visuelle ECOFOOD / Belchicken",
           fit: "cover",
           position: "center center",
         },
@@ -1893,7 +1893,7 @@ Rejoignez-nous pour transformer l’énergie!`,
     cardGallery: [
       {
         src: belchickenLesPlats,
-        alt: "Plats FASOFOOD / Belchicken",
+        alt: "Plats ECOFOOD / Belchicken",
         fit: "cover",
         position: "center center",
       },
@@ -1919,7 +1919,7 @@ Rejoignez-nous pour transformer l’énergie!`,
     gallery: [
       {
         src: belchickenLesPlats,
-        alt: "Sélection de plats FASOFOOD / Belchicken",
+        alt: "Sélection de plats ECOFOOD / Belchicken",
         fit: "cover",
         position: "center center",
       },
@@ -2138,7 +2138,7 @@ export const orgChartNodes = [
     summary:
       "Pôle de services centré sur l’offre de restauration, l’expérience client et la croissance commerciale.",
     tags: ["restauration", "services", "experience client"],
-    linkedSubsidiaries: ["fasofood"],
+    linkedSubsidiaries: ["ecofood"],
   },
   {
     id: "amko-trading-node",
@@ -2229,15 +2229,15 @@ export const orgChartNodes = [
     linkedSubsidiaries: ["gcm-immobilier"],
   },
   {
-    id: "fasofood-node",
+    id: "ecofood-node",
     parentId: "pole-restauration-services",
-    title: "FASOFOOD",
+    title: "ECOFOOD",
     lane: "filiales",
     level: 2,
     summary:
       "Filiale de restauration du groupe, exploitant la franchise Belchicken à Ouagadougou.",
     tags: ["restauration", "franchise", "Belchicken"],
-    linkedSubsidiaries: ["fasofood"],
+    linkedSubsidiaries: ["ecofood"],
   },
 ];
 export const values = [
