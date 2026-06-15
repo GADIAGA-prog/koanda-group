@@ -97,10 +97,10 @@ h1, h2, h3, p, li, a, span {
   width: 46px;
   height: 46px;
   padding: 0;
-  border: 1px solid rgba(39, 245, 60, 0.24);
+  border: 1px solid transparent;
   border-radius: 16px;
-  background: var(--white);
-  color: var(--green-deep);
+  background: #27F53C;
+  color: #0D2710;
   cursor: pointer;
 }
 
@@ -145,9 +145,9 @@ h1, h2, h3, p, li, a, span {
   width: 38px;
   height: 38px;
   border-radius: 999px;
-  border: 1px solid rgba(39, 245, 60, 0.24);
-  background: var(--white);
-  color: var(--green-deep);
+  border: 1px solid transparent;
+  background: #27F53C;
+  color: #0D2710;
   transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
 }
 
@@ -200,9 +200,9 @@ h1, h2, h3, p, li, a, span {
   min-height: 40px;
   padding: 0 14px;
   border-radius: 999px;
-  border: 1px solid rgba(39, 245, 60, 0.24);
-  background: #ffffff;
-  color: var(--green-deep);
+  border: 1px solid transparent;
+  background: #27F53C;
+  color: #0D2710;
   font-size: 0.96rem;
   font-weight: 700;
 }
@@ -213,8 +213,8 @@ h1, h2, h3, p, li, a, span {
 
 .nav-item > a:hover,
 .nav-item > .active-link {
-  background: linear-gradient(135deg, var(--green), var(--green-deep));
-  color: var(--white);
+  background: #147A1B;
+  color: #ffffff;
   border-color: transparent;
 }
 
