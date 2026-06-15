@@ -5,6 +5,7 @@ const emptyForm = {
   title: '',
   excerpt: '',
   content: '',
+  author: '',
   status: 'draft',
   coverImage: '',
   images: [],
@@ -29,6 +30,7 @@ function normalizeArticle(article) {
     title: article.title || '',
     excerpt: article.excerpt || '',
     content: article.content || '',
+    author: article.author || '',
     status: article.status || 'draft',
     coverImage: article.coverImage || '',
     images: article.images || [],
@@ -159,6 +161,11 @@ function AdminArticleEditor({ article, saving, onCancel, onSave }) {
           onChange={handleChange}
           placeholder="Résumé court affiché dans la liste des actualités"
         />
+      </label>
+
+      <label>
+        <span>Auteur</span>
+        <input name="author" value={formState.author} onChange={handleChange} placeholder="Nom de l'auteur (ex: Tindé Mariam)" />
       </label>
 
       <label>

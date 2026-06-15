@@ -66,7 +66,10 @@ function NewsDetailPage() {
               <p className="section-tag">Actualité</p>
               <h1>{article.title}</h1>
               <p className="hero-lead">{article.excerpt}</p>
-              <p><strong>Publié le :</strong> {formatDate(article.publishedAt)}</p>
+              <p>
+                <strong>Publié le :</strong> {formatDate(article.publishedAt)}
+                {article.author ? <span>&nbsp;&nbsp;·&nbsp;&nbsp;<strong>Par :</strong> {article.author}</span> : null}
+              </p>
 
               <div className="news-detail-content">
                 {article.content.split(/\n\s*\n/).map((paragraph, index) => (

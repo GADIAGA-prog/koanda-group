@@ -193,12 +193,15 @@ function normalizeArticleInput(input, existingArticle = null, normalizedImages =
   const slugBase = title || existingArticle?.title || 'article';
   const slug = slugify(slugBase) || existingArticle?.slug || crypto.randomUUID();
 
+  const author = String(input.author || existingArticle?.author || '').trim();
+
   return {
     id: existingArticle?.id || crypto.randomUUID(),
     slug,
     title,
     excerpt,
     content,
+    author,
     coverImage,
     images,
     status,
