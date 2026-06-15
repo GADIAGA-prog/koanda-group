@@ -10,7 +10,7 @@
   /* Brand greens — nature green #6DB94D */
   --green-deep: #3E6228;   /* primary — dark nature */
   --green: #54903D;        /* mid (used in gradients) */
-  --green-bright: #66e330; /* vivid nature accent */
+  --green-bright: #6DB94D; /* vivid nature accent */
   --green-soft: #ECF7E6;
   --green-ink: #233616;    /* near-black green for dark sections */
 
@@ -2719,12 +2719,12 @@ body {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  color: #e8f2e8;
+  color: #ffffff;
   background:
-    radial-gradient(120% 130% at 100% 0%, rgba(70, 157, 57, 0.22), transparent 56%),
-    radial-gradient(90% 90% at -5% 105%, rgba(14, 38, 8, 0.65), transparent 60%),
-    linear-gradient(152deg, #3E6228 0%, #233616 100%);
-  box-shadow: 0 34px 80px rgba(14, 38, 8, 0.32);
+    radial-gradient(120% 130% at 100% 0%, rgba(255, 255, 255, 0.12), transparent 56%),
+    radial-gradient(90% 90% at -5% 105%, rgba(35, 54, 22, 0.35), transparent 60%),
+    linear-gradient(152deg, #6DB94D 0%, #54903D 100%);
+  box-shadow: 0 34px 80px rgba(35, 65, 19, 0.32);
 }
 /* fine regle doree en haut du hero */
 .home-hero::before {
@@ -2846,15 +2846,15 @@ body {
 /* ---- Message final : veritable bande verte ---- */
 .section-dark,
 .final-message {
-  background: linear-gradient(150deg, var(--green-deep) 0%, var(--green-ink) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(150deg, #6DB94D 0%, #54903D 100%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   color: #ffffff;
 }
 .final-message p { color: #ffffff; }
 
 /* ---- Pied de page institutionnel (vert profond) ---- */
 .footer-main {
-  background: linear-gradient(150deg, var(--green-deep) 0%, var(--green-ink) 100%);
+  background: linear-gradient(150deg, #6DB94D 0%, #54903D 100%);
   color: rgba(255, 255, 255, 0.78);
   box-shadow: var(--shadow);
 }
@@ -2869,12 +2869,12 @@ body {
 .home-engagements {
   position: relative;
   overflow: hidden;
-  color: #e8f3e6;
+  color: #ffffff;
   background:
-    radial-gradient(110% 130% at 100% 0%, rgba(70, 157, 57, 0.2), transparent 56%),
-    linear-gradient(152deg, var(--green-deep) 0%, var(--green-ink) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 30px 70px rgba(14, 38, 8, 0.28);
+    radial-gradient(110% 130% at 100% 0%, rgba(255, 255, 255, 0.10), transparent 56%),
+    linear-gradient(152deg, #6DB94D 0%, #54903D 100%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 30px 70px rgba(35, 65, 19, 0.28);
 }
 .home-engagements::before {
   content: "";
@@ -2951,7 +2951,7 @@ body {
   z-index: 9999;
   padding: 10px 20px;
   border-radius: 14px;
-  background: var(--green-deep);
+  background: #6DB94D;
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
