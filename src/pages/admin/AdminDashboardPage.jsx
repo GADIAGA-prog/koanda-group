@@ -7,6 +7,7 @@ import {
   deleteAdminArticle,
   fetchAdminArticles,
   fetchAdminSession,
+  fetchAdminStatus,
   logoutAdmin,
   updateAdminArticle,
 } from '../../lib/newsApi';
@@ -20,6 +21,7 @@ function AdminDashboardPage() {
   const [deletingId, setDeletingId] = useState('');
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [error, setError] = useState('');
+  const [storageStatus, setStorageStatus] = useState(null);
 
   useEffect(() => {
     let active = true;
@@ -49,10 +51,11 @@ function AdminDashboardPage() {
     let active = true;
     setLoadingArticles(true);
 
-    fetchAdminArticles()
-      .then((items) => {
+    Promise.all([fetchAdminArticles(), fetchAdminStatus()])
+      .then(([items, status]) => {
         if (active) {
           setArticles(items);
+          setStorageStatus(status);
           setError('');
         }
       })
@@ -158,6 +161,20 @@ function AdminDashboardPage() {
           </button>
         </div>
       </section>
+
+      {storageStatus && !storageStatus.blobConfigured ? (
+        <section className="section admin-storage-warning">
+          <p className="admin-storage-warning-title">⚠ Stockage temporaire actif — les articles ne persistent pas</p>
+          <p>
+            La variable <strong>BLOB_READ_WRITE_TOKEN</strong> n'est pas configurée sur Vercel.
+            Les articles publiés disparaissent entre chaque requête.
+          </p>
+          <p>
+            <strong>Solution :</strong> Vercel Dashboard → Storage → ouvre ton Blob store →{' '}
+            <strong>Connect to Project</strong> → sélectionne <em>koanda-group</em> → redéploie.
+          </p>
+        </section>
+      ) : null}
 
       {error ? (
         <section className="section">

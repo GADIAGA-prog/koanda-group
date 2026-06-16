@@ -56,6 +56,12 @@ export async function fetchAdminArticles() {
   return data.articles || [];
 }
 
+export async function fetchAdminStatus() {
+  const response = await fetch('/api/admin/status');
+  const data = await response.json().catch(() => ({}));
+  return data;
+}
+
 export async function createAdminArticle(payload) {
   const response = await fetch('/api/admin/articles', {
     method: 'POST',

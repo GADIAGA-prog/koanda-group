@@ -1977,6 +1977,20 @@ h1, h2, h3, p, li, a, span {
 .form-feedback.error { background: rgba(109, 18, 18, 0.18); color: #ffe1e1; }
 .form-feedback.success { background: rgba(255, 255, 255, 0.16); color: #f0fff4; }
 
+.admin-storage-warning {
+  display: grid;
+  gap: 10px;
+  background: #fff8e1;
+  border: 1px solid #f59e0b;
+  color: #78350f;
+}
+.admin-storage-warning-title {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1rem;
+}
+.admin-storage-warning p { margin: 0; line-height: 1.6; }
+
 .contact-form-card .button-primary {
   background: linear-gradient(135deg, #ffffff, #E9F4DF);
   color: var(--green-deep);
