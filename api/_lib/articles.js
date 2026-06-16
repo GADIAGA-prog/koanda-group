@@ -3,8 +3,26 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { del, get, list, put } from '@vercel/blob';
 
-const dataDirectory = path.join(process.cwd(), 'data');
-const articlesFilePath = path.join(dataDirectory, 'articles.json');
+// Sur Vercel, process.cwd() est en lecture seule. On utilise /tmp comme fallback.
+const cwdDataDir = path.join(process.cwd(), 'data');
+const tmpDataDir = '/tmp/koanda-articles';
+let _resolvedDataDir = null;
+
+async function getDataDirectory() {
+  if (_resolvedDataDir) return _resolvedDataDir;
+
+  try {
+    await fs.access(cwdDataDir);
+    await fs.writeFile(path.join(cwdDataDir, '.write-test'), '', 'utf8');
+    await fs.unlink(path.join(cwdDataDir, '.write-test'));
+    _resolvedDataDir = cwdDataDir;
+  } catch {
+    _resolvedDataDir = tmpDataDir;
+  }
+
+  return _resolvedDataDir;
+}
+
 const articleBlobPrefix = 'articles/';
 const imageBlobPrefix = 'news-images/';
 
@@ -44,25 +62,34 @@ function parseDataUrl(value) {
 }
 
 async function ensureLocalStore() {
-  await fs.mkdir(dataDirectory, { recursive: true });
+  const dir = await getDataDirectory();
+  const filePath = path.join(dir, 'articles.json');
+  await fs.mkdir(dir, { recursive: true });
 
   try {
-    await fs.access(articlesFilePath);
+    await fs.access(filePath);
   } catch {
-    await fs.writeFile(articlesFilePath, '[]', 'utf8');
+    await fs.writeFile(filePath, '[]', 'utf8');
   }
+
+  return filePath;
 }
 
 async function readLocalArticles() {
-  await ensureLocalStore();
-  const raw = await fs.readFile(articlesFilePath, 'utf8');
-  const articles = JSON.parse(raw);
-  return Array.isArray(articles) ? articles : [];
+  const filePath = await ensureLocalStore();
+
+  try {
+    const raw = await fs.readFile(filePath, 'utf8');
+    const articles = JSON.parse(raw);
+    return Array.isArray(articles) ? articles : [];
+  } catch {
+    return [];
+  }
 }
 
 async function writeLocalArticles(articles) {
-  await ensureLocalStore();
-  await fs.writeFile(articlesFilePath, JSON.stringify(articles, null, 2), 'utf8');
+  const filePath = await ensureLocalStore();
+  await fs.writeFile(filePath, JSON.stringify(articles, null, 2), 'utf8');
 }
 
 async function streamToText(stream) {
